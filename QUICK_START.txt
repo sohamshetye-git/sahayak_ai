@@ -1,0 +1,117 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    SAHAYAK AI - QUICK START GUIDE                         ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+✅ PROJECT IS ALREADY RUNNING!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 OPEN APPLICATION
+
+   Frontend: http://localhost:3000
+   Backend:  http://localhost:3001
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 AVAILABLE PAGES
+
+   1. Language Selection    → http://localhost:3000
+   2. Home                  → http://localhost:3000/home
+   3. Explore Schemes       → http://localhost:3000/schemes
+   4. Scheme Details        → http://localhost:3000/schemes/[id]
+   5. Service Centers       → http://localhost:3000/service-centers
+   6. My Applications       → http://localhost:3000/applications
+   7. Chat                  → http://localhost:3000/chat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ FEATURES TO TEST
+
+   ✓ Browse 15 government schemes
+   ✓ Filter schemes by category
+   ✓ Search schemes by name
+   ✓ View scheme details with tabs
+   ✓ Find service centers by location
+   ✓ Apply to schemes (online/offline)
+   ✓ Track applications with progress
+   ✓ Chat with AI (requires API key)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ IF SERVERS NOT RUNNING
+
+   Terminal 1 (Backend):
+   $ cd backend
+   $ npm run dev
+
+   Terminal 2 (Frontend):
+   $ cd frontend
+   $ npm run dev
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑 FOR CHAT FEATURE
+
+   1. Get Gemini API key from: https://aistudio.google.com/app/apikey
+   2. Update .env file:
+      GEMINI_API_KEY=your-key-here
+   3. Restart backend
+   4. Test chat at: http://localhost:3000/chat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 PROJECT STATUS
+
+   Frontend:  ✓ Running on port 3000
+   Backend:   ✓ Running on port 3001
+   Database:  ✓ Using JSON files (no setup needed)
+   Redis:     ✓ Optional (not required)
+   API Key:   ⚠ Needed for chat feature
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 TROUBLESHOOTING
+
+   Port in use?
+   → Kill process: lsof -i :3000 | kill -9 <PID>
+
+   Frontend blank?
+   → Clear cache: rm -rf frontend/.next
+   → Restart: npm run dev
+
+   API errors?
+   → Check backend logs in terminal
+   → Verify .env configuration
+
+   Chat not working?
+   → Check API key in .env
+   → Verify API key has quota available
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 DOCUMENTATION
+
+   HOW_TO_RUN_PROJECT.md          → Complete guide
+   API_RATE_LIMIT_ANALYSIS.md     → API quota info
+   REDIS_ISSUE_FIXED.md           → Redis setup
+   WHY_RATE_LIMIT_EXHAUSTS_BEFORE_CHAT.md → Rate limit explanation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 NEXT STEPS
+
+   1. Open: http://localhost:3000
+   2. Select language (English or Hindi)
+   3. Explore schemes and features
+   4. Apply to a scheme
+   5. Track your application
+   6. (Optional) Test chat with API key
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ READY TO USE!
+
+   The application is fully functional and ready for testing.
+   All features work except chat (requires API key with quota).
+
+╚════════════════════════════════════════════════════════════════════════════╝

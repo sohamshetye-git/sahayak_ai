@@ -1,0 +1,87 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+.nyc_output
+
+# Production
+dist/
+build/
+out/
+.next/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AWS
+.aws-sam/
+cdk.out/
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Misc
+.cache/
+temp/
+tmp/
+
+# Documentation (too many MD files)
+*_COMPLETE.md
+*_SUMMARY.md
+*_GUIDE.md
+*_STATUS.md
+*_EXPLANATION.md
+*_CHECKLIST.md
+*_VISUAL.md
+*_REFERENCE.md
+DEPLOYMENT_*.md
+AWS_*.md
+AI_*.md
+GROQ_*.md
+PROJECT_*.md
+TESTING_*.md
+CONVERSATION_*.md
+IMPLEMENTATION_*.md
+QUICK_*.md
+START_HERE.md
+INSTALL_*.md
+
+# Test files
+test-*.html
+test-*.js
+*.test.html
+OPEN-*.html
+DEBUG-*.html
+
+# Deployment scripts (keep only essential)
+auto-deploy.ps1
+deploy-to-s3.ps1
+deploy-to-s3.sh
+fix-frontend.ps1
