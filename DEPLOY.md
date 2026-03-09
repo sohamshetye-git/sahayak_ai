@@ -1,51 +1,70 @@
-# Quick Deployment Guide
+# Sahayak AI - Deployment Guide
 
-## GitHub Upload + Vercel Deployment
+## Quick Deploy (5 Minutes)
 
-### Step 1: Upload to GitHub
+### 1. Deploy Backend (Render.com)
+1. Go to [render.com](https://render.com)
+2. New → Web Service
+3. Connect GitHub: `sohamshetye-git/sahayak_ai`
+4. Settings:
+   - Name: `sahayak-backend`
+   - Root Directory: `backend`
+   - Build Command: `npm install && npm run build`
+   - Start Command: `node dist/local.js`
+5. Environment Variables (click "Add Environment Variable"):
+   ```
+   NODE_ENV=production
+   PORT=3001
+   AI_PROVIDER=router
+   AI_ROUTING_ENABLED=true
+   GEMINI_API_KEY=your_gemini_key
+   GROQ_API_KEY=your_groq_key
+   SARVAM_API_KEY=your_sarvam_key
+   OPENAI_API_KEY=your_openai_key
+   REDIS_HOST=localhost
+   REDIS_PORT=6379
+   DATA_PATH=./data
+   ```
+6. Click "Create Web Service"
+7. Wait 5 minutes, copy your backend URL
 
-Run this command:
-```powershell
-.\deploy-github-vercel.ps1
-```
+### 2. Deploy Frontend (Vercel)
+1. Go to [vercel.com](https://vercel.com)
+2. Import Project → GitHub: `sohamshetye-git/sahayak_ai`
+3. Settings:
+   - Root Directory: `frontend`
+   - Framework: Next.js (auto-detected)
+4. Environment Variables:
+   ```
+   NEXT_PUBLIC_API_URL=https://your-backend.onrender.com
+   ```
+5. Click "Deploy"
+6. Done! Your URL: `https://sahayak-ai.vercel.app`
 
-This will:
-- Initialize Git repository
-- Add all files
-- Commit with "Initial MVP commit"
-- Push to https://github.com/sohamshetye-git/sahayak-ai
+## API Keys
 
-### Step 2: Deploy on Vercel
+Get free API keys from:
+- Gemini: [ai.google.dev](https://ai.google.dev)
+- Groq: [console.groq.com](https://console.groq.com)
+- Sarvam: [sarvam.ai](https://sarvam.ai)
+- OpenAI: [platform.openai.com](https://platform.openai.com)
 
-1. Go to https://vercel.com
-2. Sign in with GitHub
-3. Click "Add New Project"
-4. Import `sahayak-ai` repository
-5. Configure:
-   - **Root Directory**: `frontend`
-   - **Framework**: Next.js (auto-detected)
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `.next`
-6. Add Environment Variable:
-   - Name: `NEXT_PUBLIC_API_URL`
-   - Value: `http://localhost:3001`
-7. Click "Deploy"
-8. Wait 2-3 minutes
-9. Get your live URL: `https://sahayak-ai.vercel.app`
+## Local Development
 
-### Step 3: Update Later
-
-To update your deployed site:
 ```bash
-git add .
-git commit -m "Your update message"
-git push
+# Backend
+cd backend
+npm install
+npm run dev
+
+# Frontend
+cd frontend
+npm install
+npm run dev
 ```
 
-Vercel will automatically rebuild and deploy!
+Visit: http://localhost:3000
 
-## Notes
+## Support
 
-- Frontend will be live and publicly accessible
-- Backend features (chat, recommendations) won't work until backend is deployed
-- This is perfect for MVP demo/submission
+Issues? Check README.md or create an issue on GitHub.
