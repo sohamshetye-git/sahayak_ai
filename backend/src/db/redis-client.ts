@@ -12,50 +12,61 @@ const redisConfig: RedisOptions = {
   port: config.redis.port,
   password: config.redis.password,
   tls: config.redis.tls ? {} : undefined,
-  retryStrategy: (times: number) => {
-    if (times > config.redis.maxRetries) {
-      return null; // Stop retrying
-    }
-    const delay = Math.min(times * 50, 2000);
-    return delay;
-  },
-  maxRetriesPerRequest: 3,
+  retryStrategy: () => null, // Don't retry - fail fast
+  maxRetriesPerRequest: 1,
   enableReadyCheck: true,
-  enableOfflineQueue: true,
-  lazyConnect: false,
-  connectTimeout: 10000,
+  enableOfflineQueue: false, // Don't queue commands when offline
+  lazyConnect: true,
+  connectTimeout: 5000,
   keepAlive: 30000,
 };
 
-// Create Redis client instance
-const redisClient = new Redis(redisConfig);
+// Create Redis client instance with lazy connect
+const redisClient = new Redis({
+  ...redisConfig,
+  lazyConnect: true, // Don't connect immediately
+});
+
+let isRedisAvailable = false;
+
+// Try to connect to Redis
+(async () => {
+  try {
+    await redisClient.connect();
+    isRedisAvailable = true;
+    console.log(`✓ Redis connected: ${config.redis.host}:${config.redis.port}`);
+  } catch (error) {
+    isRedisAvailable = false;
+    console.log('⚠ Redis not available - running without cache');
+    // Disconnect to prevent reconnection attempts
+    redisClient.disconnect();
+  }
+})();
 
 // Event handlers
 redisClient.on('connect', () => {
+  isRedisAvailable = true;
   console.log(`✓ Redis client connected: ${config.redis.host}:${config.redis.port} (TLS: ${config.redis.tls})`);
 });
 
 redisClient.on('ready', () => {
+  isRedisAvailable = true;
   console.log('✓ Redis client ready');
 });
 
 redisClient.on('error', (error) => {
-  // Redis is optional for MVP - silently handle connection errors
-  // In production, use AWS ElastiCache or implement proper error handling
-  if (config.env === 'development') {
-    // Suppress verbose error logging in development
-    // console.error('✗ Redis client error:', error);
-  } else {
-    console.error('✗ Redis client error:', error);
-  }
+  isRedisAvailable = false;
+  // Silently handle Redis errors - it's optional
+  console.log('⚠ Redis error (running without cache)');
 });
 
 redisClient.on('close', () => {
-  console.log('Redis client connection closed');
+  isRedisAvailable = false;
+  console.log('⚠ Redis connection closed');
 });
 
 redisClient.on('reconnecting', () => {
-  console.log('Redis client reconnecting...');
+  console.log('⚠ Redis reconnecting...');
 });
 
 /**
@@ -75,17 +86,25 @@ export async function closeRedisConnection(): Promise<void> {
  * Health check for Redis connection
  */
 export async function checkRedisHealth(): Promise<boolean> {
+  if (!isRedisAvailable) return false;
   try {
     const result = await redisClient.ping();
     return result === 'PONG';
   } catch (error) {
-    console.error('Redis health check failed:', error);
+    isRedisAvailable = false;
     return false;
   }
 }
 
 /**
- * Get Redis client instance
+ * Check if Redis is available
+ */
+export function isRedisConnected(): boolean {
+  return isRedisAvailable;
+}
+
+/**
+ * Get Redis client instance (may not be connected)
  */
 export function getRedisClient(): Redis {
   return redisClient;

@@ -3,7 +3,7 @@
  * Caches AI responses to reduce API calls
  */
 
-import { getRedisClient } from './redis-client';
+import { getRedisClient, isRedisConnected } from './redis-client';
 import crypto from 'crypto';
 
 export class ChatCacheService {
@@ -24,6 +24,8 @@ export class ChatCacheService {
    * Get cached response
    */
   async get(message: string, language: string): Promise<string | null> {
+    if (!isRedisConnected()) return null;
+    
     try {
       const key = this.generateCacheKey(message, language);
       const cached = await this.redis.get(key);
@@ -45,6 +47,8 @@ export class ChatCacheService {
    * Set cached response
    */
   async set(message: string, language: string, response: string, ttl: number = this.DEFAULT_TTL): Promise<void> {
+    if (!isRedisConnected()) return;
+    
     try {
       const key = this.generateCacheKey(message, language);
       await this.redis.set(key, response, 'EX', ttl);
@@ -59,6 +63,8 @@ export class ChatCacheService {
    * Clear all chat cache
    */
   async clear(): Promise<void> {
+    if (!isRedisConnected()) return;
+    
     try {
       const keys = await this.redis.keys(`${this.CACHE_PREFIX}*`);
       if (keys.length > 0) {
@@ -74,6 +80,10 @@ export class ChatCacheService {
    * Get cache statistics
    */
   async getStats(): Promise<{ totalCached: number; memoryUsed: string }> {
+    if (!isRedisConnected()) {
+      return { totalCached: 0, memoryUsed: 'N/A (Redis not connected)' };
+    }
+    
     try {
       const keys = await this.redis.keys(`${this.CACHE_PREFIX}*`);
       const info = await this.redis.info('memory');
