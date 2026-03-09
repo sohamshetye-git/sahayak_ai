@@ -10,7 +10,7 @@ import { z } from 'zod';
 
 export class GeminiProvider extends BaseAIProvider {
   private genAI: GoogleGenerativeAI;
-  protected model: any;
+  private geminiModel: any;
   private currentModelName: string;
   private static readonly MODEL_FALLBACK_ORDER = [
     'gemini-1.5-flash-latest',
@@ -24,7 +24,7 @@ export class GeminiProvider extends BaseAIProvider {
     super('gemini', modelName, timeoutMs);
     this.genAI = new GoogleGenerativeAI(apiKey);
     this.currentModelName = modelName;
-    this.model = this.genAI.getGenerativeModel({ model: modelName });
+    this.geminiModel = this.genAI.getGenerativeModel({ model: modelName });
   }
 
   async generateResponse(request: AIRequest): Promise<AIResponse> {
@@ -63,7 +63,7 @@ export class GeminiProvider extends BaseAIProvider {
         if (modelName !== this.currentModelName) {
           console.log(`[GEMINI] Switched from ${this.currentModelName} to ${modelName}`);
           this.currentModelName = modelName;
-          this.model = modelInstance;
+          this.geminiModel = modelInstance;
         }
 
         return {
@@ -162,7 +162,7 @@ Return the extracted data as JSON:`;
         await result.response;
         console.log(`[GEMINI] Available model found: ${modelName}`);
         this.currentModelName = modelName;
-        this.model = modelInstance;
+        this.geminiModel = modelInstance;
         return true;
       } catch {
         continue;
