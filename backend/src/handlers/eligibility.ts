@@ -120,7 +120,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       },
       body: JSON.stringify(response),
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error('Eligibility handler error:', error);
 
     return {
@@ -130,7 +130,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
         error: {
           code: 'INTERNAL_SERVER_ERROR',
           message: 'Failed to check eligibility',
-          details: error.message,
+          details: error?.message || 'Unknown error',
           timestamp: Date.now(),
         },
       }),

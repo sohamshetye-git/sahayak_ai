@@ -53,7 +53,7 @@ export class AWSVoiceProvider extends BaseVoiceProvider {
       // This is a simplified implementation
       throw new VoiceProviderError(
         'Amazon Transcribe requires S3 integration. Use Web Speech API for browser-based transcription.',
-        null
+        undefined
       );
     } catch (error: any) {
       throw new VoiceProviderError(`Transcribe error: ${error.message}`, error);
@@ -63,7 +63,7 @@ export class AWSVoiceProvider extends BaseVoiceProvider {
   /**
    * Convert text to speech using Amazon Polly
    */
-  async textToSpeech(text: string, language: 'hi' | 'en', voiceId?: string): Promise<Buffer> {
+  async textToSpeech(text: string, language: 'hi' | 'en', voiceId?: string): Promise<Buffer | Blob> {
     this.validateLanguage(language);
 
     try {
@@ -73,7 +73,7 @@ export class AWSVoiceProvider extends BaseVoiceProvider {
       const command = new SynthesizeSpeechCommand({
         Text: text,
         OutputFormat: OutputFormat.MP3,
-        VoiceId: voice,
+        VoiceId: voice as VoiceId,
         Engine: Engine.NEURAL,
         LanguageCode: languageCode,
       });

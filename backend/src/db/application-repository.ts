@@ -46,7 +46,6 @@ export class ApplicationRepository {
       currentStep: 1,
       totalSteps,
       completedSteps: [],
-      documents: [],
       createdAt: now,
       updatedAt: now,
       ttl: Math.floor(now / 1000) + 365 * 24 * 60 * 60, // 1 year from now

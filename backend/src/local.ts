@@ -38,7 +38,7 @@ app.post('/api/chat', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await chatHandler(event, {} as any, {} as any);
+  const result = await chatHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -49,7 +49,7 @@ app.post('/api/check-eligibility', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await eligibilityHandler(event, {} as any, {} as any);
+  const result = await eligibilityHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -62,7 +62,7 @@ app.get('/api/schemes/:schemeId/workflow', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await schemesHandler(event, {} as any, {} as any);
+  const result = await schemesHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -73,7 +73,7 @@ app.get('/api/schemes/:schemeId', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await schemesHandler(event, {} as any, {} as any);
+  const result = await schemesHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -83,7 +83,7 @@ app.get('/api/schemes', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await schemesHandler(event, {} as any, {} as any);
+  const result = await schemesHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -94,7 +94,7 @@ app.get('/api/service-centers', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await serviceCentersHandler(event, {} as any, {} as any);
+  const result = await serviceCentersHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -106,7 +106,7 @@ app.get('/api/applications/:applicationId', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await applicationsHandler(event, {} as any, {} as any);
+  const result = await applicationsHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -117,7 +117,7 @@ app.get('/api/applications', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await applicationsHandler(event, {} as any, {} as any);
+  const result = await applicationsHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -128,7 +128,7 @@ app.post('/api/applications', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await applicationsHandler(event, {} as any, {} as any);
+  const result = await applicationsHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 
@@ -140,7 +140,7 @@ app.put('/api/applications/:applicationId', async (req, res) => {
     headers: req.headers,
   } as any;
 
-  const result = await applicationsHandler(event, {} as any, {} as any);
+  const result = await applicationsHandler(event);
   res.status(result.statusCode).json(JSON.parse(result.body));
 });
 

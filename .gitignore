@@ -1,87 +1,138 @@
 # Dependencies
 node_modules/
-.pnp
+/.pnp
 .pnp.js
 
-# Testing
-coverage/
-.nyc_output
-
-# Production
-dist/
-build/
-out/
-.next/
-
-# Environment variables
+# Environment variables - NEVER COMMIT
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
+.env.production
+!.env.example
+
+# Build outputs
+/build
+/dist
+/.next/
+/out/
+frontend/.next/
+frontend/out/
+backend/dist/
 
 # Logs
-logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
 
-# OS
+# OS files
 .DS_Store
+*.pem
 Thumbs.db
 
 # IDE
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
 
-# AWS
-.aws-sam/
-cdk.out/
-.terraform/
-*.tfstate
-*.tfstate.backup
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
 
-# Misc
-.cache/
-temp/
-tmp/
+# Testing
+/coverage
 
-# Documentation (too many MD files)
+# Deployment
+.vercel
+.netlify
+
+# Temporary documentation files
 *_COMPLETE.md
-*_SUMMARY.md
-*_GUIDE.md
+*_FIXED.md
+*_READY.md
 *_STATUS.md
-*_EXPLANATION.md
+*_GUIDE.md
+*_SUMMARY.md
 *_CHECKLIST.md
+*_DIAGRAM.md
 *_VISUAL.md
+*_INSTRUCTIONS.md
+*_PROGRESS.md
+*_ARCHITECTURE.md
+*_INTEGRATION.md
+*_IMPLEMENTATION.md
+*_TESTING.md
+*_DEPLOYMENT.md
+*_RUNNING.md
+*_WORKING.md
+*_ISSUE.md
+*_FIX.md
+*_DEBUG.md
 *_REFERENCE.md
-DEPLOYMENT_*.md
-AWS_*.md
+TEST*.md
+DEBUG*.md
+HOW*.md
+WHY*.md
+GET*.md
+START*.md
+TUNNEL*.md
+VERCEL*.md
+AWS*.md
+GROQ*.md
+SARVAM*.md
+OPENAI*.md
+GEMINI*.md
 AI_*.md
-GROQ_*.md
-PROJECT_*.md
-TESTING_*.md
+CHAT_*.md
 CONVERSATION_*.md
+SCHEME*.md
+SERVICE*.md
+APPLICATION*.md
+PROJECT_*.md
+MVP_*.md
+SPEC_*.md
+TASK_*.md
+CRITICAL_*.md
+FINAL_*.md
 IMPLEMENTATION_*.md
-QUICK_*.md
-START_HERE.md
-INSTALL_*.md
+FRONTEND_*.md
+BACKEND_*.md
+REDIS_*.md
+API_*.md
+VOICE_*.md
+NAVIGATION_*.md
+CONTEXTUAL_*.md
+INTELLIGENT_*.md
+SMART_*.md
+ENHANCED_*.md
+POST_*.md
+MY-*.md
+UPDATED-*.md
+DOCUMENT-*.md
+ALL-*.md
+ISSUE-*.md
+SOLUTION_*.md
+VIEW_*.md
+REAL_*.md
+JSON_*.md
+PLATFORM-*.md
+STATUS.md
+ENV_*.txt
+DEPLOYMENT_*.txt
 
-# Test files
+# Test HTML files
 test-*.html
-test-*.js
-*.test.html
 OPEN-*.html
 DEBUG-*.html
+TEST-*.html
 
 # Deployment scripts (keep only essential)
+fix-*.ps1
+deploy-github-*.ps1
 auto-deploy.ps1
-deploy-to-s3.ps1
-deploy-to-s3.sh
-fix-frontend.ps1
+deploy-to-s3.*
+deploy-frontend.ps1
+
+# Keep these important files
+!README.md
+!SETUP.md
+!LICENSE.md

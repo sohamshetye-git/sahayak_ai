@@ -3,11 +3,11 @@
  * Wrapper for Redis caching with TTL and error handling
  */
 
-import { createRedisClient } from './redis-client';
-import type { RedisClientType } from 'redis';
+import { getRedisClient } from './redis-client';
+import type { Redis } from 'ioredis';
 
 export class CacheService {
-  private client: RedisClientType | null = null;
+  private client: Redis | null = null;
   private isConnected: boolean = false;
 
   constructor() {
@@ -16,11 +16,11 @@ export class CacheService {
 
   private async initialize() {
     try {
-      this.client = await createRedisClient();
+      this.client = getRedisClient();
       this.isConnected = true;
       console.log('Cache service initialized successfully');
-    } catch (error) {
-      console.warn('Cache service initialization failed, running without cache:', error.message);
+    } catch (error: any) {
+      console.warn('Cache service initialization failed, running without cache:', error?.message || 'Unknown error');
       this.isConnected = false;
     }
   }
@@ -39,8 +39,8 @@ export class CacheService {
         return null;
       }
       return JSON.parse(value) as T;
-    } catch (error) {
-      console.error(`Cache get error for key ${key}:`, error.message);
+    } catch (error: any) {
+      console.error(`Cache get error for key ${key}:`, error?.message || 'Unknown error');
       return null; // Graceful degradation
     }
   }
@@ -55,9 +55,9 @@ export class CacheService {
 
     try {
       const serialized = JSON.stringify(value);
-      await this.client.setEx(key, ttlSeconds, serialized);
-    } catch (error) {
-      console.error(`Cache set error for key ${key}:`, error.message);
+      await this.client.setex(key, ttlSeconds, serialized);
+    } catch (error: any) {
+      console.error(`Cache set error for key ${key}:`, error?.message || 'Unknown error');
       // Don't throw - graceful degradation
     }
   }
@@ -72,8 +72,8 @@ export class CacheService {
 
     try {
       await this.client.del(key);
-    } catch (error) {
-      console.error(`Cache delete error for key ${key}:`, error.message);
+    } catch (error: any) {
+      console.error(`Cache delete error for key ${key}:`, error?.message || 'Unknown error');
     }
   }
 
@@ -88,10 +88,10 @@ export class CacheService {
     try {
       const keys = await this.client.keys(pattern);
       if (keys.length > 0) {
-        await this.client.del(keys);
+        await this.client.del(...keys);
       }
-    } catch (error) {
-      console.error(`Cache invalidate error for pattern ${pattern}:`, error.message);
+    } catch (error: any) {
+      console.error(`Cache invalidate error for pattern ${pattern}:`, error?.message || 'Unknown error');
     }
   }
 
@@ -110,8 +110,8 @@ export class CacheService {
       try {
         await this.client.quit();
         this.isConnected = false;
-      } catch (error) {
-        console.error('Error closing cache connection:', error.message);
+      } catch (error: any) {
+        console.error('Error closing cache connection:', error?.message || 'Unknown error');
       }
     }
   }

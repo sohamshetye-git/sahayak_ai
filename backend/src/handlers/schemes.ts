@@ -85,7 +85,6 @@ async function initializeDynamoDB(): Promise<void> {
       await client.send(new PutCommand({
         TableName: tableName,
         Item: {
-          schemeId: scheme.schemeId,
           ...scheme,
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString(),
@@ -167,7 +166,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
 
     // Handle scheme listing with filters
     return await getSchemes(queryStringParameters || {});
-  } catch (error) {
+  } catch (error: any) {
     console.error('Schemes handler error:', error);
 
     return {
@@ -177,7 +176,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
         error: {
           code: 'INTERNAL_SERVER_ERROR',
           message: 'Failed to retrieve schemes',
-          details: error.message,
+          details: error?.message || 'Unknown error',
           timestamp: Date.now(),
         },
       }),
@@ -253,7 +252,7 @@ async function getSingleScheme(schemeId: string, language: string): Promise<APIG
 /**
  * Get schemes with filtering and pagination
  */
-async function getSchemes(params: Record<string, string>): Promise<APIGatewayProxyResult> {
+async function getSchemes(params: Record<string, string | undefined>): Promise<APIGatewayProxyResult> {
   const {
     category,
     state,
@@ -354,6 +353,9 @@ function formatSchemeForLanguage(scheme: Scheme, language: string): any {
  */
 async function getSchemeWorkflow(schemeId: string, _language: string): Promise<APIGatewayProxyResult> {
   try {
+    const fs = require('fs');
+    const path = require('path');
+    
     // Load workflow data from SQL file
     const workflowPath = path.resolve(__dirname, '../../../data/application-workflows.sql');
     const workflowContent = fs.readFileSync(workflowPath, 'utf-8');

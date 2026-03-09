@@ -248,19 +248,6 @@ export interface AIProviderConfig {
 // Voice Provider Interfaces
 // ============================================================================
 
-export interface TranscriptionResult {
-  text: string;
-  confidence: number;
-  language: string;
-}
-
-export interface VoiceProvider {
-  speechToText(audio: Buffer, language: string): Promise<TranscriptionResult>;
-  textToSpeech(text: string, language: string): Promise<Buffer>;
-  getSupportedLanguages(): string[];
-  getName(): string;
-}
-
 export interface VoiceProviderConfig {
   type: 'web-speech' | 'aws';
   transcribeLanguageCode?: string;

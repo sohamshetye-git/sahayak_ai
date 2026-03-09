@@ -96,7 +96,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
         total: formattedCenters.length,
       }),
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error('Service centers handler error:', error);
 
     return {
@@ -106,7 +106,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
         error: {
           code: 'INTERNAL_SERVER_ERROR',
           message: 'Failed to retrieve service centers',
-          details: error.message,
+          details: error?.message || 'Unknown error',
           timestamp: Date.now(),
         },
       }),

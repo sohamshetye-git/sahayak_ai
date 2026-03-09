@@ -14,6 +14,7 @@ export abstract class BaseVoiceProvider implements VoiceProvider {
   abstract speechToText(audio: Buffer | Blob, language: 'hi' | 'en'): Promise<string>;
   abstract textToSpeech(text: string, language: 'hi' | 'en', voiceId?: string): Promise<Buffer | Blob>;
   abstract isAvailable(): Promise<boolean>;
+  abstract isAvailable(): Promise<boolean>;
 
   getSupportedLanguages(): string[] {
     return this.supportedLanguages;
