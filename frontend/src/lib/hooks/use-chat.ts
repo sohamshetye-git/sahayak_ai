@@ -23,7 +23,13 @@ export interface ChatResponse {
 
 export function useChat(initialSessionId?: string) {
   const [sessionId, setSessionId] = useState<string | undefined>(initialSessionId);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: 'assistant',
+      content: "Namaste! I'm Sahayak AI, your smart assistant for government schemes. Tell me about yourself, and I'll help you find the best schemes you're eligible for.",
+      timestamp: new Date(),
+    }
+  ]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 

@@ -168,34 +168,27 @@ export default function ChatPage() {
         {/* Messages Container */}
         <div className="flex-1 overflow-y-auto">
           <div className="max-w-4xl mx-auto px-4 py-6 space-y-4">
-            {/* Welcome Message */}
-            {messages.length === 0 && (
-              <div className="text-center text-gray-600 py-12">
-                <div className="text-6xl mb-4">👋</div>
-                <h2 className="text-2xl font-bold mb-2">{t('welcome')}</h2>
-                <p className="text-lg mb-6">
-                  {language === 'hi' ? 'मुझसे सरकारी योजनाओं के बारे में पूछें' : 'Ask me about government schemes'}
-                </p>
-                <div className="flex justify-center gap-4 flex-wrap">
-                  <button
-                    onClick={() => setInput(language === 'hi' ? 'मुझे शिक्षा योजनाओं के बारे में बताएं' : 'Tell me about education schemes')}
-                    className="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-sm"
-                  >
-                    {language === 'hi' ? '📚 शिक्षा योजनाएं' : '📚 Education Schemes'}
-                  </button>
-                  <button
-                    onClick={() => setInput(language === 'hi' ? 'मुझे स्वास्थ्य योजनाओं के बारे में बताएं' : 'Tell me about health schemes')}
-                    className="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-sm"
-                  >
-                    {language === 'hi' ? '🏥 स्वास्थ्य योजनाएं' : '🏥 Health Schemes'}
-                  </button>
-                  <button
-                    onClick={() => setInput(language === 'hi' ? 'मुझे कृषि योजनाओं के बारे में बताएं' : 'Tell me about agriculture schemes')}
-                    className="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-sm"
-                  >
-                    {language === 'hi' ? '🌾 कृषि योजनाएं' : '🌾 Agriculture Schemes'}
-                  </button>
-                </div>
+            {/* Quick Action Buttons - Show only when there's just the greeting message */}
+            {messages.length === 1 && messages[0].role === 'assistant' && (
+              <div className="flex justify-center gap-4 flex-wrap mb-6">
+                <button
+                  onClick={() => setInput(language === 'hi' ? 'मुझे शिक्षा योजनाओं के बारे में बताएं' : 'Tell me about education schemes')}
+                  className="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-sm"
+                >
+                  {language === 'hi' ? '📚 शिक्षा योजनाएं' : '📚 Education Schemes'}
+                </button>
+                <button
+                  onClick={() => setInput(language === 'hi' ? 'मुझे स्वास्थ्य योजनाओं के बारे में बताएं' : 'Tell me about health schemes')}
+                  className="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-sm"
+                >
+                  {language === 'hi' ? '🏥 स्वास्थ्य योजनाएं' : '🏥 Health Schemes'}
+                </button>
+                <button
+                  onClick={() => setInput(language === 'hi' ? 'मुझे कृषि योजनाओं के बारे में बताएं' : 'Tell me about agriculture schemes')}
+                  className="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-sm"
+                >
+                  {language === 'hi' ? '🌾 कृषि योजनाएं' : '🌾 Agriculture Schemes'}
+                </button>
               </div>
             )}
 
