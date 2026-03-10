@@ -3,7 +3,7 @@
  * Centralized HTTP client for backend API calls
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://sahayak-ai-mvny.onrender.com';
 
 export interface APIError {
   message: string;
