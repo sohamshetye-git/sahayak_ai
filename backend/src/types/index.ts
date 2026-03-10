@@ -18,6 +18,7 @@ export const UserProfileSchema = z.object({
   income: z.number().min(0).optional(),
   casteCategory: z.enum(['general', 'obc', 'sc', 'st']).optional(),
   hasDisability: z.boolean().optional(),
+  residenceType: z.enum(['Urban', 'Rural']).optional(),
   completeness: z.number().min(0).max(100).default(0),
 });
 

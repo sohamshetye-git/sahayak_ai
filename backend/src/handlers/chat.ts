@@ -549,20 +549,23 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       completeness: profile.completeness,
     });
 
-    // Clean AI response - remove thinking tags and markdown
-    let cleanedResponse = cleanAIResponse(response.response);
-
-    // CRITICAL: Enforce architecture - AI must NEVER recommend schemes
-    // If stage is recommendation_ready, replace AI response with waiting message
+    // FIX 3: Intercept AI response BEFORE cleanAIResponse if stage is recommendation_ready
+    // This prevents AI from "hallucinating" scheme names
+    let cleanedResponse: string;
+    
     if (response.stage === 'recommendation_ready' && hasRequiredFields) {
-      console.log('[ARCHITECTURE_ENFORCEMENT] Blocking AI scheme recommendations - rule engine will provide schemes');
+      console.log('[FIX 3] Intercepting AI response - forcing localized processing message');
+      // Replace AI text IMMEDIATELY with localized message
       cleanedResponse = language === 'hi'
-        ? 'आपकी प्रोफ़ाइल पूर्ण है। आपके विवरण के आधार पर पात्रता की जांच कर रहा हूं...'
-        : 'Your profile is complete. Checking eligibility based on your details...';
+        ? 'धन्यवाद! मैं आपकी पात्रता की जांच कर रहा हूं...'
+        : 'Thank you! I am checking your eligibility...';
+    } else {
+      // Clean AI response - remove thinking tags and markdown
+      cleanedResponse = cleanAIResponse(response.response);
+      
+      // Additional guard: Remove any scheme names AI might have generated
+      cleanedResponse = removeSchemeNamesFromResponse(cleanedResponse);
     }
-
-    // Additional guard: Remove any scheme names AI might have generated
-    cleanedResponse = removeSchemeNamesFromResponse(cleanedResponse);
 
     // Prevent duplicate questions - check if AI is asking for already collected field
     if (cleanedResponse && response.stage !== 'recommendation_ready') {

@@ -120,12 +120,13 @@ export class ConversationOrchestrator {
 
     // Fallback to pattern matching for reliability
     
-    // Extract age - multiple patterns
+    // Extract age - multiple patterns with aggressive Hinglish support
     if (!updatedProfile.age) {
       const agePatterns = [
         /(?:my\s+)?age\s+is\s+(\d+)/i,           // "my age is 43" or "age is 43"
         /(?:i\s+am|i'm)\s+(\d+)\s*(?:years?|yr|yrs)?/i,  // "I am 43" or "I'm 43 years"
-        /(\d+)\s*(?:years?|साल|वर्ष|yr|yrs)\s*(?:old)?/i, // "43 years old"
+        /(\d+)\s*(?:years?|साल|वर्ष|yr|yrs|saal|umr)\s*(?:old|ka|ki)?/i, // "43 years old", "25 saal ka"
+        /\b(\d{1,2})\s*(?:saal|years|yr|umr|old)\b/i, // Aggressive: "Main 25 saal ka hoon"
         /^(\d+)$/,                                // Just "43"
       ];
       
@@ -251,6 +252,22 @@ export class ConversationOrchestrator {
       }
     }
 
+    // Extract residence type (Urban/Rural)
+    if (!updatedProfile.residenceType) {
+      const residencePatterns = {
+        'Urban': /\b(urban|city|town|shahar|शहर|नगर)\b/i,
+        'Rural': /\b(rural|village|gaon|गांव|ग्रामीण)\b/i,
+      };
+      
+      if (residencePatterns.Urban.test(message)) {
+        updatedProfile.residenceType = 'Urban';
+        console.log('[PROFILE] Extracted residence type: Urban');
+      } else if (residencePatterns.Rural.test(message)) {
+        updatedProfile.residenceType = 'Rural';
+        console.log('[PROFILE] Extracted residence type: Rural');
+      }
+    }
+
     // Calculate completeness - ONLY required fields
     const requiredFields: (keyof UserProfile)[] = ['age', 'occupation', 'state', 'income'];
     const filledFields = requiredFields.filter((field) => updatedProfile[field] !== undefined && updatedProfile[field] !== null);
@@ -264,67 +281,83 @@ export class ConversationOrchestrator {
   /**
    * Build profile summary for AI context with missing fields
    * CRITICAL: This format MUST be followed exactly for AI to understand
+   * FIX 2: Dynamic Short-Circuit Prompting with Status Header
    */
   private buildProfileSummary(profile: Partial<UserProfile>, language: 'hi' | 'en', missingFields: string[]): string {
     const fields: string[] = [];
+    const completeness = profile.completeness || 0;
     
     // Show collected fields
     if (profile.age !== undefined) {
-      fields.push(language === 'hi' ? `• उम्र: ${profile.age}` : `• Age: ${profile.age}`);
+      fields.push(language === 'hi' ? `• उम्र: ${profile.age} ✓` : `• Age: ${profile.age} ✓`);
     }
     if (profile.gender) {
-      fields.push(language === 'hi' ? `• लिंग: ${profile.gender}` : `• Gender: ${profile.gender}`);
+      fields.push(language === 'hi' ? `• लिंग: ${profile.gender} ✓` : `• Gender: ${profile.gender} ✓`);
     }
     if (profile.occupation) {
-      fields.push(language === 'hi' ? `• व्यवसाय: ${profile.occupation}` : `• Occupation: ${profile.occupation}`);
+      fields.push(language === 'hi' ? `• व्यवसाय: ${profile.occupation} ✓` : `• Occupation: ${profile.occupation} ✓`);
     }
     if (profile.state) {
-      fields.push(language === 'hi' ? `• राज्य: ${profile.state}` : `• State: ${profile.state}`);
+      fields.push(language === 'hi' ? `• राज्य: ${profile.state} ✓` : `• State: ${profile.state} ✓`);
     }
     if (profile.district) {
-      fields.push(language === 'hi' ? `• जिला: ${profile.district}` : `• District: ${profile.district}`);
+      fields.push(language === 'hi' ? `• जिला: ${profile.district} ✓` : `• District: ${profile.district} ✓`);
     }
     if (profile.income !== undefined) {
-      fields.push(language === 'hi' ? `• आय: ₹${profile.income}` : `• Income: ₹${profile.income}`);
+      fields.push(language === 'hi' ? `• आय: ₹${profile.income} ✓` : `• Income: ₹${profile.income} ✓`);
     }
     if (profile.casteCategory) {
-      fields.push(language === 'hi' ? `• श्रेणी: ${profile.casteCategory}` : `• Category: ${profile.casteCategory}`);
+      fields.push(language === 'hi' ? `• श्रेणी: ${profile.casteCategory} ✓` : `• Category: ${profile.casteCategory} ✓`);
     }
     if (profile.hasDisability !== undefined) {
       const disability = profile.hasDisability ? 
         (language === 'hi' ? 'हाँ' : 'Yes') : 
         (language === 'hi' ? 'नहीं' : 'No');
-      fields.push(language === 'hi' ? `• विकलांगता: ${disability}` : `• Disability: ${disability}`);
+      fields.push(language === 'hi' ? `• विकलांगता: ${disability} ✓` : `• Disability: ${disability} ✓`);
+    }
+    if (profile.residenceType) {
+      fields.push(language === 'hi' ? `• निवास प्रकार: ${profile.residenceType} ✓` : `• Residence Type: ${profile.residenceType} ✓`);
     }
     
+    // FIX 2: Status Header at the very top
+    const statusHeader = language === 'hi'
+      ? `\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 [वर्तमान स्थिति]: प्रोफ़ाइल ${completeness}% पूर्ण
+${missingFields.length > 0 ? `⚠️ लापता: ${missingFields.join(', ')}` : '✅ सभी फ़ील्ड पूर्ण'}
+${missingFields.length > 0 ? `🔒 [सख्त नियम]: आप वर्तमान में "${missingFields[0]}" पूछ रहे हैं। कुछ और न पूछें।` : ''}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`
+      : `\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 [CURRENT STATE]: Profile is ${completeness}% complete
+${missingFields.length > 0 ? `⚠️ Missing: ${missingFields.join(', ')}` : '✅ All fields complete'}
+${missingFields.length > 0 ? `🔒 [STRICT RULE]: You are currently asking for "${missingFields[0]}". Do NOT ask for anything else.` : ''}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+    
     if (fields.length === 0) {
-      return language === 'hi' 
-        ? '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📌 उपयोगकर्ता प्रोफ़ाइल (कोई जानकारी एकत्रित नहीं)\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
-        : '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📌 USER PROFILE (No information collected)\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
+      return statusHeader + (language === 'hi' 
+        ? '\n\n📌 उपयोगकर्ता प्रोफ़ाइल (कोई जानकारी एकत्रित नहीं)'
+        : '\n\n📌 USER PROFILE (No information collected)');
     }
     
     const header = language === 'hi' 
-      ? '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📌 उपयोगकर्ता प्रोफ़ाइल (पहले से एकत्रित — कभी न पूछें)\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
-      : '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📌 USER PROFILE (ALREADY COLLECTED — NEVER ASK AGAIN)\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
+      ? '\n\n📌 उपयोगकर्ता प्रोफ़ाइल (पहले से एकत्रित — कभी न पूछें)'
+      : '\n\n📌 USER PROFILE (ALREADY COLLECTED — NEVER ASK AGAIN)';
     
-    let summary = `${header}\n${fields.join('\n')}`;
+    let summary = `${statusHeader}${header}\n${fields.join('\n')}`;
     
     // Add missing fields section
     if (missingFields.length > 0) {
       const missingHeader = language === 'hi' 
-        ? '\n\n⚠️ लापता फ़ील्ड (केवल ये पूछें - एक बार में एक):\n'
-        : '\n\n⚠️ MISSING FIELDS (ONLY ASK THESE - ONE AT A TIME):\n';
-      const fieldNames = missingFields.map(f => {
-        const translations: Record<string, string> = {
-          age: language === 'hi' ? 'उम्र' : 'Age',
-          gender: language === 'hi' ? 'लिंग' : 'Gender',
-          occupation: language === 'hi' ? 'व्यवसाय' : 'Occupation',
-          state: language === 'hi' ? 'राज्य' : 'State',
-          income: language === 'hi' ? 'आय' : 'Income',
-        };
-        return `  - ${translations[f] || f}`;
-      });
-      summary += `${missingHeader}${fieldNames.join('\n')}`;
+        ? '\n\n⚠️ अगला पूछने के लिए (केवल यह एक):\n'
+        : '\n\n⚠️ NEXT TO ASK (ONLY THIS ONE):\n';
+      const translations: Record<string, string> = {
+        age: language === 'hi' ? 'उम्र' : 'Age',
+        gender: language === 'hi' ? 'लिंग' : 'Gender',
+        occupation: language === 'hi' ? 'व्यवसाय' : 'Occupation',
+        state: language === 'hi' ? 'राज्य' : 'State',
+        income: language === 'hi' ? 'आय' : 'Income',
+        residenceType: language === 'hi' ? 'निवास प्रकार (शहरी/ग्रामीण)' : 'Residence Type (Urban/Rural)',
+      };
+      summary += `${missingHeader}  ➤ ${translations[missingFields[0]] || missingFields[0]}`;
     } else {
       const completeMsg = language === 'hi'
         ? '\n\n✅ प्रोफ़ाइल पूर्ण — अब योजनाएं सुझाएं'
