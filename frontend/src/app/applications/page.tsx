@@ -56,7 +56,7 @@ export default function ApplicationsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Back to Home Button */}
           <button
-            onClick={() => router.push('/')}
+            onClick={() => router.push('/home')}
             className="mb-3 text-blue-600 hover:text-blue-700 font-semibold transition-colors flex items-center gap-2"
           >
             <Home size={20} />

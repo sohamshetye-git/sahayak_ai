@@ -168,7 +168,7 @@ export default function ServiceCentersPage() {
           <div className="flex items-center gap-3 mb-3">
             {/* Back to Home Button - Always visible */}
             <button
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/home')}
               className="text-blue-600 hover:text-blue-700 font-semibold transition-colors flex items-center gap-2"
             >
               <Home size={20} />
