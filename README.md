@@ -262,28 +262,8 @@ npm run dev
 - **Database** → RDS + DynamoDB
 - **Caching** → ElastiCache Redis
 
----
 
-## 📊 Current Status
 
-- ✅ **Live Production:** https://sahayak-two.vercel.app
-- ✅ **Backend API:** https://sahayak-ai-mvny.onrender.com
-- ✅ **500+ Schemes** in database
-- ✅ **2 Languages** (English, Hindi)
-- ✅ **1,000+ Service Centers** mapped
-- ✅ **99.9% Uptime**
-
----
-
-## 📚 Documentation
-
-- [Setup Guide](./SETUP.md) — Local development setup
-- [Deployment Guide](./DEPLOY.md) — Production deployment
-- [Render Deployment](./RENDER_DEPLOYMENT.md) — Render-specific setup
-- [Vercel Deployment](./VERCEL_DEPLOYMENT_SUCCESS.md) — Vercel frontend deployment
-- [Presentation Script](./PROJECT_PRESENTATION_SCRIPT.md) — Full project overview
-- [Video Demo Script](./VIDEO_DEMO_SCRIPT.md) — Demo walkthrough
-- [Future Enhancements](./FUTURE_ENHANCEMENTS_BENCHMARKS.md) — Roadmap & benchmarks
 
 ---
 
@@ -295,11 +275,7 @@ We welcome contributions! Please feel free to:
 - Submit pull requests
 - Improve documentation
 
----
 
-## 📜 License
-
-MIT License — See LICENSE file for details
 
 ---
 
@@ -307,13 +283,7 @@ MIT License — See LICENSE file for details
 
 **Sahayak AI — Your Voice. Your Rights. Your Schemes. 🇮🇳**
 
----
 
-## 📞 Contact & Support
-
-- **GitHub:** https://github.com/sohamshetye-git/sahayak_ai
-- **Live Demo:** https://sahayak-two.vercel.app
-- **Issues:** GitHub Issues
 
 ---
 
