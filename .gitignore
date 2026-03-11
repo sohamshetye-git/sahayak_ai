@@ -45,94 +45,70 @@ next-env.d.ts
 .vercel
 .netlify
 
-# Temporary documentation files
-*_COMPLETE.md
-*_FIXED.md
-*_READY.md
-*_STATUS.md
-*_GUIDE.md
-*_SUMMARY.md
-*_CHECKLIST.md
-*_DIAGRAM.md
-*_VISUAL.md
-*_INSTRUCTIONS.md
-*_PROGRESS.md
-*_ARCHITECTURE.md
-*_INTEGRATION.md
-*_IMPLEMENTATION.md
-*_TESTING.md
-*_DEPLOYMENT.md
-*_RUNNING.md
-*_WORKING.md
-*_ISSUE.md
-*_FIX.md
-*_DEBUG.md
-*_REFERENCE.md
-TEST*.md
-DEBUG*.md
-HOW*.md
-WHY*.md
-GET*.md
-START*.md
-TUNNEL*.md
-VERCEL*.md
-AWS*.md
-GROQ*.md
-SARVAM*.md
-OPENAI*.md
-GEMINI*.md
-AI_*.md
-CHAT_*.md
-CONVERSATION_*.md
-SCHEME*.md
-SERVICE*.md
-APPLICATION*.md
-PROJECT_*.md
-MVP_*.md
-SPEC_*.md
-TASK_*.md
-CRITICAL_*.md
-FINAL_*.md
-IMPLEMENTATION_*.md
-FRONTEND_*.md
-BACKEND_*.md
-REDIS_*.md
-API_*.md
-VOICE_*.md
-NAVIGATION_*.md
-CONTEXTUAL_*.md
-INTELLIGENT_*.md
-SMART_*.md
-ENHANCED_*.md
-POST_*.md
-MY-*.md
-UPDATED-*.md
-DOCUMENT-*.md
-ALL-*.md
-ISSUE-*.md
-SOLUTION_*.md
-VIEW_*.md
-REAL_*.md
-JSON_*.md
-PLATFORM-*.md
-STATUS.md
-ENV_*.txt
-DEPLOYMENT_*.txt
+# ============================================
+# PREVENT UNNECESSARY FILES IN ROOT
+# ============================================
 
-# Test HTML files
+# Test files
 test-*.html
-OPEN-*.html
-DEBUG-*.html
+test-*.js
 TEST-*.html
+DEBUG-*.html
+OPEN-*.html
+check-*.js
+list-*.js
 
-# Deployment scripts (keep only essential)
+# Temporary scheme files
+scheme-*.json
+schemes-*.json
+new-*.json
+*-schemes-*.json
+
+# Deployment and documentation files
+*DEPLOYMENT*.md
+*DEPLOYMENT*.txt
+VERCEL_*.md
+VERCEL_*.txt
+INTERACTIVE_MAP_*.md
+RENDER_*.md
+
+# Temporary documentation
+10-*.md
+CHAT_*.md
+DATA_*.md
+SCHEMES_*.md
+NEW-*.md
+FIXES_*.md
+QUICK*.md
+PROJECT_*.md
+FUTURE_*.md
+VIDEO_*.md
+SYSTEM_*.md
+
+# Script files (except essential ones)
+add-*.js
+create-*.js
+generate-*.js
+deploy-*.ps1
+deploy-*.sh
+auto-*.ps1
 fix-*.ps1
-deploy-github-*.ps1
-auto-deploy.ps1
-deploy-to-s3.*
-deploy-frontend.ps1
+start-*.ps1
+check-*.ps1
+check-*.sh
+*.bat
+
+# Temporary text files
+*.txt
+!README.txt
+
+# Temporary directories
+figma-ui/
+infrastructure/
+tests/
 
 # Keep these important files
 !README.md
 !SETUP.md
 !LICENSE.md
+!start.sh
