@@ -1,0 +1,142 @@
+{
+  "scheme_id": "SCH_044",
+  "scheme_name": "Post Matric Scholarship for SC Students",
+  "category": "Education",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Social Justice and Empowerment",
+  "short_description": "Financial assistance for SC students pursuing post-matriculation or post-secondary education.",
+  "detailed_description": "The Post Matric Scholarship Scheme for Scheduled Caste students is a Centrally Sponsored Scheme to provide financial assistance to SC students studying at post-matriculation or post-secondary stage to enable them to complete their education. The scheme covers maintenance allowance, reimbursement of compulsory non-refundable fees, study tour charges, thesis typing/printing charges for research scholars, and book allowance.",
+  "key_benefits": [
+    "Maintenance allowance ranging from ₹380 to ₹1,200 per month depending on course",
+    "Reimbursement of compulsory non-refundable fees",
+    "Book allowance and study tour charges",
+    "Thesis typing charges for research scholars",
+    "Reader allowance for blind students"
+  ],
+  "financial_assistance": "₹4,560 to ₹14,400 per year (varies by course)",
+  "benefit_type": "Scholarship",
+  "age_criteria": "No age limit",
+  "income_criteria": "Parental income not exceeding ₹2.5 Lakhs per annum",
+  "gender_criteria": "All",
+  "category_criteria": "Scheduled Caste (SC)",
+  "occupation_criteria": "Student",
+  "geographic_criteria": "All India",
+  "other_conditions": [
+    "Must belong to Scheduled Caste category",
+    "Must have passed matriculation or higher secondary examination",
+    "Must be pursuing recognized post-matriculation course",
+    "Only two children of the same parents/guardian are eligible"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "Caste Certificate",
+      "required_or_optional": "Required",
+      "description": "Valid SC caste certificate issued by competent authority"
+    },
+    {
+      "document_name": "Income Certificate",
+      "required_or_optional": "Required",
+      "description": "Parental income certificate not exceeding ₹2.5 Lakhs per annum"
+    },
+    {
+      "document_name": "Previous Year Marksheet",
+      "required_or_optional": "Required",
+      "description": "Proof of passing previous examination"
+    },
+    {
+      "document_name": "Fee Receipt",
+      "required_or_optional": "Required",
+      "description": "Current year fee receipt from institution"
+    },
+    {
+      "document_name": "Bank Account Details",
+      "required_or_optional": "Required",
+      "description": "Student's bank account for scholarship transfer"
+    },
+    {
+      "document_name": "Aadhaar Card",
+      "required_or_optional": "Required",
+      "description": "For identity verification"
+    }
+  ],
+  "application_mode": "Online",
+  "online_apply_link": "https://scholarships.gov.in/",
+  "official_website": "https://socialjustice.gov.in/",
+  "application_steps_online": [
+    "Visit National Scholarship Portal at scholarships.gov.in",
+    "Register as new user with valid email and mobile number",
+    "Login and select 'Post Matric Scholarship for SC Students'",
+    "Fill application form with personal, academic and income details",
+    "Upload all required documents in specified format",
+    "Submit application and save application ID",
+    "Track application status through portal"
+  ],
+  "application_steps_offline": [
+    "Contact your institution's scholarship cell",
+    "Obtain application form for SC Post Matric Scholarship",
+    "Fill form completely with accurate information",
+    "Attach self-attested copies of all required documents",
+    "Submit to institution before deadline",
+    "Institution will verify and forward to state authorities"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "Institution Scholarship Cell",
+      "department_name": "College/University Administration",
+      "address": "Student's current educational institution",
+      "contact_phone": "Contact institution directly",
+      "working_days": "Monday to Friday",
+      "working_hours": "10:00 AM - 05:00 PM",
+      "who_should_visit": "Student",
+      "notes": "Institution will verify documents and forward application"
+    }
+  ],
+  "start_date": "1944-01-01",
+  "last_date": "Announced annually by states (typically September-November)",
+  "status": "Active",
+  "validity": "Renewable annually",
+  "renewal_required": "Yes",
+  "processing_time": "90 to 120 days",
+  "helpline_number": "0120-6619540",
+  "email_support": "helpdesk@nsp.gov.in",
+  "faq": [
+    {
+      "question": "Can I apply if I'm studying in a private institution?",
+      "answer": "Yes, students in both government and private recognized institutions are eligible."
+    },
+    {
+      "question": "What is the income limit?",
+      "answer": "Parental income should not exceed ₹2.5 Lakhs per annum from all sources."
+    }
+  ],
+  "common_rejection_reasons": [
+    "Invalid or expired caste certificate",
+    "Income exceeding ₹2.5 Lakhs limit",
+    "Incomplete fee receipt or marksheet",
+    "More than two siblings already receiving scholarship"
+  ],
+  "tips_for_successful_application": [
+    "Ensure caste certificate is issued by competent authority",
+    "Get income certificate from Tehsildar or equivalent officer",
+    "Upload clear, readable documents",
+    "Apply before deadline to avoid last-minute issues"
+  ],
+  "target_beneficiaries": [
+    "SC students",
+    "Post-matriculation students",
+    "College and university students"
+  ],
+  "tags": [
+    "Education",
+    "SC Welfare",
+    "Post Matric",
+    "Scholarship"
+  ],
+  "priority_level": "High",
+  "popularity_score": 90,
+  "difficulty_level_to_apply": "Medium",
+  "icon_keyword": "education",
+  "banner_image_keyword": "college_students",
+  "theme_color": "#9C27B0",
+  "featured_flag": true
+}

@@ -1,0 +1,140 @@
+{
+  "scheme_id": "SCH_046",
+  "scheme_name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+  "category": "Agriculture",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+  "short_description": "Promotes organic farming through cluster approach and provides financial assistance of ₹50,000 per hectare over 3 years.",
+  "detailed_description": "PKVY is an elaborated component of Soil Health Management under Mission Organic Value Chain Development. The scheme promotes organic farming through adoption of organic villages by cluster approach and Participatory Guarantee System (PGS) certification. Financial assistance of ₹50,000 per hectare for 3 years is provided to farmers for organic inputs, certification, capacity building, and marketing support. The scheme aims to improve soil health, reduce chemical usage, and increase farmer income through premium prices for organic produce.",
+  "key_benefits": [
+    "Financial assistance of ₹50,000 per hectare distributed over 3 years",
+    "Free organic farming training and capacity building programs",
+    "PGS certification support for organic produce",
+    "Marketing assistance and linkages for organic products",
+    "Cluster-based approach ensures better results and peer learning",
+    "Improved soil health and reduced input costs over time"
+  ],
+  "financial_assistance": "₹50,000 per hectare (over 3 years)",
+  "benefit_type": "Financial + Training",
+  "age_criteria": "18 years and above",
+  "income_criteria": "All",
+  "gender_criteria": "All",
+  "category_criteria": "All",
+  "occupation_criteria": "Farmers",
+  "geographic_criteria": "All India",
+  "other_conditions": [
+    "Minimum cluster size of 50 acres (20 hectares) required",
+    "At least 50 farmers should form a cluster with contiguous land",
+    "Must commit to organic farming practices for minimum 3 years",
+    "Land should be suitable for organic farming",
+    "Cluster must adopt PGS certification process"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "Land Ownership Documents",
+      "required_or_optional": "Required",
+      "description": "7/12 extract, land records, or lease agreement proving ownership/tenancy rights"
+    },
+    {
+      "document_name": "Aadhaar Card",
+      "required_or_optional": "Required",
+      "description": "For identity verification and DBT"
+    },
+    {
+      "document_name": "Bank Account Details",
+      "required_or_optional": "Required",
+      "description": "Bank passbook or cancelled cheque for direct benefit transfer"
+    },
+    {
+      "document_name": "Cluster Formation Document",
+      "required_or_optional": "Required",
+      "description": "List of all farmers in cluster with signatures and land details"
+    },
+    {
+      "document_name": "Consent Letter",
+      "required_or_optional": "Required",
+      "description": "Written consent to adopt organic farming for 3 years"
+    }
+  ],
+  "application_mode": "Offline",
+  "online_apply_link": "Not Applicable",
+  "official_website": "https://pgsindia-ncof.gov.in/",
+  "application_steps_online": [],
+  "application_steps_offline": [
+    "Form a cluster of minimum 50 farmers with contiguous or nearby land parcels",
+    "Contact District Agriculture Officer or Krishi Vigyan Kendra for guidance",
+    "Prepare cluster proposal with complete farmer list and land details",
+    "Submit proposal to District Agriculture Office with all required documents",
+    "Attend mandatory orientation program on organic farming practices",
+    "Get PGS certification process initiated through local group",
+    "Receive financial assistance in three annual installments after verification"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "District Agriculture Office",
+      "department_name": "Department of Agriculture",
+      "address": "District headquarters",
+      "contact_phone": "Contact district agriculture office",
+      "working_days": "Monday to Friday",
+      "working_hours": "10:00 AM - 05:00 PM",
+      "who_should_visit": "Cluster representative or lead farmer",
+      "notes": "Krishi Vigyan Kendras also provide assistance in cluster formation and proposal preparation"
+    }
+  ],
+  "start_date": "2015-04-01",
+  "last_date": "Ongoing program",
+  "status": "Active",
+  "validity": "3 years per cluster",
+  "renewal_required": "No",
+  "processing_time": "60 to 90 days for cluster approval and first installment",
+  "helpline_number": "011-23382012",
+  "email_support": "ncof@gov.in",
+  "faq": [
+    {
+      "question": "Can individual farmers apply for PKVY?",
+      "answer": "No, farmers must form a cluster of minimum 50 farmers with at least 20 hectares of contiguous land to be eligible."
+    },
+    {
+      "question": "What is PGS certification?",
+      "answer": "Participatory Guarantee System is a quality assurance system for organic products based on active participation of stakeholders and built on trust, social networks and knowledge exchange."
+    },
+    {
+      "question": "How is the financial assistance disbursed?",
+      "answer": "The ₹50,000 per hectare is disbursed in three annual installments over 3 years directly to farmer's bank account."
+    }
+  ],
+  "common_rejection_reasons": [
+    "Cluster size less than minimum 50 farmers or 20 hectares",
+    "Non-contiguous land parcels making cluster management difficult",
+    "Incomplete farmer list or missing documentation",
+    "Land not suitable for organic farming (highly degraded or contaminated)",
+    "Lack of commitment from farmers for 3-year organic farming"
+  ],
+  "tips_for_successful_application": [
+    "Form cluster with genuinely committed farmers interested in organic farming",
+    "Ensure land parcels are contiguous or in close proximity for better management",
+    "Get technical support from local agriculture department or KVK",
+    "Attend all training programs and follow organic farming guidelines strictly",
+    "Maintain proper records of organic inputs and farming practices"
+  ],
+  "target_beneficiaries": [
+    "Farmers interested in organic farming",
+    "Farmer producer organizations",
+    "Small and marginal farmers",
+    "Progressive farmers"
+  ],
+  "tags": [
+    "Agriculture",
+    "Organic Farming",
+    "Sustainable Agriculture",
+    "Cluster Approach",
+    "Soil Health"
+  ],
+  "priority_level": "Medium",
+  "popularity_score": 70,
+  "difficulty_level_to_apply": "Medium",
+  "icon_keyword": "organic_farming",
+  "banner_image_keyword": "organic_crops",
+  "theme_color": "#8BC34A",
+  "featured_flag": false
+}

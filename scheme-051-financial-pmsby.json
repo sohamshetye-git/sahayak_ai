@@ -1,0 +1,142 @@
+{
+  "scheme_id": "SCH_051",
+  "scheme_name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+  "category": "Financial Assistance",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Finance",
+  "short_description": "Accident insurance scheme providing ₹2 Lakh coverage for accidental death or disability at premium of just ₹20 per year.",
+  "detailed_description": "PMSBY is a one-year accident insurance scheme renewable from year to year, offering coverage for accidental death and disability. The scheme is available to people in the age group of 18 to 70 years with a savings bank account who give their consent to join and enable auto-debit. The premium of ₹20 per annum is to be deducted from the account holder's bank account through auto-debit facility in one installment on or before 1st June of each coverage year.",
+  "key_benefits": [
+    "₹2,00,000 coverage for accidental death",
+    "₹2,00,000 for permanent total disability (loss of both eyes or both limbs)",
+    "₹1,00,000 for permanent partial disability (loss of one eye or one limb)",
+    "Very low premium of only ₹20 per year",
+    "Simple enrollment process through bank",
+    "Coverage renewable annually"
+  ],
+  "financial_assistance": "₹2 Lakh accident insurance cover",
+  "benefit_type": "Insurance",
+  "age_criteria": "18 to 70 years",
+  "income_criteria": "All",
+  "gender_criteria": "All",
+  "category_criteria": "All",
+  "occupation_criteria": "All",
+  "geographic_criteria": "All India",
+  "other_conditions": [
+    "Must have a savings bank account in participating bank",
+    "Must give consent for auto-debit of premium amount",
+    "Account should have sufficient balance for premium deduction",
+    "Coverage period is June 1 to May 31 annually",
+    "Can be enrolled through multiple bank accounts but claim only from one"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "Aadhaar Card",
+      "required_or_optional": "Required",
+      "description": "For identity verification and KYC compliance"
+    },
+    {
+      "document_name": "Bank Account Details",
+      "required_or_optional": "Required",
+      "description": "Active savings bank account for premium deduction"
+    },
+    {
+      "document_name": "Consent Form",
+      "required_or_optional": "Required",
+      "description": "Written consent for enrollment and auto-debit authorization"
+    },
+    {
+      "document_name": "Nomination Form",
+      "required_or_optional": "Optional",
+      "description": "To nominate beneficiary for claim settlement"
+    }
+  ],
+  "application_mode": "Both",
+  "online_apply_link": "https://www.jansuraksha.gov.in/",
+  "official_website": "https://www.jansuraksha.gov.in/",
+  "application_steps_online": [
+    "Visit your bank's internet banking portal or mobile app",
+    "Navigate to insurance or Jan Suraksha section",
+    "Select Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+    "Fill the enrollment form with personal details",
+    "Provide consent for auto-debit of ₹20 premium",
+    "Submit the form and receive enrollment confirmation",
+    "Premium will be auto-debited from account annually"
+  ],
+  "application_steps_offline": [
+    "Visit your bank branch where you have savings account",
+    "Request for PMSBY enrollment form from bank staff",
+    "Fill the form completely with accurate details",
+    "Provide Aadhaar number and give consent for auto-debit",
+    "Submit the form along with required documents",
+    "Ensure sufficient balance in account for premium deduction",
+    "Receive enrollment confirmation and policy details"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "Bank Branch",
+      "department_name": "Your Bank Branch",
+      "address": "Branch where you have savings account",
+      "contact_phone": "Your bank branch contact number",
+      "working_days": "Monday to Friday (Saturday for some banks)",
+      "working_hours": "10:00 AM - 04:00 PM",
+      "who_should_visit": "Account holder",
+      "notes": "Can also enroll through bank's internet banking or mobile app"
+    }
+  ],
+  "start_date": "2015-05-09",
+  "last_date": "Enrollment period: June 1 to May 31 annually",
+  "status": "Active",
+  "validity": "One year (June 1 to May 31), renewable annually",
+  "renewal_required": "Yes",
+  "processing_time": "Immediate enrollment, claims processed within 30 days",
+  "helpline_number": "1800-180-1111 / 1800-110-001",
+  "email_support": "jansuraksha@gov.in",
+  "faq": [
+    {
+      "question": "What is covered under PMSBY?",
+      "answer": "Accidental death and permanent disability (total or partial) due to accident are covered. Natural death is not covered."
+    },
+    {
+      "question": "Can I enroll after June 1?",
+      "answer": "Yes, you can enroll anytime during the year by paying full annual premium, but coverage will start from enrollment date."
+    },
+    {
+      "question": "Is medical examination required?",
+      "answer": "No, there is no medical examination required for enrollment in PMSBY."
+    }
+  ],
+  "common_rejection_reasons": [
+    "Insufficient balance in account for premium deduction",
+    "Age not within 18-70 years range",
+    "Incomplete or incorrect Aadhaar details",
+    "Claim not supported by proper accident documentation"
+  ],
+  "tips_for_successful_application": [
+    "Ensure sufficient balance in account before June 1 for auto-debit",
+    "Link Aadhaar with bank account for smooth enrollment",
+    "Keep nomination details updated",
+    "Renew annually by maintaining sufficient balance",
+    "Keep policy documents safe for claim purposes"
+  ],
+  "target_beneficiaries": [
+    "Bank account holders",
+    "Working professionals",
+    "Self-employed individuals",
+    "Daily wage workers"
+  ],
+  "tags": [
+    "Insurance",
+    "Accident Cover",
+    "Financial Protection",
+    "Low Premium",
+    "Jan Suraksha"
+  ],
+  "priority_level": "High",
+  "popularity_score": 88,
+  "difficulty_level_to_apply": "Easy",
+  "icon_keyword": "insurance_shield",
+  "banner_image_keyword": "accident_insurance",
+  "theme_color": "#FF9800",
+  "featured_flag": true
+}

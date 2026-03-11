@@ -1,0 +1,120 @@
+{
+  "scheme_id": "SCH_055",
+  "scheme_name": "Ayushman Bharat Health and Wellness Centres (AB-HWC)",
+  "category": "Health",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Health and Family Welfare",
+  "short_description": "Comprehensive primary healthcare services including screening, treatment, and wellness at 1.5 lakh centres across India.",
+  "detailed_description": "Ayushman Bharat Health and Wellness Centres (AB-HWCs) deliver Comprehensive Primary Health Care (CPHC), bringing health care closer to the homes of people. These centres provide a wide range of services including screening for non-communicable diseases, maternal and child health services, free essential drugs and diagnostic services, and wellness activities. The AB-HWCs are transforming existing Sub Centres and Primary Health Centres into Health and Wellness Centres.",
+  "key_benefits": [
+    "Free screening for diabetes, hypertension, and common cancers",
+    "Maternal and child health services",
+    "Free essential drugs and diagnostic services",
+    "Teleconsultation facilities",
+    "Yoga and wellness activities",
+    "Geriatric and palliative care",
+    "Mental health counseling",
+    "Oral and dental health services"
+  ],
+  "financial_assistance": "Free healthcare services",
+  "benefit_type": "Healthcare Services",
+  "age_criteria": "All",
+  "income_criteria": "All",
+  "gender_criteria": "All",
+  "category_criteria": "All",
+  "occupation_criteria": "All",
+  "geographic_criteria": "All India (1.5 lakh centres)",
+  "other_conditions": [
+    "Services available to all citizens",
+    "No registration or enrollment required",
+    "Walk-in facility at nearest AB-HWC",
+    "Priority given to vulnerable populations"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "Aadhaar Card",
+      "required_or_optional": "Optional",
+      "description": "For identification and health record maintenance"
+    },
+    {
+      "document_name": "Any Government ID",
+      "required_or_optional": "Optional",
+      "description": "Voter ID, Ration Card, or any identity proof"
+    }
+  ],
+  "application_mode": "Offline",
+  "online_apply_link": "Not Applicable",
+  "official_website": "https://ab-hwc.nhp.gov.in/",
+  "application_steps_online": [],
+  "application_steps_offline": [
+    "Locate nearest AB-HWC using the official portal or mobile app",
+    "Visit the centre during working hours",
+    "Register at the reception with basic details",
+    "Consult with health worker or doctor",
+    "Receive free medicines and diagnostic services as prescribed"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "Health and Wellness Centre",
+      "department_name": "Ayushman Bharat HWC",
+      "address": "1.5 lakh centres across India (former Sub Centres and PHCs)",
+      "contact_phone": "14555 (Ayushman Bharat Helpline)",
+      "working_days": "Monday to Saturday",
+      "working_hours": "08:00 AM - 02:00 PM",
+      "who_should_visit": "Any citizen requiring primary healthcare",
+      "notes": "Use AB-HWC mobile app to locate nearest centre"
+    }
+  ],
+  "start_date": "2018-04-14",
+  "last_date": "Ongoing",
+  "status": "Active",
+  "validity": "Lifetime access",
+  "renewal_required": "No",
+  "processing_time": "Immediate walk-in service",
+  "helpline_number": "14555",
+  "email_support": "abhwc-support@nhp.gov.in",
+  "faq": [
+    {
+      "question": "Do I need to register or enroll for AB-HWC services?",
+      "answer": "No, AB-HWCs are walk-in facilities. You can visit the nearest centre without any prior registration."
+    },
+    {
+      "question": "Are all services completely free?",
+      "answer": "Yes, all services including consultation, essential medicines, and basic diagnostic tests are provided free of cost."
+    },
+    {
+      "question": "How do I find the nearest AB-HWC?",
+      "answer": "You can use the AB-HWC mobile app or visit the official website to locate the nearest Health and Wellness Centre."
+    }
+  ],
+  "common_rejection_reasons": [
+    "Services not available at specific centre (varies by location)",
+    "Specialized treatment requiring referral to higher facility"
+  ],
+  "tips_for_successful_application": [
+    "Visit during morning hours to avoid rush",
+    "Carry any previous medical records if available",
+    "Use the AB-HWC app to check services available at specific centre",
+    "Bring identity proof for first visit to create health record"
+  ],
+  "target_beneficiaries": [
+    "All citizens",
+    "Rural population",
+    "Vulnerable groups",
+    "Pregnant women and children",
+    "Elderly citizens"
+  ],
+  "tags": [
+    "Health",
+    "Primary Healthcare",
+    "Wellness",
+    "Free Medical Services"
+  ],
+  "priority_level": "High",
+  "popularity_score": 88,
+  "difficulty_level_to_apply": "Easy",
+  "icon_keyword": "local_hospital",
+  "banner_image_keyword": "health_centre",
+  "theme_color": "#4CAF50",
+  "featured_flag": true
+}

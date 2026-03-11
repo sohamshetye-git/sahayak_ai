@@ -3965,6 +3965,1422 @@
       "banner_image_keyword": "entrepreneur_success",
       "theme_color": "#673AB7",
       "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_053",
+      "scheme_name": "National Scholarship Portal (NSP) - Central Sector Scheme",
+      "category": "Education",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Education",
+      "short_description": "Merit-based scholarship for students from class 11 to postgraduate level with family income below ₹4.5 Lakhs.",
+      "detailed_description": "The Central Sector Scheme of Scholarship for College and University Students is a merit-based scholarship scheme for students pursuing regular courses at college and university level. The scheme provides financial assistance to meritorious students from economically weaker sections to meet a part of their day-to-day expenses while pursuing higher studies. The scholarship amount ranges from ₹10,000 to ₹20,000 per annum depending on the course level.",
+      "key_benefits": [
+        "Class 11-12: ₹10,000 per annum",
+        "Undergraduate: ₹12,000 per annum",
+        "Postgraduate: ₹20,000 per annum",
+        "Direct transfer to student's bank account",
+        "Covers 82,000 fresh scholarships annually",
+        "Renewable till course completion"
+      ],
+      "financial_assistance": "₹10,000 to ₹20,000 per year",
+      "benefit_type": "Scholarship",
+      "age_criteria": "No age limit",
+      "income_criteria": "Family income not exceeding ₹4.5 Lakhs per annum",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Student",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must have secured at least 80% marks in Class 10 and 12 for fresh scholarship",
+        "Must be enrolled in regular full-time courses",
+        "Not more than 2 children of same parents can avail scholarship",
+        "Students pursuing distance/correspondence courses not eligible",
+        "Must maintain satisfactory academic performance for renewal"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Class 10 Marksheet",
+          "required_or_optional": "Required",
+          "description": "Proof of securing minimum 80% marks"
+        },
+        {
+          "document_name": "Class 12 Marksheet",
+          "required_or_optional": "Required",
+          "description": "For undergraduate and above, proof of 80% marks"
+        },
+        {
+          "document_name": "Income Certificate",
+          "required_or_optional": "Required",
+          "description": "Family income certificate not exceeding ₹4.5 Lakhs per annum"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification and DBT"
+        },
+        {
+          "document_name": "Bank Account Details",
+          "required_or_optional": "Required",
+          "description": "Student's bank account for scholarship transfer"
+        },
+        {
+          "document_name": "College/University ID Card",
+          "required_or_optional": "Required",
+          "description": "Proof of current enrollment"
+        },
+        {
+          "document_name": "Fee Receipt",
+          "required_or_optional": "Required",
+          "description": "Current year fee receipt from institution"
+        }
+      ],
+      "application_mode": "Online",
+      "online_apply_link": "https://scholarships.gov.in/",
+      "official_website": "https://scholarships.gov.in/",
+      "application_steps_online": [
+        "Visit National Scholarship Portal at scholarships.gov.in",
+        "Register as new user with valid email and mobile number",
+        "Verify email and mobile through OTP",
+        "Login and select 'Central Sector Scheme of Scholarship'",
+        "Fill application form with personal, academic and income details",
+        "Upload all required documents in specified format",
+        "Submit application and save application ID",
+        "Track application status through portal"
+      ],
+      "application_steps_offline": [
+        "Contact your institution's scholarship cell",
+        "Obtain application form for Central Sector Scholarship",
+        "Fill form completely with accurate information",
+        "Attach self-attested copies of all required documents",
+        "Submit to institution before deadline",
+        "Institution will verify and forward to authorities"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Institution Scholarship Cell",
+          "department_name": "College/University Administration",
+          "address": "Student's current educational institution",
+          "contact_phone": "Contact institution directly",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Student",
+          "notes": "Online application preferred, institution will verify documents"
+        }
+      ],
+      "start_date": "2008-01-01",
+      "last_date": "Announced annually (typically September-November)",
+      "status": "Active",
+      "validity": "Renewable annually till course completion",
+      "renewal_required": "Yes",
+      "processing_time": "90 to 120 days",
+      "helpline_number": "0120-6619540",
+      "email_support": "helpdesk@nsp.gov.in",
+      "faq": [
+        {
+          "question": "What is the minimum percentage required?",
+          "answer": "Students must have secured at least 80% marks in Class 10 and 12 examinations for fresh scholarship."
+        },
+        {
+          "question": "Can I apply if I'm in a private college?",
+          "answer": "Yes, students in both government and private recognized institutions are eligible."
+        },
+        {
+          "question": "Is the scholarship renewable?",
+          "answer": "Yes, if you maintain satisfactory academic performance and continue in eligible courses."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Marks below 80% in qualifying examinations",
+        "Income exceeding ₹4.5 Lakhs per annum",
+        "Incomplete or incorrect documents",
+        "Pursuing distance/correspondence courses",
+        "More than 2 siblings already receiving scholarship"
+      ],
+      "tips_for_successful_application": [
+        "Apply early before deadline",
+        "Ensure all marksheets show at least 80% marks",
+        "Get income certificate from competent authority",
+        "Upload clear, readable documents",
+        "Keep application ID safe for tracking"
+      ],
+      "target_beneficiaries": [
+        "Meritorious students",
+        "Students from economically weaker sections",
+        "Class 11-12 and college/university students"
+      ],
+      "tags": [
+        "Education",
+        "Scholarship",
+        "Merit-based",
+        "Higher Education"
+      ],
+      "priority_level": "High",
+      "popularity_score": 92,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "scholarship",
+      "banner_image_keyword": "college_education",
+      "theme_color": "#2196F3",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_054",
+      "scheme_name": "PM SHRI Schools (PM Schools for Rising India)",
+      "category": "Education",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Education",
+      "short_description": "Upgradation of 14,500 schools as exemplar schools with modern infrastructure and quality education.",
+      "detailed_description": "PM SHRI Schools scheme aims to develop more than 14,500 PM SHRI Schools across the country. These schools will be developed as exemplar schools and will also act as mentors to other schools in their vicinity. These schools will aim to be green schools, with water conservation, waste recycling, and energy-efficient infrastructure. They will have modern infrastructure, including labs, smart classrooms, libraries, sports, art rooms, and will offer holistic and well-rounded education as envisaged in the National Education Policy 2020.",
+      "key_benefits": [
+        "Modern infrastructure with smart classrooms",
+        "Digital libraries and computer labs",
+        "Sports facilities and playgrounds",
+        "Vocational training and skill development",
+        "Green school initiatives (solar panels, rainwater harvesting)",
+        "Holistic education following NEP 2020",
+        "Free quality education for all enrolled students"
+      ],
+      "financial_assistance": "Central funding for infrastructure development",
+      "benefit_type": "Infrastructure + Quality Education",
+      "age_criteria": "School-going children (5 to 18 years)",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Student",
+      "geographic_criteria": "All India (14,500 selected schools)",
+      "other_conditions": [
+        "Student must be enrolled in a designated PM SHRI school",
+        "Schools are selected through a challenge mode from existing government schools",
+        "Focus on implementing NEP 2020 recommendations",
+        "Schools will serve as model institutions for neighboring schools"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "School Enrollment Certificate",
+          "required_or_optional": "Required",
+          "description": "Proof of enrollment in PM SHRI designated school"
+        },
+        {
+          "document_name": "Birth Certificate",
+          "required_or_optional": "Required",
+          "description": "For age verification during admission"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Optional",
+          "description": "For student identification and tracking"
+        },
+        {
+          "document_name": "Previous School Records",
+          "required_or_optional": "Required",
+          "description": "Transfer certificate and mark sheets for admission"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://pmshrischools.education.gov.in/",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Check if your local government school is designated as PM SHRI school",
+        "Visit the school during admission period",
+        "Fill the admission form as per school requirements",
+        "Submit required documents to school office",
+        "Complete admission formalities as per school norms"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "School Office",
+          "department_name": "PM SHRI School Administration",
+          "address": "Designated PM SHRI Schools across India",
+          "contact_phone": "Contact specific school",
+          "working_days": "Monday to Saturday",
+          "working_hours": "08:00 AM - 02:00 PM",
+          "who_should_visit": "Parent/Guardian with student",
+          "notes": "Check PM SHRI portal for list of designated schools in your area"
+        }
+      ],
+      "start_date": "2022-09-05",
+      "last_date": "Ongoing (Admission as per school calendar)",
+      "status": "Active",
+      "validity": "Throughout school education",
+      "renewal_required": "Annual re-enrollment",
+      "processing_time": "Immediate upon admission",
+      "helpline_number": "011-23070647",
+      "email_support": "pmshri-edu@gov.in",
+      "faq": [
+        {
+          "question": "How can I find PM SHRI schools near me?",
+          "answer": "Visit the official PM SHRI portal at pmshrischools.education.gov.in to find the list of designated schools in your district."
+        },
+        {
+          "question": "Is there any fee for studying in PM SHRI schools?",
+          "answer": "PM SHRI schools are government schools, so education is free as per existing government school norms."
+        },
+        {
+          "question": "What makes PM SHRI schools different?",
+          "answer": "These schools have upgraded infrastructure, smart classrooms, modern labs, sports facilities, and implement NEP 2020 holistic education approach."
+        }
+      ],
+      "common_rejection_reasons": [
+        "School not designated as PM SHRI school",
+        "Age criteria not met for specific class",
+        "Incomplete admission documents",
+        "Seats full in the school"
+      ],
+      "tips_for_successful_application": [
+        "Apply during the official admission period",
+        "Verify if your nearby school is PM SHRI designated",
+        "Keep all documents ready before visiting school",
+        "Contact school office for specific admission requirements"
+      ],
+      "target_beneficiaries": [
+        "School students",
+        "Children from all socio-economic backgrounds",
+        "Rural and urban students"
+      ],
+      "tags": [
+        "Education",
+        "School Infrastructure",
+        "NEP 2020",
+        "Quality Education"
+      ],
+      "priority_level": "High",
+      "popularity_score": 85,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "school",
+      "banner_image_keyword": "modern_school",
+      "theme_color": "#2196F3",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_055",
+      "scheme_name": "Ayushman Bharat Health and Wellness Centres (AB-HWC)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Comprehensive primary healthcare services including screening, treatment, and wellness at 1.5 lakh centres across India.",
+      "detailed_description": "Ayushman Bharat Health and Wellness Centres (AB-HWCs) deliver Comprehensive Primary Health Care (CPHC), bringing health care closer to the homes of people. These centres provide a wide range of services including screening for non-communicable diseases, maternal and child health services, free essential drugs and diagnostic services, and wellness activities. The AB-HWCs are transforming existing Sub Centres and Primary Health Centres into Health and Wellness Centres.",
+      "key_benefits": [
+        "Free screening for diabetes, hypertension, and common cancers",
+        "Maternal and child health services",
+        "Free essential drugs and diagnostic services",
+        "Teleconsultation facilities",
+        "Yoga and wellness activities",
+        "Geriatric and palliative care",
+        "Mental health counseling",
+        "Oral and dental health services"
+      ],
+      "financial_assistance": "Free healthcare services",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "All",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India (1.5 lakh centres)",
+      "other_conditions": [
+        "Services available to all citizens",
+        "No registration or enrollment required",
+        "Walk-in facility at nearest AB-HWC",
+        "Priority given to vulnerable populations"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Optional",
+          "description": "For identification and health record maintenance"
+        },
+        {
+          "document_name": "Any Government ID",
+          "required_or_optional": "Optional",
+          "description": "Voter ID, Ration Card, or any identity proof"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://ab-hwc.nhp.gov.in/",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Locate nearest AB-HWC using the official portal or mobile app",
+        "Visit the centre during working hours",
+        "Register at the reception with basic details",
+        "Consult with health worker or doctor",
+        "Receive free medicines and diagnostic services as prescribed"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Health and Wellness Centre",
+          "department_name": "Ayushman Bharat HWC",
+          "address": "1.5 lakh centres across India (former Sub Centres and PHCs)",
+          "contact_phone": "14555 (Ayushman Bharat Helpline)",
+          "working_days": "Monday to Saturday",
+          "working_hours": "08:00 AM - 02:00 PM",
+          "who_should_visit": "Any citizen requiring primary healthcare",
+          "notes": "Use AB-HWC mobile app to locate nearest centre"
+        }
+      ],
+      "start_date": "2018-04-14",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Lifetime access",
+      "renewal_required": "No",
+      "processing_time": "Immediate walk-in service",
+      "helpline_number": "14555",
+      "email_support": "abhwc-support@nhp.gov.in",
+      "faq": [
+        {
+          "question": "Do I need to register or enroll for AB-HWC services?",
+          "answer": "No, AB-HWCs are walk-in facilities. You can visit the nearest centre without any prior registration."
+        },
+        {
+          "question": "Are all services completely free?",
+          "answer": "Yes, all services including consultation, essential medicines, and basic diagnostic tests are provided free of cost."
+        },
+        {
+          "question": "How do I find the nearest AB-HWC?",
+          "answer": "You can use the AB-HWC mobile app or visit the official website to locate the nearest Health and Wellness Centre."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Services not available at specific centre (varies by location)",
+        "Specialized treatment requiring referral to higher facility"
+      ],
+      "tips_for_successful_application": [
+        "Visit during morning hours to avoid rush",
+        "Carry any previous medical records if available",
+        "Use the AB-HWC app to check services available at specific centre",
+        "Bring identity proof for first visit to create health record"
+      ],
+      "target_beneficiaries": [
+        "All citizens",
+        "Rural population",
+        "Vulnerable groups",
+        "Pregnant women and children",
+        "Elderly citizens"
+      ],
+      "tags": [
+        "Health",
+        "Primary Healthcare",
+        "Wellness",
+        "Free Medical Services"
+      ],
+      "priority_level": "High",
+      "popularity_score": 88,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "local_hospital",
+      "banner_image_keyword": "health_centre",
+      "theme_color": "#4CAF50",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_056",
+      "scheme_name": "PM Kisan Maandhan Yojana (PM-KMY)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Pension scheme for small and marginal farmers providing ₹3,000 monthly pension after 60 years of age.",
+      "detailed_description": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY) is a voluntary and contributory pension scheme for small and marginal farmers. Under this scheme, farmers between 18 to 40 years of age can enroll and contribute monthly amounts ranging from ₹55 to ₹200 based on their entry age. Upon reaching 60 years, they receive a fixed pension of ₹3,000 per month. In case of death of the beneficiary, the spouse is entitled to receive 50% of the pension as family pension.",
+      "key_benefits": [
+        "Guaranteed monthly pension of ₹3,000 after 60 years",
+        "Low monthly contribution (₹55 to ₹200 based on entry age)",
+        "Equal contribution by Central Government",
+        "Family pension of ₹1,500 per month to spouse",
+        "Voluntary exit with interest on contribution",
+        "Direct transfer to bank account"
+      ],
+      "financial_assistance": "₹3,000 per month pension after 60 years",
+      "benefit_type": "Pension",
+      "age_criteria": "18 to 40 years (for enrollment)",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Small and Marginal Farmers (up to 2 hectares land)",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must be a small or marginal farmer with cultivable land up to 2 hectares",
+        "Should not be covered under National Pension Scheme (NPS), ESIC, or EPFO",
+        "Should not be an income tax payer",
+        "Must have savings bank account and Aadhaar card",
+        "Monthly contribution required till 60 years of age"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification and DBT"
+        },
+        {
+          "document_name": "Land Records",
+          "required_or_optional": "Required",
+          "description": "Proof of being small/marginal farmer (land up to 2 hectares)"
+        },
+        {
+          "document_name": "Bank Account Passbook",
+          "required_or_optional": "Required",
+          "description": "For pension transfer and contribution deduction"
+        },
+        {
+          "document_name": "IFSC Code",
+          "required_or_optional": "Required",
+          "description": "Bank IFSC code for account verification"
+        }
+      ],
+      "application_mode": "Both",
+      "online_apply_link": "https://maandhan.in/",
+      "official_website": "https://maandhan.in/",
+      "application_steps_online": [
+        "Visit the official PM-KMY portal at maandhan.in",
+        "Click on 'Self Enrollment' option",
+        "Enter Aadhaar number and mobile number",
+        "Verify through OTP",
+        "Fill personal details, bank account, and land details",
+        "Upload required documents",
+        "Select contribution amount based on age",
+        "Submit application and save enrollment number"
+      ],
+      "application_steps_offline": [
+        "Visit nearest Common Service Centre (CSC)",
+        "Carry Aadhaar card, bank passbook, and land records",
+        "CSC operator will help fill the enrollment form",
+        "Provide biometric authentication",
+        "Pay first month contribution",
+        "Receive enrollment slip with PM-KMY number"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "CSC Center",
+          "department_name": "Common Service Centre",
+          "address": "Local CSC outlets across all villages",
+          "contact_phone": "1800-3000-3468",
+          "working_days": "Monday to Saturday",
+          "working_hours": "09:00 AM - 06:00 PM",
+          "who_should_visit": "Farmer",
+          "notes": "CSC will charge nominal service fee for enrollment"
+        }
+      ],
+      "start_date": "2019-08-09",
+      "last_date": "Open throughout the year",
+      "status": "Active",
+      "validity": "Till 60 years of age, then lifetime pension",
+      "renewal_required": "Monthly contribution required",
+      "processing_time": "Immediate enrollment, pension starts at 60 years",
+      "helpline_number": "1800-3000-3468",
+      "email_support": "support@maandhan.in",
+      "faq": [
+        {
+          "question": "What is the monthly contribution amount?",
+          "answer": "Contribution ranges from ₹55 to ₹200 per month depending on your age at enrollment. Younger farmers pay less."
+        },
+        {
+          "question": "Can I exit the scheme before 60 years?",
+          "answer": "Yes, voluntary exit is allowed. You will receive your contribution with interest as per scheme rules."
+        },
+        {
+          "question": "What happens if I miss monthly contributions?",
+          "answer": "You can regularize by paying pending contributions with interest. Continuous default may lead to account closure."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Land holding exceeds 2 hectares",
+        "Already covered under NPS, ESIC, or EPFO",
+        "Income tax payer",
+        "Age above 40 years at enrollment",
+        "Aadhaar not linked to bank account"
+      ],
+      "tips_for_successful_application": [
+        "Enroll at younger age for lower monthly contribution",
+        "Ensure sufficient balance for auto-debit of monthly contribution",
+        "Link Aadhaar with bank account before enrollment",
+        "Keep land records updated and accurate",
+        "Save enrollment number for future reference"
+      ],
+      "target_beneficiaries": [
+        "Small farmers",
+        "Marginal farmers",
+        "Farmers with land up to 2 hectares"
+      ],
+      "tags": [
+        "Agriculture",
+        "Pension",
+        "Farmer Welfare",
+        "Social Security"
+      ],
+      "priority_level": "High",
+      "popularity_score": 86,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "agriculture",
+      "banner_image_keyword": "farmer_pension",
+      "theme_color": "#4CAF50",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_057",
+      "scheme_name": "Pradhan Mantri Mudra Yojana (PMMY) - Tarun",
+      "category": "Financial Assistance",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Finance",
+      "short_description": "Business loans from ₹5 Lakh to ₹10 Lakh for established micro-enterprises without collateral.",
+      "detailed_description": "Pradhan Mantri MUDRA Yojana (PMMY) provides loans to non-corporate, non-farm small/micro enterprises under three categories: Shishu (up to ₹50,000), Kishor (₹50,001 to ₹5 Lakh), and Tarun (₹5 Lakh to ₹10 Lakh). The Tarun category is designed for well-established micro-enterprises that need growth capital. These loans are provided by banks, NBFCs, and MFIs without requiring collateral, making it easier for entrepreneurs to expand their businesses.",
+      "key_benefits": [
+        "Loans from ₹5 Lakh to ₹10 Lakh",
+        "No collateral required",
+        "Competitive interest rates (varies by lender)",
+        "Flexible repayment tenure up to 7 years",
+        "Available for manufacturing, trading, and service sectors",
+        "Quick processing through MUDRA card",
+        "Working capital and term loan both available"
+      ],
+      "financial_assistance": "Loans ₹5 Lakh to ₹10 Lakh",
+      "benefit_type": "Loan",
+      "age_criteria": "18 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Entrepreneur/Business Owner/Self-Employed",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Business should be in manufacturing, trading, or service sector",
+        "Applicant should have existing business operations",
+        "Business should be a non-corporate, non-farm enterprise",
+        "Good credit history preferred",
+        "Business plan and financial projections required",
+        "Should not be defaulter in any bank"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Business Plan",
+          "required_or_optional": "Required",
+          "description": "Detailed project report with financial projections"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "Identity proof of applicant"
+        },
+        {
+          "document_name": "PAN Card",
+          "required_or_optional": "Required",
+          "description": "For tax identification"
+        },
+        {
+          "document_name": "Bank Statements",
+          "required_or_optional": "Required",
+          "description": "Last 6 months bank statements"
+        },
+        {
+          "document_name": "Business Registration",
+          "required_or_optional": "Required",
+          "description": "GST registration, Shop Act license, or business registration certificate"
+        },
+        {
+          "document_name": "Address Proof",
+          "required_or_optional": "Required",
+          "description": "Business and residential address proof"
+        },
+        {
+          "document_name": "Quotations",
+          "required_or_optional": "Required",
+          "description": "For machinery or equipment purchase (if applicable)"
+        }
+      ],
+      "application_mode": "Both",
+      "online_apply_link": "https://www.mudra.org.in/",
+      "official_website": "https://www.mudra.org.in/",
+      "application_steps_online": [
+        "Visit MUDRA portal or your bank's website",
+        "Download MUDRA loan application form",
+        "Fill the form with business and personal details",
+        "Prepare detailed business plan and financial projections",
+        "Upload all required documents",
+        "Submit application online or visit bank branch",
+        "Bank will assess and process the application",
+        "Upon approval, loan amount will be disbursed"
+      ],
+      "application_steps_offline": [
+        "Visit nearest bank, NBFC, or MFI offering MUDRA loans",
+        "Collect MUDRA Tarun loan application form",
+        "Fill the form with accurate business details",
+        "Attach all required documents and business plan",
+        "Submit to loan officer for assessment",
+        "Attend interview if required by bank",
+        "Upon approval, complete loan documentation",
+        "Receive loan disbursement in bank account"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Bank Branch",
+          "department_name": "MSME/Retail Lending Department",
+          "address": "Any commercial bank, RRB, cooperative bank, NBFC, or MFI",
+          "contact_phone": "Bank specific helpline",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 04:00 PM",
+          "who_should_visit": "Business Owner/Entrepreneur",
+          "notes": "Different banks may have different interest rates and processing fees"
+        }
+      ],
+      "start_date": "2015-04-08",
+      "last_date": "Open throughout the year",
+      "status": "Active",
+      "validity": "Loan tenure up to 7 years",
+      "renewal_required": "No (but can apply for fresh loan after repayment)",
+      "processing_time": "15 to 30 days",
+      "helpline_number": "1800-180-1111",
+      "email_support": "mudra@sidbi.in",
+      "faq": [
+        {
+          "question": "What is the interest rate for Tarun loans?",
+          "answer": "Interest rates vary by lender, typically ranging from 10% to 12% per annum. Check with your bank for current rates."
+        },
+        {
+          "question": "Is collateral required for Tarun loans?",
+          "answer": "No, MUDRA loans including Tarun category do not require collateral or third-party guarantee."
+        },
+        {
+          "question": "Can I get both working capital and term loan?",
+          "answer": "Yes, MUDRA Tarun can be used for both working capital needs and term loan for assets, within the ₹10 Lakh limit."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Poor credit history or existing defaults",
+        "Incomplete or inadequate business plan",
+        "Business not in eligible sector",
+        "Insufficient business experience",
+        "Incomplete documentation",
+        "Business viability concerns"
+      ],
+      "tips_for_successful_application": [
+        "Prepare comprehensive business plan with realistic projections",
+        "Maintain good credit score (above 650)",
+        "Keep all business documents updated",
+        "Show existing business operations and revenue",
+        "Apply through bank where you have existing relationship",
+        "Be prepared to explain how loan will be utilized"
+      ],
+      "target_beneficiaries": [
+        "Micro-entrepreneurs",
+        "Small business owners",
+        "Self-employed individuals",
+        "Women entrepreneurs",
+        "SC/ST entrepreneurs"
+      ],
+      "tags": [
+        "Finance",
+        "Business Loan",
+        "MUDRA",
+        "Entrepreneurship",
+        "MSME"
+      ],
+      "priority_level": "High",
+      "popularity_score": 90,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "business_center",
+      "banner_image_keyword": "business_growth",
+      "theme_color": "#FF9800",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_058",
+      "scheme_name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Women and Child Development",
+      "short_description": "Maternity benefit of ₹5,000 for pregnant and lactating mothers for first living child.",
+      "detailed_description": "Pradhan Mantri Matru Vandana Yojana (PMMVY) is a Centrally Sponsored Scheme with the objective of providing partial compensation for the wage loss in terms of cash incentive so that the woman can take adequate rest before and after delivery of the first living child. The cash incentive provided would lead to improved health seeking behaviour amongst the Pregnant Women and Lactating Mothers (PW&LM).",
+      "key_benefits": [
+        "₹5,000 cash benefit in 3 installments",
+        "First installment: ₹1,000 on early registration of pregnancy",
+        "Second installment: ₹2,000 after 6 months of pregnancy",
+        "Third installment: ₹2,000 after child birth and completion of first cycle of vaccination",
+        "Direct transfer to beneficiary's bank account",
+        "Promotes institutional delivery and antenatal care"
+      ],
+      "financial_assistance": "₹5,000 in 3 installments",
+      "benefit_type": "Cash",
+      "age_criteria": "19 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "Female",
+      "category_criteria": "All",
+      "occupation_criteria": "All (except government employees and PSU employees)",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Applicable for first living child only",
+        "Pregnant woman should be 19 years or above on the date of conception",
+        "Government employees and PSU employees are not eligible",
+        "Must register pregnancy at Anganwadi Centre or approved health facility",
+        "Must complete antenatal check-ups and vaccination schedule"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "Identity proof of pregnant woman"
+        },
+        {
+          "document_name": "Bank Account Passbook",
+          "required_or_optional": "Required",
+          "description": "For direct benefit transfer"
+        },
+        {
+          "document_name": "MCP Card",
+          "required_or_optional": "Required",
+          "description": "Mother and Child Protection card from health facility"
+        },
+        {
+          "document_name": "Pregnancy Certificate",
+          "required_or_optional": "Required",
+          "description": "From registered medical facility or Anganwadi"
+        },
+        {
+          "document_name": "Identity Proof of Husband",
+          "required_or_optional": "Optional",
+          "description": "Aadhaar or any government ID"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://wcd.nic.in/schemes/pradhan-mantri-matru-vandana-yojana",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Visit nearest Anganwadi Centre or health facility",
+        "Register pregnancy within first trimester",
+        "Fill Form 1A for first installment with required documents",
+        "After 6 months pregnancy, fill Form 1B for second installment",
+        "After delivery and vaccination, fill Form 1C for third installment",
+        "Submit forms at Anganwadi Centre",
+        "Amount will be transferred to bank account after verification"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Anganwadi Centre",
+          "department_name": "Women and Child Development",
+          "address": "Local Anganwadi Centre or Primary Health Centre",
+          "contact_phone": "7998799804 (PMMVY Helpline)",
+          "working_days": "Monday to Saturday",
+          "working_hours": "09:00 AM - 05:00 PM",
+          "who_should_visit": "Pregnant woman or family member",
+          "notes": "Register early in pregnancy to avail all three installments"
+        }
+      ],
+      "start_date": "2017-01-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "For first living child only",
+      "renewal_required": "No",
+      "processing_time": "30 to 60 days per installment",
+      "helpline_number": "7998799804",
+      "email_support": "pmmvy-wcd@gov.in",
+      "faq": [
+        {
+          "question": "Can I apply for second child?",
+          "answer": "No, PMMVY is applicable only for the first living child of the family."
+        },
+        {
+          "question": "When should I register?",
+          "answer": "Register as early as possible during pregnancy, preferably in the first trimester to avail all three installments."
+        },
+        {
+          "question": "Are government employees eligible?",
+          "answer": "No, women who are in regular employment with Central or State Government or PSUs are not eligible."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Age below 19 years at conception",
+        "Second or subsequent child",
+        "Government or PSU employee",
+        "Incomplete documentation",
+        "Late registration missing installment deadlines",
+        "Bank account not linked with Aadhaar"
+      ],
+      "tips_for_successful_application": [
+        "Register pregnancy early at Anganwadi Centre",
+        "Keep all medical records and MCP card updated",
+        "Link Aadhaar with bank account before applying",
+        "Complete all antenatal check-ups on time",
+        "Ensure child receives first cycle of vaccination for third installment"
+      ],
+      "target_beneficiaries": [
+        "Pregnant women",
+        "Lactating mothers",
+        "First-time mothers",
+        "Women from economically weaker sections"
+      ],
+      "tags": [
+        "Health",
+        "Maternity Benefit",
+        "Women Welfare",
+        "Child Health"
+      ],
+      "priority_level": "High",
+      "popularity_score": 91,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "pregnant_woman",
+      "banner_image_keyword": "mother_child",
+      "theme_color": "#E91E63",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_059",
+      "scheme_name": "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Jal Shakti",
+      "short_description": "Irrigation support through micro-irrigation, watershed development with subsidy up to 90%.",
+      "detailed_description": "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) was launched with the motto of 'Har Khet Ko Pani' to extend the coverage of irrigation and improve water use efficiency. The scheme focuses on creating sources for assured irrigation, improving on-farm water use efficiency through micro-irrigation (drip and sprinkler), and watershed development. PMKSY provides financial assistance to farmers for adopting efficient irrigation systems.",
+      "key_benefits": [
+        "Subsidy of 55% to 90% on micro-irrigation systems",
+        "Drip and sprinkler irrigation support",
+        "Watershed development for rain-fed areas",
+        "Water conservation and efficiency improvement",
+        "Increased crop productivity",
+        "Reduced water wastage",
+        "Support for farm ponds and water harvesting structures"
+      ],
+      "financial_assistance": "Subsidy 55% to 90% on irrigation equipment",
+      "benefit_type": "Subsidy",
+      "age_criteria": "18 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All (Higher subsidy for SC/ST/Small farmers)",
+      "occupation_criteria": "Farmers",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must have cultivable land",
+        "Land ownership or lease documents required",
+        "Subsidy percentage varies by category (Small/Marginal farmers get higher subsidy)",
+        "State government implements through agriculture department",
+        "Technical guidance provided for installation"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Land Records",
+          "required_or_optional": "Required",
+          "description": "Proof of land ownership or lease agreement"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "Identity proof"
+        },
+        {
+          "document_name": "Bank Account Details",
+          "required_or_optional": "Required",
+          "description": "For subsidy transfer"
+        },
+        {
+          "document_name": "Quotation",
+          "required_or_optional": "Required",
+          "description": "Cost estimate from approved vendor for irrigation equipment"
+        },
+        {
+          "document_name": "Category Certificate",
+          "required_or_optional": "Optional",
+          "description": "SC/ST/Small farmer certificate for higher subsidy"
+        }
+      ],
+      "application_mode": "Both",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://pmksy.gov.in/",
+      "application_steps_online": [
+        "Visit state agriculture department portal",
+        "Register with farmer details and land information",
+        "Select type of irrigation system required",
+        "Upload required documents",
+        "Submit application online",
+        "Track application status through portal"
+      ],
+      "application_steps_offline": [
+        "Visit District Agriculture Office or Krishi Vigyan Kendra",
+        "Collect PMKSY application form",
+        "Fill form with land and irrigation requirement details",
+        "Attach land records, Aadhaar, and bank details",
+        "Submit form to agriculture officer",
+        "Officer will conduct field inspection",
+        "Upon approval, install system through approved vendor",
+        "Subsidy will be transferred after installation verification"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Agriculture Office",
+          "department_name": "District Agriculture Department",
+          "address": "District Agriculture Office or Krishi Vigyan Kendra",
+          "contact_phone": "State agriculture department helpline",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Farmer",
+          "notes": "Implementation varies by state, contact local agriculture office"
+        }
+      ],
+      "start_date": "2015-07-01",
+      "last_date": "Open throughout the year (subject to budget availability)",
+      "status": "Active",
+      "validity": "One-time benefit per land holding",
+      "renewal_required": "No",
+      "processing_time": "60 to 90 days",
+      "helpline_number": "1800-180-1551",
+      "email_support": "pmksy-mowr@gov.in",
+      "faq": [
+        {
+          "question": "What is the subsidy percentage?",
+          "answer": "General farmers get 55% subsidy, while small/marginal farmers and SC/ST get up to 90% subsidy on micro-irrigation systems."
+        },
+        {
+          "question": "Can I get subsidy for farm pond?",
+          "answer": "Yes, PMKSY provides support for farm ponds, water harvesting structures, and micro-irrigation systems."
+        },
+        {
+          "question": "Do I need to pay first and then get subsidy?",
+          "answer": "Yes, typically you need to install the system first, then subsidy is transferred after verification by agriculture department."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Incomplete land documents",
+        "Already availed subsidy for same land",
+        "Non-approved vendor or equipment",
+        "Insufficient budget allocation",
+        "Land not suitable for proposed irrigation system"
+      ],
+      "tips_for_successful_application": [
+        "Apply early in the financial year when budget is available",
+        "Get land records updated and clear",
+        "Choose approved vendors for equipment",
+        "Consult agriculture officer for suitable irrigation system",
+        "Keep all receipts and installation certificates"
+      ],
+      "target_beneficiaries": [
+        "Farmers",
+        "Small and marginal farmers",
+        "SC/ST farmers",
+        "Farmers in water-scarce areas"
+      ],
+      "tags": [
+        "Agriculture",
+        "Irrigation",
+        "Water Conservation",
+        "Micro-irrigation",
+        "Farmer Welfare"
+      ],
+      "priority_level": "High",
+      "popularity_score": 87,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "water_drop",
+      "banner_image_keyword": "irrigation_system",
+      "theme_color": "#4CAF50",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_060",
+      "scheme_name": "Samagra Shiksha Abhiyan",
+      "category": "Education",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Education",
+      "short_description": "Integrated scheme for school education from pre-school to class 12 with focus on quality and equity.",
+      "detailed_description": "Samagra Shiksha is an overarching programme for the school education sector extending from pre-school to class 12. The scheme subsumes the three erstwhile Centrally Sponsored Schemes of Sarva Shiksha Abhiyan (SSA), Rashtriya Madhyamik Shiksha Abhiyan (RMSA) and Teacher Education (TE). It aims to ensure inclusive and equitable quality education from pre-primary to senior secondary stage in accordance with the Sustainable Development Goal for Education.",
+      "key_benefits": [
+        "Free textbooks and uniforms",
+        "Mid-day meals for students",
+        "Infrastructure development in schools",
+        "Teacher training and capacity building",
+        "Digital education initiatives",
+        "Special focus on girls' education",
+        "Support for children with special needs",
+        "Vocational education from class 9"
+      ],
+      "financial_assistance": "Free education + textbooks + uniforms + meals",
+      "benefit_type": "Educational Support",
+      "age_criteria": "3 to 18 years",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Student",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Student must be enrolled in government or government-aided school",
+        "Regular attendance required",
+        "Benefits vary by state implementation",
+        "Focus on disadvantaged groups and areas"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "School Enrollment Certificate",
+          "required_or_optional": "Required",
+          "description": "Proof of enrollment in government school"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Optional",
+          "description": "For student identification"
+        },
+        {
+          "document_name": "Income Certificate",
+          "required_or_optional": "Optional",
+          "description": "For specific benefits and scholarships"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://samagra.education.gov.in/",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Enroll in government or government-aided school",
+        "School will automatically provide benefits under Samagra Shiksha",
+        "Textbooks and uniforms distributed by school",
+        "Mid-day meals provided during school hours",
+        "No separate application required for basic benefits"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "School",
+          "department_name": "Government School Administration",
+          "address": "Local government or government-aided schools",
+          "contact_phone": "Contact school directly",
+          "working_days": "Monday to Saturday",
+          "working_hours": "School hours",
+          "who_should_visit": "Parent/Guardian with student",
+          "notes": "Benefits provided automatically upon enrollment"
+        }
+      ],
+      "start_date": "2018-05-24",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Throughout school education (pre-school to class 12)",
+      "renewal_required": "Annual re-enrollment",
+      "processing_time": "Immediate upon enrollment",
+      "helpline_number": "011-23070647",
+      "email_support": "samagra-edu@gov.in",
+      "faq": [
+        {
+          "question": "Do I need to apply separately for textbooks and uniforms?",
+          "answer": "No, once enrolled in a government school, these benefits are provided automatically under Samagra Shiksha."
+        },
+        {
+          "question": "Is mid-day meal provided to all students?",
+          "answer": "Yes, mid-day meals are provided to all students from class 1 to 8 in government and government-aided schools."
+        },
+        {
+          "question": "Are private school students eligible?",
+          "answer": "No, Samagra Shiksha benefits are primarily for students in government and government-aided schools."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Enrollment in private unaided school",
+        "Irregular attendance",
+        "Not meeting state-specific criteria"
+      ],
+      "tips_for_successful_application": [
+        "Enroll in government or government-aided school",
+        "Maintain regular attendance",
+        "Keep school records updated",
+        "Participate in school activities"
+      ],
+      "target_beneficiaries": [
+        "School students",
+        "Children from disadvantaged groups",
+        "Girls",
+        "Children with special needs",
+        "Rural students"
+      ],
+      "tags": [
+        "Education",
+        "School Education",
+        "Free Textbooks",
+        "Mid-day Meal",
+        "Quality Education"
+      ],
+      "priority_level": "High",
+      "popularity_score": 95,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "menu_book",
+      "banner_image_keyword": "school_children",
+      "theme_color": "#2196F3",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_061",
+      "scheme_name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+      "category": "Financial Assistance",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Finance",
+      "short_description": "Financial inclusion scheme providing zero-balance bank accounts with RuPay debit card and insurance benefits.",
+      "detailed_description": "Pradhan Mantri Jan-Dhan Yojana (PMJDY) is National Mission for Financial Inclusion to ensure access to financial services, namely, Banking/ Savings & Deposit Accounts, Remittance, Credit, Insurance, Pension in an affordable manner. The scheme offers zero-balance bank accounts with RuPay debit card, accident insurance cover of ₹2 lakh, and overdraft facility up to ₹10,000 for eligible account holders.",
+      "key_benefits": [
+        "Zero balance bank account",
+        "RuPay debit card with free accident insurance of ₹2 lakh",
+        "Overdraft facility up to ₹10,000 for eligible accounts",
+        "Access to insurance and pension products",
+        "Mobile banking facility",
+        "Direct Benefit Transfer (DBT) of government schemes",
+        "No minimum balance requirement"
+      ],
+      "financial_assistance": "Banking services + ₹2 Lakh accident insurance + ₹10,000 overdraft",
+      "benefit_type": "Banking Services",
+      "age_criteria": "10 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "One account per person",
+        "Aadhaar linking mandatory for DBT benefits",
+        "Overdraft facility available after 6 months of satisfactory operation",
+        "RuPay card usage activates accident insurance",
+        "Account can be opened at any bank branch or Business Correspondent"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "Primary identity and address proof"
+        },
+        {
+          "document_name": "PAN Card",
+          "required_or_optional": "Optional",
+          "description": "For tax compliance (if applicable)"
+        },
+        {
+          "document_name": "Voter ID",
+          "required_or_optional": "Optional",
+          "description": "Alternative identity proof"
+        },
+        {
+          "document_name": "Passport Size Photos",
+          "required_or_optional": "Required",
+          "description": "2 recent photographs"
+        }
+      ],
+      "application_mode": "Both",
+      "online_apply_link": "Via bank websites",
+      "official_website": "https://pmjdy.gov.in/",
+      "application_steps_online": [
+        "Visit your preferred bank's website",
+        "Look for PMJDY account opening option",
+        "Fill online application form with personal details",
+        "Upload Aadhaar and photograph",
+        "Complete video KYC if required",
+        "Submit application",
+        "Visit branch for account activation and RuPay card collection"
+      ],
+      "application_steps_offline": [
+        "Visit nearest bank branch or Business Correspondent",
+        "Request PMJDY account opening form",
+        "Fill form with personal details",
+        "Submit Aadhaar card and photographs",
+        "Complete biometric verification",
+        "Receive account number and passbook",
+        "Collect RuPay debit card within 30 days"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Bank Branch",
+          "department_name": "Customer Service",
+          "address": "Any bank branch or Business Correspondent point",
+          "contact_phone": "Bank specific helpline",
+          "working_days": "Monday to Saturday",
+          "working_hours": "10:00 AM - 04:00 PM",
+          "who_should_visit": "Account holder",
+          "notes": "Can also open at CSC centers and camp sites"
+        }
+      ],
+      "start_date": "2014-08-28",
+      "last_date": "Open throughout the year",
+      "status": "Active",
+      "validity": "Lifetime",
+      "renewal_required": "No",
+      "processing_time": "Same day account opening",
+      "helpline_number": "1800-11-0001",
+      "email_support": "pmjdy@dfs.gov.in",
+      "faq": [
+        {
+          "question": "Is there any charge for opening PMJDY account?",
+          "answer": "No, PMJDY accounts are completely free with zero balance requirement and no account maintenance charges."
+        },
+        {
+          "question": "How do I get the overdraft facility?",
+          "answer": "Overdraft facility of up to ₹10,000 is available after 6 months of satisfactory account operation and is subject to bank's assessment."
+        },
+        {
+          "question": "Is the RuPay card free?",
+          "answer": "Yes, RuPay debit card is provided free of cost with the account, and it comes with ₹2 lakh accident insurance cover."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Already have PMJDY account in another bank",
+        "Incomplete Aadhaar details",
+        "Invalid or expired identity documents",
+        "Duplicate application"
+      ],
+      "tips_for_successful_application": [
+        "Carry original Aadhaar card for verification",
+        "Link mobile number for SMS alerts",
+        "Activate RuPay card immediately to avail insurance",
+        "Use account regularly to become eligible for overdraft",
+        "Link Aadhaar for DBT benefits"
+      ],
+      "target_beneficiaries": [
+        "Unbanked population",
+        "Rural population",
+        "Low-income groups",
+        "Migrant workers",
+        "Women"
+      ],
+      "tags": [
+        "Finance",
+        "Banking",
+        "Financial Inclusion",
+        "Zero Balance Account",
+        "Insurance"
+      ],
+      "priority_level": "High",
+      "popularity_score": 97,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "account_balance",
+      "banner_image_keyword": "banking_services",
+      "theme_color": "#FF9800",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_062",
+      "scheme_name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "World's largest health insurance scheme providing ₹5 Lakh annual coverage per family for secondary and tertiary hospitalization.",
+      "detailed_description": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY) is the world's largest health insurance/ assurance scheme fully financed by the government. It provides health cover of ₹5 lakh per family per year for secondary and tertiary care hospitalization. The scheme covers over 10.74 crore poor and vulnerable families (approximately 50 crore beneficiaries) providing coverage for almost 40% of India's population. The scheme is cashless and paperless at empanelled hospitals.",
+      "key_benefits": [
+        "Health cover of ₹5 Lakh per family per year",
+        "Cashless and paperless treatment at empanelled hospitals",
+        "Coverage for 1,949 procedures including surgeries",
+        "Pre and post-hospitalization expenses covered",
+        "No cap on family size or age",
+        "Covers pre-existing conditions from day one",
+        "Nationwide portability",
+        "Free treatment at government and empanelled private hospitals"
+      ],
+      "financial_assistance": "₹5 Lakh health cover per family per year",
+      "benefit_type": "Health Insurance",
+      "age_criteria": "All",
+      "income_criteria": "SECC 2011 eligible families (Poor and vulnerable)",
+      "gender_criteria": "All",
+      "category_criteria": "All (Based on SECC deprivation criteria)",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Eligibility based on SECC 2011 database",
+        "Automatic inclusion for families meeting deprivation criteria",
+        "No enrollment fee or premium",
+        "Covers entire family with no cap on family size",
+        "Pre-existing conditions covered from day one",
+        "Treatment must be at empanelled hospitals only"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For beneficiary identification and verification"
+        },
+        {
+          "document_name": "Ration Card",
+          "required_or_optional": "Optional",
+          "description": "Additional proof of family"
+        },
+        {
+          "document_name": "Mobile Number",
+          "required_or_optional": "Required",
+          "description": "For OTP verification and updates"
+        }
+      ],
+      "application_mode": "Both",
+      "online_apply_link": "https://pmjay.gov.in/",
+      "official_website": "https://pmjay.gov.in/",
+      "application_steps_online": [
+        "Visit PMJAY website at pmjay.gov.in",
+        "Click on 'Am I Eligible' section",
+        "Enter mobile number and captcha",
+        "Enter name and other details to check eligibility",
+        "If eligible, visit nearest empanelled hospital with Aadhaar",
+        "Hospital will generate Ayushman card and provide treatment"
+      ],
+      "application_steps_offline": [
+        "Check eligibility at nearest Common Service Centre (CSC)",
+        "If eligible, visit empanelled hospital with Aadhaar card",
+        "Hospital Ayushman Mitra will verify eligibility",
+        "Ayushman card will be generated at hospital",
+        "Receive cashless treatment as per scheme coverage",
+        "No payment required at hospital"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Empanelled Hospital",
+          "department_name": "Ayushman Bharat Desk",
+          "address": "25,000+ empanelled hospitals across India",
+          "contact_phone": "14555 (PMJAY Helpline)",
+          "working_days": "All days (24x7 for emergencies)",
+          "working_hours": "24x7",
+          "who_should_visit": "Patient or family member",
+          "notes": "Check hospital empanelment status on PMJAY website before visiting"
+        }
+      ],
+      "start_date": "2018-09-23",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Lifetime (as long as eligible)",
+      "renewal_required": "No",
+      "processing_time": "Immediate at hospital",
+      "helpline_number": "14555",
+      "email_support": "pmjay@nha.gov.in",
+      "faq": [
+        {
+          "question": "How do I know if I am eligible?",
+          "answer": "Visit pmjay.gov.in and check eligibility using your mobile number and name. Eligibility is based on SECC 2011 database."
+        },
+        {
+          "question": "Do I need to pay any premium?",
+          "answer": "No, Ayushman Bharat is completely free. There is no enrollment fee, premium, or co-payment required."
+        },
+        {
+          "question": "Can I use it anywhere in India?",
+          "answer": "Yes, the scheme is portable across India. You can avail treatment at any empanelled hospital in any state."
+        },
+        {
+          "question": "Are pre-existing diseases covered?",
+          "answer": "Yes, all pre-existing conditions are covered from day one without any waiting period."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Not in SECC 2011 eligible list",
+        "Treatment at non-empanelled hospital",
+        "Procedure not covered under scheme package",
+        "Aadhaar verification failure",
+        "Fraudulent claims"
+      ],
+      "tips_for_successful_application": [
+        "Check eligibility online before visiting hospital",
+        "Always carry Aadhaar card for verification",
+        "Visit only empanelled hospitals (check on PMJAY website)",
+        "Contact Ayushman Mitra at hospital for assistance",
+        "Keep mobile number active for OTP verification",
+        "Generate Ayushman card at first hospital visit"
+      ],
+      "target_beneficiaries": [
+        "Poor and vulnerable families",
+        "SECC 2011 eligible families",
+        "Rural and urban poor",
+        "Deprived categories",
+        "Occupational category beneficiaries"
+      ],
+      "tags": [
+        "Health",
+        "Health Insurance",
+        "Hospitalization",
+        "Cashless Treatment",
+        "Universal Health Coverage"
+      ],
+      "priority_level": "High",
+      "popularity_score": 96,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "health_and_safety",
+      "banner_image_keyword": "health_insurance",
+      "theme_color": "#4CAF50",
+      "featured_flag": true
     }
   ]
 }

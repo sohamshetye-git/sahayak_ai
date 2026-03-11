@@ -1,0 +1,119 @@
+{
+  "scheme_id": "SCH_048",
+  "scheme_name": "Rashtriya Kishor Swasthya Karyakram (RKSK)",
+  "category": "Health",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Health and Family Welfare",
+  "short_description": "Comprehensive adolescent health program providing health services, counseling, and nutrition support for 10-19 years age group.",
+  "detailed_description": "RKSK is a comprehensive program under National Health Mission to address the health needs of adolescents in the age group of 10-19 years. The program focuses on six key areas: nutrition, sexual and reproductive health, mental health, injuries and violence, substance misuse, and non-communicable diseases. Services are provided through Adolescent Friendly Health Clinics (AFHCs) at health facilities, peer educators, and school health programs.",
+  "key_benefits": [
+    "Free health checkups and counseling for adolescents",
+    "Nutrition supplementation for anemic adolescents (IFA tablets)",
+    "Mental health counseling and support services",
+    "Reproductive health education and services",
+    "Substance abuse prevention and counseling",
+    "Peer educator support in schools and communities"
+  ],
+  "financial_assistance": "Free health services",
+  "benefit_type": "Healthcare Services",
+  "age_criteria": "10 to 19 years",
+  "income_criteria": "All",
+  "gender_criteria": "All",
+  "category_criteria": "All",
+  "occupation_criteria": "All",
+  "geographic_criteria": "All India",
+  "other_conditions": [
+    "Available to all adolescents regardless of economic status",
+    "Services provided at Adolescent Friendly Health Clinics",
+    "School health programs cover enrolled students",
+    "Confidential counseling services available",
+    "No registration required for basic services"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "School ID Card",
+      "required_or_optional": "Optional",
+      "description": "For school-based services identification"
+    },
+    {
+      "document_name": "Age Proof",
+      "required_or_optional": "Optional",
+      "description": "Birth certificate or school records for age verification"
+    }
+  ],
+  "application_mode": "Offline",
+  "online_apply_link": "Not Applicable",
+  "official_website": "https://nhm.gov.in/index1.php?lang=1&level=2&sublinkid=818&lid=222",
+  "application_steps_online": [],
+  "application_steps_offline": [
+    "Visit nearest Adolescent Friendly Health Clinic (AFHC) at PHC/CHC",
+    "No appointment needed - walk-in services available",
+    "Register at reception with basic details",
+    "Consult with trained counselor or doctor",
+    "Receive health checkup, counseling, or treatment as needed",
+    "Get IFA tablets if anemic (free of cost)",
+    "Follow-up visits as advised by health provider"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "Adolescent Friendly Health Clinic",
+      "department_name": "Health Department",
+      "address": "Primary Health Center or Community Health Center",
+      "contact_phone": "Contact local PHC/CHC",
+      "working_days": "Monday to Saturday",
+      "working_hours": "09:00 AM - 05:00 PM (specific AFHC hours may vary)",
+      "who_should_visit": "Adolescent (can come alone or with parent)",
+      "notes": "Confidential services available, peer educators also provide support in schools"
+    }
+  ],
+  "start_date": "2014-01-08",
+  "last_date": "Ongoing program",
+  "status": "Active",
+  "validity": "Continuous coverage during adolescent years (10-19)",
+  "renewal_required": "No",
+  "processing_time": "Immediate consultation and services",
+  "helpline_number": "1800-180-1104",
+  "email_support": "rksk-mohfw@gov.in",
+  "faq": [
+    {
+      "question": "Are the services confidential?",
+      "answer": "Yes, all counseling and health services at AFHC are completely confidential."
+    },
+    {
+      "question": "Can I visit AFHC without parents?",
+      "answer": "Yes, adolescents can visit AFHC independently for consultation and services."
+    },
+    {
+      "question": "What services are provided?",
+      "answer": "Health checkups, nutrition counseling, mental health support, reproductive health education, substance abuse counseling, and treatment for common ailments."
+    }
+  ],
+  "common_rejection_reasons": [],
+  "tips_for_successful_application": [
+    "Locate nearest AFHC through ASHA worker or school health program",
+    "Visit during AFHC operational hours",
+    "Feel free to discuss any health concerns confidentially",
+    "Take IFA tablets regularly if prescribed for anemia",
+    "Participate in peer educator programs at school"
+  ],
+  "target_beneficiaries": [
+    "Adolescents 10-19 years",
+    "School-going adolescents",
+    "Out-of-school adolescents",
+    "Adolescent girls and boys"
+  ],
+  "tags": [
+    "Health",
+    "Adolescent Health",
+    "Mental Health",
+    "Nutrition",
+    "Counseling"
+  ],
+  "priority_level": "High",
+  "popularity_score": 72,
+  "difficulty_level_to_apply": "Easy",
+  "icon_keyword": "adolescent_health",
+  "banner_image_keyword": "youth_healthcare",
+  "theme_color": "#9C27B0",
+  "featured_flag": false
+}

@@ -1,0 +1,143 @@
+{
+  "scheme_id": "SCH_058",
+  "scheme_name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+  "category": "Health",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Women and Child Development",
+  "short_description": "Maternity benefit of ₹5,000 for pregnant and lactating mothers for first living child.",
+  "detailed_description": "Pradhan Mantri Matru Vandana Yojana (PMMVY) is a Centrally Sponsored Scheme with the objective of providing partial compensation for the wage loss in terms of cash incentive so that the woman can take adequate rest before and after delivery of the first living child. The cash incentive provided would lead to improved health seeking behaviour amongst the Pregnant Women and Lactating Mothers (PW&LM).",
+  "key_benefits": [
+    "₹5,000 cash benefit in 3 installments",
+    "First installment: ₹1,000 on early registration of pregnancy",
+    "Second installment: ₹2,000 after 6 months of pregnancy",
+    "Third installment: ₹2,000 after child birth and completion of first cycle of vaccination",
+    "Direct transfer to beneficiary's bank account",
+    "Promotes institutional delivery and antenatal care"
+  ],
+  "financial_assistance": "₹5,000 in 3 installments",
+  "benefit_type": "Cash",
+  "age_criteria": "19 years and above",
+  "income_criteria": "All",
+  "gender_criteria": "Female",
+  "category_criteria": "All",
+  "occupation_criteria": "All (except government employees and PSU employees)",
+  "geographic_criteria": "All India"
+,
+  "other_conditions": [
+    "Applicable for first living child only",
+    "Pregnant woman should be 19 years or above on the date of conception",
+    "Government employees and PSU employees are not eligible",
+    "Must register pregnancy at Anganwadi Centre or approved health facility",
+    "Must complete antenatal check-ups and vaccination schedule"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "Aadhaar Card",
+      "required_or_optional": "Required",
+      "description": "Identity proof of pregnant woman"
+    },
+    {
+      "document_name": "Bank Account Passbook",
+      "required_or_optional": "Required",
+      "description": "For direct benefit transfer"
+    },
+    {
+      "document_name": "MCP Card",
+      "required_or_optional": "Required",
+      "description": "Mother and Child Protection card from health facility"
+    },
+    {
+      "document_name": "Pregnancy Certificate",
+      "required_or_optional": "Required",
+      "description": "From registered medical facility or Anganwadi"
+    },
+    {
+      "document_name": "Identity Proof of Husband",
+      "required_or_optional": "Optional",
+      "description": "Aadhaar or any government ID"
+    }
+  ],
+  "application_mode": "Offline",
+  "online_apply_link": "Not Applicable",
+  "official_website": "https://wcd.nic.in/schemes/pradhan-mantri-matru-vandana-yojana"
+,
+  "application_steps_online": [],
+  "application_steps_offline": [
+    "Visit nearest Anganwadi Centre or health facility",
+    "Register pregnancy within first trimester",
+    "Fill Form 1A for first installment with required documents",
+    "After 6 months pregnancy, fill Form 1B for second installment",
+    "After delivery and vaccination, fill Form 1C for third installment",
+    "Submit forms at Anganwadi Centre",
+    "Amount will be transferred to bank account after verification"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "Anganwadi Centre",
+      "department_name": "Women and Child Development",
+      "address": "Local Anganwadi Centre or Primary Health Centre",
+      "contact_phone": "7998799804 (PMMVY Helpline)",
+      "working_days": "Monday to Saturday",
+      "working_hours": "09:00 AM - 05:00 PM",
+      "who_should_visit": "Pregnant woman or family member",
+      "notes": "Register early in pregnancy to avail all three installments"
+    }
+  ],
+  "start_date": "2017-01-01",
+  "last_date": "Ongoing",
+  "status": "Active",
+  "validity": "For first living child only",
+  "renewal_required": "No",
+  "processing_time": "30 to 60 days per installment",
+  "helpline_number": "7998799804",
+  "email_support": "pmmvy-wcd@gov.in"
+,
+  "faq": [
+    {
+      "question": "Can I apply for second child?",
+      "answer": "No, PMMVY is applicable only for the first living child of the family."
+    },
+    {
+      "question": "When should I register?",
+      "answer": "Register as early as possible during pregnancy, preferably in the first trimester to avail all three installments."
+    },
+    {
+      "question": "Are government employees eligible?",
+      "answer": "No, women who are in regular employment with Central or State Government or PSUs are not eligible."
+    }
+  ],
+  "common_rejection_reasons": [
+    "Age below 19 years at conception",
+    "Second or subsequent child",
+    "Government or PSU employee",
+    "Incomplete documentation",
+    "Late registration missing installment deadlines",
+    "Bank account not linked with Aadhaar"
+  ],
+  "tips_for_successful_application": [
+    "Register pregnancy early at Anganwadi Centre",
+    "Keep all medical records and MCP card updated",
+    "Link Aadhaar with bank account before applying",
+    "Complete all antenatal check-ups on time",
+    "Ensure child receives first cycle of vaccination for third installment"
+  ],
+  "target_beneficiaries": [
+    "Pregnant women",
+    "Lactating mothers",
+    "First-time mothers",
+    "Women from economically weaker sections"
+  ],
+  "tags": [
+    "Health",
+    "Maternity Benefit",
+    "Women Welfare",
+    "Child Health"
+  ],
+  "priority_level": "High",
+  "popularity_score": 91,
+  "difficulty_level_to_apply": "Medium",
+  "icon_keyword": "pregnant_woman",
+  "banner_image_keyword": "mother_child",
+  "theme_color": "#E91E63",
+  "featured_flag": true
+}

@@ -1,0 +1,156 @@
+{
+  "scheme_id": "SCH_053",
+  "scheme_name": "National Scholarship Portal (NSP) - Central Sector Scheme",
+  "category": "Education",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Education",
+  "short_description": "Merit-based scholarship for students from class 11 to postgraduate level with family income below ₹4.5 Lakhs.",
+  "detailed_description": "The Central Sector Scheme of Scholarship for College and University Students is a merit-based scholarship scheme for students pursuing regular courses at college and university level. The scheme provides financial assistance to meritorious students from economically weaker sections to meet a part of their day-to-day expenses while pursuing higher studies. The scholarship amount ranges from ₹10,000 to ₹20,000 per annum depending on the course level.",
+  "key_benefits": [
+    "Class 11-12: ₹10,000 per annum",
+    "Undergraduate: ₹12,000 per annum",
+    "Postgraduate: ₹20,000 per annum",
+    "Direct transfer to student's bank account",
+    "Covers 82,000 fresh scholarships annually",
+    "Renewable till course completion"
+  ],
+  "financial_assistance": "₹10,000 to ₹20,000 per year",
+  "benefit_type": "Scholarship",
+  "age_criteria": "No age limit",
+  "income_criteria": "Family income not exceeding ₹4.5 Lakhs per annum",
+  "gender_criteria": "All",
+  "category_criteria": "All",
+  "occupation_criteria": "Student",
+  "geographic_criteria": "All India",
+  "other_conditions": [
+    "Must have secured at least 80% marks in Class 10 and 12 for fresh scholarship",
+    "Must be enrolled in regular full-time courses",
+    "Not more than 2 children of same parents can avail scholarship",
+    "Students pursuing distance/correspondence courses not eligible",
+    "Must maintain satisfactory academic performance for renewal"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "Class 10 Marksheet",
+      "required_or_optional": "Required",
+      "description": "Proof of securing minimum 80% marks"
+    },
+    {
+      "document_name": "Class 12 Marksheet",
+      "required_or_optional": "Required",
+      "description": "For undergraduate and above, proof of 80% marks"
+    },
+    {
+      "document_name": "Income Certificate",
+      "required_or_optional": "Required",
+      "description": "Family income certificate not exceeding ₹4.5 Lakhs per annum"
+    },
+    {
+      "document_name": "Aadhaar Card",
+      "required_or_optional": "Required",
+      "description": "For identity verification and DBT"
+    },
+    {
+      "document_name": "Bank Account Details",
+      "required_or_optional": "Required",
+      "description": "Student's bank account for scholarship transfer"
+    },
+    {
+      "document_name": "College/University ID Card",
+      "required_or_optional": "Required",
+      "description": "Proof of current enrollment"
+    },
+    {
+      "document_name": "Fee Receipt",
+      "required_or_optional": "Required",
+      "description": "Current year fee receipt from institution"
+    }
+  ],
+  "application_mode": "Online",
+  "online_apply_link": "https://scholarships.gov.in/",
+  "official_website": "https://scholarships.gov.in/",
+  "application_steps_online": [
+    "Visit National Scholarship Portal at scholarships.gov.in",
+    "Register as new user with valid email and mobile number",
+    "Verify email and mobile through OTP",
+    "Login and select 'Central Sector Scheme of Scholarship'",
+    "Fill application form with personal, academic and income details",
+    "Upload all required documents in specified format",
+    "Submit application and save application ID",
+    "Track application status through portal"
+  ],
+  "application_steps_offline": [
+    "Contact your institution's scholarship cell",
+    "Obtain application form for Central Sector Scholarship",
+    "Fill form completely with accurate information",
+    "Attach self-attested copies of all required documents",
+    "Submit to institution before deadline",
+    "Institution will verify and forward to authorities"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "Institution Scholarship Cell",
+      "department_name": "College/University Administration",
+      "address": "Student's current educational institution",
+      "contact_phone": "Contact institution directly",
+      "working_days": "Monday to Friday",
+      "working_hours": "10:00 AM - 05:00 PM",
+      "who_should_visit": "Student",
+      "notes": "Online application preferred, institution will verify documents"
+    }
+  ],
+  "start_date": "2008-01-01",
+  "last_date": "Announced annually (typically September-November)",
+  "status": "Active",
+  "validity": "Renewable annually till course completion",
+  "renewal_required": "Yes",
+  "processing_time": "90 to 120 days",
+  "helpline_number": "0120-6619540",
+  "email_support": "helpdesk@nsp.gov.in",
+  "faq": [
+    {
+      "question": "What is the minimum percentage required?",
+      "answer": "Students must have secured at least 80% marks in Class 10 and 12 examinations for fresh scholarship."
+    },
+    {
+      "question": "Can I apply if I'm in a private college?",
+      "answer": "Yes, students in both government and private recognized institutions are eligible."
+    },
+    {
+      "question": "Is the scholarship renewable?",
+      "answer": "Yes, if you maintain satisfactory academic performance and continue in eligible courses."
+    }
+  ],
+  "common_rejection_reasons": [
+    "Marks below 80% in qualifying examinations",
+    "Income exceeding ₹4.5 Lakhs per annum",
+    "Incomplete or incorrect documents",
+    "Pursuing distance/correspondence courses",
+    "More than 2 siblings already receiving scholarship"
+  ],
+  "tips_for_successful_application": [
+    "Apply early before deadline",
+    "Ensure all marksheets show at least 80% marks",
+    "Get income certificate from competent authority",
+    "Upload clear, readable documents",
+    "Keep application ID safe for tracking"
+  ],
+  "target_beneficiaries": [
+    "Meritorious students",
+    "Students from economically weaker sections",
+    "Class 11-12 and college/university students"
+  ],
+  "tags": [
+    "Education",
+    "Scholarship",
+    "Merit-based",
+    "Higher Education"
+  ],
+  "priority_level": "High",
+  "popularity_score": 92,
+  "difficulty_level_to_apply": "Medium",
+  "icon_keyword": "scholarship",
+  "banner_image_keyword": "college_education",
+  "theme_color": "#2196F3",
+  "featured_flag": true
+}

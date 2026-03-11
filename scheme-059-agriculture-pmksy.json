@@ -1,0 +1,150 @@
+{
+  "scheme_id": "SCH_059",
+  "scheme_name": "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)",
+  "category": "Agriculture",
+  "central_or_state": "Central",
+  "ministry_department": "Ministry of Jal Shakti",
+  "short_description": "Irrigation support through micro-irrigation, watershed development with subsidy up to 90%.",
+  "detailed_description": "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) was launched with the motto of 'Har Khet Ko Pani' to extend the coverage of irrigation and improve water use efficiency. The scheme focuses on creating sources for assured irrigation, improving on-farm water use efficiency through micro-irrigation (drip and sprinkler), and watershed development. PMKSY provides financial assistance to farmers for adopting efficient irrigation systems.",
+  "key_benefits": [
+    "Subsidy of 55% to 90% on micro-irrigation systems",
+    "Drip and sprinkler irrigation support",
+    "Watershed development for rain-fed areas",
+    "Water conservation and efficiency improvement",
+    "Increased crop productivity",
+    "Reduced water wastage",
+    "Support for farm ponds and water harvesting structures"
+  ],
+  "financial_assistance": "Subsidy 55% to 90% on irrigation equipment",
+  "benefit_type": "Subsidy",
+  "age_criteria": "18 years and above",
+  "income_criteria": "All",
+  "gender_criteria": "All",
+  "category_criteria": "All (Higher subsidy for SC/ST/Small farmers)",
+  "occupation_criteria": "Farmers",
+  "geographic_criteria": "All India"
+,
+  "other_conditions": [
+    "Must have cultivable land",
+    "Land ownership or lease documents required",
+    "Subsidy percentage varies by category (Small/Marginal farmers get higher subsidy)",
+    "State government implements through agriculture department",
+    "Technical guidance provided for installation"
+  ],
+  "REQUIRED_DOCUMENTS": [
+    {
+      "document_name": "Land Records",
+      "required_or_optional": "Required",
+      "description": "Proof of land ownership or lease agreement"
+    },
+    {
+      "document_name": "Aadhaar Card",
+      "required_or_optional": "Required",
+      "description": "Identity proof"
+    },
+    {
+      "document_name": "Bank Account Details",
+      "required_or_optional": "Required",
+      "description": "For subsidy transfer"
+    },
+    {
+      "document_name": "Quotation",
+      "required_or_optional": "Required",
+      "description": "Cost estimate from approved vendor for irrigation equipment"
+    },
+    {
+      "document_name": "Category Certificate",
+      "required_or_optional": "Optional",
+      "description": "SC/ST/Small farmer certificate for higher subsidy"
+    }
+  ],
+  "application_mode": "Both",
+  "online_apply_link": "Not Applicable",
+  "official_website": "https://pmksy.gov.in/",
+  "application_steps_online": [
+    "Visit state agriculture department portal",
+    "Register with farmer details and land information",
+    "Select type of irrigation system required",
+    "Upload required documents",
+    "Submit application online",
+    "Track application status through portal"
+  ],
+  "application_steps_offline": [
+    "Visit District Agriculture Office or Krishi Vigyan Kendra",
+    "Collect PMKSY application form",
+    "Fill form with land and irrigation requirement details",
+    "Attach land records, Aadhaar, and bank details",
+    "Submit form to agriculture officer",
+    "Officer will conduct field inspection",
+    "Upon approval, install system through approved vendor",
+    "Subsidy will be transferred after installation verification"
+  ],
+  "submission_locations": [
+    {
+      "office_type": "Agriculture Office",
+      "department_name": "District Agriculture Department",
+      "address": "District Agriculture Office or Krishi Vigyan Kendra",
+      "contact_phone": "State agriculture department helpline",
+      "working_days": "Monday to Friday",
+      "working_hours": "10:00 AM - 05:00 PM",
+      "who_should_visit": "Farmer",
+      "notes": "Implementation varies by state, contact local agriculture office"
+    }
+  ],
+  "start_date": "2015-07-01",
+  "last_date": "Open throughout the year (subject to budget availability)",
+  "status": "Active",
+  "validity": "One-time benefit per land holding",
+  "renewal_required": "No",
+  "processing_time": "60 to 90 days",
+  "helpline_number": "1800-180-1551",
+  "email_support": "pmksy-mowr@gov.in",
+  "faq": [
+    {
+      "question": "What is the subsidy percentage?",
+      "answer": "General farmers get 55% subsidy, while small/marginal farmers and SC/ST get up to 90% subsidy on micro-irrigation systems."
+    },
+    {
+      "question": "Can I get subsidy for farm pond?",
+      "answer": "Yes, PMKSY provides support for farm ponds, water harvesting structures, and micro-irrigation systems."
+    },
+    {
+      "question": "Do I need to pay first and then get subsidy?",
+      "answer": "Yes, typically you need to install the system first, then subsidy is transferred after verification by agriculture department."
+    }
+  ],
+  "common_rejection_reasons": [
+    "Incomplete land documents",
+    "Already availed subsidy for same land",
+    "Non-approved vendor or equipment",
+    "Insufficient budget allocation",
+    "Land not suitable for proposed irrigation system"
+  ],
+  "tips_for_successful_application": [
+    "Apply early in the financial year when budget is available",
+    "Get land records updated and clear",
+    "Choose approved vendors for equipment",
+    "Consult agriculture officer for suitable irrigation system",
+    "Keep all receipts and installation certificates"
+  ],
+  "target_beneficiaries": [
+    "Farmers",
+    "Small and marginal farmers",
+    "SC/ST farmers",
+    "Farmers in water-scarce areas"
+  ],
+  "tags": [
+    "Agriculture",
+    "Irrigation",
+    "Water Conservation",
+    "Micro-irrigation",
+    "Farmer Welfare"
+  ],
+  "priority_level": "High",
+  "popularity_score": 87,
+  "difficulty_level_to_apply": "Medium",
+  "icon_keyword": "water_drop",
+  "banner_image_keyword": "irrigation_system",
+  "theme_color": "#4CAF50",
+  "featured_flag": true
+}
