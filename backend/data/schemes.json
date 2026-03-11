@@ -2721,6 +2721,1250 @@
           "description": "Proof of incorporation"
         }
       ]
+    },
+    {
+      "scheme_id": "SCH_044",
+      "scheme_name": "Post Matric Scholarship for SC Students",
+      "category": "Education",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Social Justice and Empowerment",
+      "short_description": "Financial assistance for SC students pursuing post-matriculation or post-secondary education.",
+      "detailed_description": "The Post Matric Scholarship Scheme for Scheduled Caste students is a Centrally Sponsored Scheme to provide financial assistance to SC students studying at post-matriculation or post-secondary stage to enable them to complete their education. The scheme covers maintenance allowance, reimbursement of compulsory non-refundable fees, study tour charges, thesis typing/printing charges for research scholars, and book allowance.",
+      "key_benefits": [
+        "Maintenance allowance ranging from ₹380 to ₹1,200 per month depending on course",
+        "Reimbursement of compulsory non-refundable fees",
+        "Book allowance and study tour charges",
+        "Thesis typing charges for research scholars",
+        "Reader allowance for blind students"
+      ],
+      "financial_assistance": "₹4,560 to ₹14,400 per year (varies by course)",
+      "benefit_type": "Scholarship",
+      "age_criteria": "No age limit",
+      "income_criteria": "Parental income not exceeding ₹2.5 Lakhs per annum",
+      "gender_criteria": "All",
+      "category_criteria": "Scheduled Caste (SC)",
+      "occupation_criteria": "Student",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must belong to Scheduled Caste category",
+        "Must have passed matriculation or higher secondary examination",
+        "Must be pursuing recognized post-matriculation course",
+        "Only two children of the same parents/guardian are eligible"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Caste Certificate",
+          "required_or_optional": "Required",
+          "description": "Valid SC caste certificate issued by competent authority"
+        },
+        {
+          "document_name": "Income Certificate",
+          "required_or_optional": "Required",
+          "description": "Parental income certificate not exceeding ₹2.5 Lakhs per annum"
+        },
+        {
+          "document_name": "Previous Year Marksheet",
+          "required_or_optional": "Required",
+          "description": "Proof of passing previous examination"
+        },
+        {
+          "document_name": "Fee Receipt",
+          "required_or_optional": "Required",
+          "description": "Current year fee receipt from institution"
+        },
+        {
+          "document_name": "Bank Account Details",
+          "required_or_optional": "Required",
+          "description": "Student's bank account for scholarship transfer"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification"
+        }
+      ],
+      "application_mode": "Online",
+      "online_apply_link": "https://scholarships.gov.in/",
+      "official_website": "https://socialjustice.gov.in/",
+      "application_steps_online": [
+        "Visit National Scholarship Portal at scholarships.gov.in",
+        "Register as new user with valid email and mobile number",
+        "Login and select 'Post Matric Scholarship for SC Students'",
+        "Fill application form with personal, academic and income details",
+        "Upload all required documents in specified format",
+        "Submit application and save application ID",
+        "Track application status through portal"
+      ],
+      "application_steps_offline": [
+        "Contact your institution's scholarship cell",
+        "Obtain application form for SC Post Matric Scholarship",
+        "Fill form completely with accurate information",
+        "Attach self-attested copies of all required documents",
+        "Submit to institution before deadline",
+        "Institution will verify and forward to state authorities"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Institution Scholarship Cell",
+          "department_name": "College/University Administration",
+          "address": "Student's current educational institution",
+          "contact_phone": "Contact institution directly",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Student",
+          "notes": "Institution will verify documents and forward application"
+        }
+      ],
+      "start_date": "1944-01-01",
+      "last_date": "Announced annually by states (typically September-November)",
+      "status": "Active",
+      "validity": "Renewable annually",
+      "renewal_required": "Yes",
+      "processing_time": "90 to 120 days",
+      "helpline_number": "0120-6619540",
+      "email_support": "helpdesk@nsp.gov.in",
+      "faq": [
+        {
+          "question": "Can I apply if I'm studying in a private institution?",
+          "answer": "Yes, students in both government and private recognized institutions are eligible."
+        },
+        {
+          "question": "What is the income limit?",
+          "answer": "Parental income should not exceed ₹2.5 Lakhs per annum from all sources."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Invalid or expired caste certificate",
+        "Income exceeding ₹2.5 Lakhs limit",
+        "Incomplete fee receipt or marksheet",
+        "More than two siblings already receiving scholarship"
+      ],
+      "tips_for_successful_application": [
+        "Ensure caste certificate is issued by competent authority",
+        "Get income certificate from Tehsildar or equivalent officer",
+        "Upload clear, readable documents",
+        "Apply before deadline to avoid last-minute issues"
+      ],
+      "target_beneficiaries": [
+        "SC students",
+        "Post-matriculation students",
+        "College and university students"
+      ],
+      "tags": [
+        "Education",
+        "SC Welfare",
+        "Post Matric",
+        "Scholarship"
+      ],
+      "priority_level": "High",
+      "popularity_score": 90,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "education",
+      "banner_image_keyword": "college_students",
+      "theme_color": "#9C27B0",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_045",
+      "scheme_name": "Rashtriya Bal Swasthya Karyakram (RBSK)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Child health screening and early intervention services for children from birth to 18 years.",
+      "detailed_description": "RBSK is a comprehensive program under National Health Mission to provide comprehensive health screening and early intervention services to all children from birth to 18 years. The program covers 4 'D's - Defects at birth, Deficiencies, Diseases, Development delays including disability. Free treatment and management is provided for identified health conditions through mobile health teams and referral services.",
+      "key_benefits": [
+        "Free health screening for all children 0-18 years at schools and Anganwadi centers",
+        "Early detection of 30 selected health conditions including birth defects and disabilities",
+        "Free treatment and management of identified conditions at government facilities",
+        "Referral services to district and tertiary level hospitals for specialized care",
+        "Follow-up care and rehabilitation services for children with disabilities"
+      ],
+      "financial_assistance": "Free health services",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "0 to 18 years",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Available to all children regardless of economic status",
+        "Screening conducted at schools, Anganwadi centers and health facilities",
+        "No registration or application required - automatic coverage",
+        "Mobile health teams visit regularly for screening"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Birth Certificate",
+          "required_or_optional": "Optional",
+          "description": "For age verification if needed"
+        },
+        {
+          "document_name": "School ID Card",
+          "required_or_optional": "Optional",
+          "description": "For school-based screening identification"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://nhm.gov.in/index1.php?lang=1&level=2&sublinkid=818&lid=221",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "No application needed - screening teams visit schools and Anganwadi centers regularly",
+        "Parents can also take children to nearest Primary Health Center for screening",
+        "Mobile health teams conduct regular screening camps in communities",
+        "Identified cases are automatically referred for treatment",
+        "Follow-up is done by ASHA workers and health teams"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Primary Health Center",
+          "department_name": "Health Department",
+          "address": "Nearest PHC or Community Health Center",
+          "contact_phone": "Contact local PHC",
+          "working_days": "Monday to Saturday",
+          "working_hours": "09:00 AM - 05:00 PM",
+          "who_should_visit": "Parent with child",
+          "notes": "RBSK mobile health teams visit schools and Anganwadis regularly for screening"
+        }
+      ],
+      "start_date": "2013-02-05",
+      "last_date": "Ongoing program",
+      "status": "Active",
+      "validity": "Continuous coverage till 18 years",
+      "renewal_required": "No",
+      "processing_time": "Immediate screening, treatment as per condition severity",
+      "helpline_number": "1800-180-1104",
+      "email_support": "rbsk-mohfw@gov.in",
+      "faq": [
+        {
+          "question": "Is there any cost for screening and treatment?",
+          "answer": "No, all screening and basic treatment services under RBSK are completely free of cost."
+        },
+        {
+          "question": "Where is screening conducted?",
+          "answer": "Screening is done at schools, Anganwadi centers, and health facilities by trained mobile health teams."
+        },
+        {
+          "question": "What conditions are covered?",
+          "answer": "RBSK covers 30 health conditions including birth defects, childhood diseases, deficiencies, and developmental delays."
+        }
+      ],
+      "common_rejection_reasons": [],
+      "tips_for_successful_application": [
+        "Ensure child attends school or Anganwadi regularly to not miss screening",
+        "Follow up on referrals for identified conditions promptly",
+        "Keep health records and referral slips provided by RBSK team",
+        "Contact ASHA worker or ANM for screening schedule"
+      ],
+      "target_beneficiaries": [
+        "Children 0-18 years",
+        "School-going children",
+        "Anganwadi children",
+        "Children with disabilities"
+      ],
+      "tags": [
+        "Health",
+        "Child Health",
+        "Screening",
+        "Free Healthcare",
+        "Disability"
+      ],
+      "priority_level": "High",
+      "popularity_score": 75,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "child_health",
+      "banner_image_keyword": "children_healthcare",
+      "theme_color": "#E91E63",
+      "featured_flag": false
+    },
+    {
+      "scheme_id": "SCH_046",
+      "scheme_name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Promotes organic farming through cluster approach and provides financial assistance of ₹50,000 per hectare over 3 years.",
+      "detailed_description": "PKVY is an elaborated component of Soil Health Management under Mission Organic Value Chain Development. The scheme promotes organic farming through adoption of organic villages by cluster approach and Participatory Guarantee System (PGS) certification. Financial assistance of ₹50,000 per hectare for 3 years is provided to farmers for organic inputs, certification, capacity building, and marketing support. The scheme aims to improve soil health, reduce chemical usage, and increase farmer income through premium prices for organic produce.",
+      "key_benefits": [
+        "Financial assistance of ₹50,000 per hectare distributed over 3 years",
+        "Free organic farming training and capacity building programs",
+        "PGS certification support for organic produce",
+        "Marketing assistance and linkages for organic products",
+        "Cluster-based approach ensures better results and peer learning",
+        "Improved soil health and reduced input costs over time"
+      ],
+      "financial_assistance": "₹50,000 per hectare (over 3 years)",
+      "benefit_type": "Financial + Training",
+      "age_criteria": "18 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Farmers",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Minimum cluster size of 50 acres (20 hectares) required",
+        "At least 50 farmers should form a cluster with contiguous land",
+        "Must commit to organic farming practices for minimum 3 years",
+        "Land should be suitable for organic farming",
+        "Cluster must adopt PGS certification process"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Land Ownership Documents",
+          "required_or_optional": "Required",
+          "description": "7/12 extract, land records, or lease agreement proving ownership/tenancy rights"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification and DBT"
+        },
+        {
+          "document_name": "Bank Account Details",
+          "required_or_optional": "Required",
+          "description": "Bank passbook or cancelled cheque for direct benefit transfer"
+        },
+        {
+          "document_name": "Cluster Formation Document",
+          "required_or_optional": "Required",
+          "description": "List of all farmers in cluster with signatures and land details"
+        },
+        {
+          "document_name": "Consent Letter",
+          "required_or_optional": "Required",
+          "description": "Written consent to adopt organic farming for 3 years"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://pgsindia-ncof.gov.in/",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Form a cluster of minimum 50 farmers with contiguous or nearby land parcels",
+        "Contact District Agriculture Officer or Krishi Vigyan Kendra for guidance",
+        "Prepare cluster proposal with complete farmer list and land details",
+        "Submit proposal to District Agriculture Office with all required documents",
+        "Attend mandatory orientation program on organic farming practices",
+        "Get PGS certification process initiated through local group",
+        "Receive financial assistance in three annual installments after verification"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "District Agriculture Office",
+          "department_name": "Department of Agriculture",
+          "address": "District headquarters",
+          "contact_phone": "Contact district agriculture office",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Cluster representative or lead farmer",
+          "notes": "Krishi Vigyan Kendras also provide assistance in cluster formation and proposal preparation"
+        }
+      ],
+      "start_date": "2015-04-01",
+      "last_date": "Ongoing program",
+      "status": "Active",
+      "validity": "3 years per cluster",
+      "renewal_required": "No",
+      "processing_time": "60 to 90 days for cluster approval and first installment",
+      "helpline_number": "011-23382012",
+      "email_support": "ncof@gov.in",
+      "faq": [
+        {
+          "question": "Can individual farmers apply for PKVY?",
+          "answer": "No, farmers must form a cluster of minimum 50 farmers with at least 20 hectares of contiguous land to be eligible."
+        },
+        {
+          "question": "What is PGS certification?",
+          "answer": "Participatory Guarantee System is a quality assurance system for organic products based on active participation of stakeholders and built on trust, social networks and knowledge exchange."
+        },
+        {
+          "question": "How is the financial assistance disbursed?",
+          "answer": "The ₹50,000 per hectare is disbursed in three annual installments over 3 years directly to farmer's bank account."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Cluster size less than minimum 50 farmers or 20 hectares",
+        "Non-contiguous land parcels making cluster management difficult",
+        "Incomplete farmer list or missing documentation",
+        "Land not suitable for organic farming (highly degraded or contaminated)",
+        "Lack of commitment from farmers for 3-year organic farming"
+      ],
+      "tips_for_successful_application": [
+        "Form cluster with genuinely committed farmers interested in organic farming",
+        "Ensure land parcels are contiguous or in close proximity for better management",
+        "Get technical support from local agriculture department or KVK",
+        "Attend all training programs and follow organic farming guidelines strictly",
+        "Maintain proper records of organic inputs and farming practices"
+      ],
+      "target_beneficiaries": [
+        "Farmers interested in organic farming",
+        "Farmer producer organizations",
+        "Small and marginal farmers",
+        "Progressive farmers"
+      ],
+      "tags": [
+        "Agriculture",
+        "Organic Farming",
+        "Sustainable Agriculture",
+        "Cluster Approach",
+        "Soil Health"
+      ],
+      "priority_level": "Medium",
+      "popularity_score": 70,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "organic_farming",
+      "banner_image_keyword": "organic_crops",
+      "theme_color": "#8BC34A",
+      "featured_flag": false
+    },
+    {
+      "scheme_id": "SCH_047",
+      "scheme_name": "Pre-Matric Scholarship for OBC Students",
+      "category": "Education",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Social Justice and Empowerment",
+      "short_description": "Financial assistance for OBC students studying in classes 9 and 10 to prevent dropouts and encourage education.",
+      "detailed_description": "The Pre-Matric Scholarship Scheme for OBC students aims to provide financial assistance to students belonging to Other Backward Classes studying in classes 9 and 10. The scheme helps in preventing dropouts and encourages OBC students to continue their education. The scholarship covers maintenance allowance and reimbursement of compulsory non-refundable fees charged by schools.",
+      "key_benefits": [
+        "Day scholars: ₹225 per month for 10 months (₹2,250 per year)",
+        "Hostellers: ₹525 per month for 10 months (₹5,250 per year)",
+        "Reimbursement of compulsory non-refundable fees",
+        "Book allowance included in maintenance",
+        "Direct transfer to student's bank account"
+      ],
+      "financial_assistance": "₹2,250 to ₹5,250 per year",
+      "benefit_type": "Scholarship",
+      "age_criteria": "Students in Class 9-10",
+      "income_criteria": "Parental income not exceeding ₹1 Lakh per annum",
+      "gender_criteria": "All",
+      "category_criteria": "Other Backward Classes (OBC)",
+      "occupation_criteria": "Student",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must belong to OBC category (non-creamy layer)",
+        "Must be studying in Class 9 or 10 in government or recognized school",
+        "Parental income from all sources should not exceed ₹1 Lakh per annum",
+        "Only two children of the same parents/guardian are eligible",
+        "Must have passed previous class examination"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "OBC Certificate",
+          "required_or_optional": "Required",
+          "description": "Valid OBC (non-creamy layer) certificate issued by competent authority"
+        },
+        {
+          "document_name": "Income Certificate",
+          "required_or_optional": "Required",
+          "description": "Parental income certificate not exceeding ₹1 Lakh per annum"
+        },
+        {
+          "document_name": "Previous Year Marksheet",
+          "required_or_optional": "Required",
+          "description": "Proof of passing previous class examination"
+        },
+        {
+          "document_name": "School Bonafide Certificate",
+          "required_or_optional": "Required",
+          "description": "Certificate from school confirming current enrollment"
+        },
+        {
+          "document_name": "Bank Account Details",
+          "required_or_optional": "Required",
+          "description": "Student's bank account for scholarship transfer"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification and DBT"
+        },
+        {
+          "document_name": "Hostel Certificate",
+          "required_or_optional": "Optional",
+          "description": "Required only if claiming hostel allowance"
+        }
+      ],
+      "application_mode": "Online",
+      "online_apply_link": "https://scholarships.gov.in/",
+      "official_website": "https://socialjustice.gov.in/",
+      "application_steps_online": [
+        "Visit National Scholarship Portal at scholarships.gov.in",
+        "Register as new user with valid email and mobile number",
+        "Verify email and mobile through OTP",
+        "Login and select 'Pre-Matric Scholarship for OBC Students'",
+        "Fill application form with personal, academic and income details",
+        "Upload all required documents in specified format (PDF/JPG)",
+        "Submit application and save application ID for tracking",
+        "Track application status through portal using application ID"
+      ],
+      "application_steps_offline": [
+        "Contact your school principal or scholarship coordinator",
+        "Obtain Pre-Matric OBC scholarship application form",
+        "Fill the form completely with accurate information",
+        "Attach self-attested copies of all required documents",
+        "Submit to school authorities before deadline",
+        "School will verify and forward applications to district authorities",
+        "Follow up with school for application status"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "School Office",
+          "department_name": "School Administration",
+          "address": "Student's current school",
+          "contact_phone": "Contact school directly",
+          "working_days": "Monday to Friday",
+          "working_hours": "09:00 AM - 04:00 PM",
+          "who_should_visit": "Student or Parent",
+          "notes": "School will verify documents and forward application to district education office"
+        }
+      ],
+      "start_date": "2012-04-01",
+      "last_date": "Announced annually (typically September-November)",
+      "status": "Active",
+      "validity": "One year, renewable for Class 10",
+      "renewal_required": "Yes",
+      "processing_time": "60 to 90 days",
+      "helpline_number": "0120-6619540",
+      "email_support": "helpdesk@nsp.gov.in",
+      "faq": [
+        {
+          "question": "What is non-creamy layer certificate?",
+          "answer": "Non-creamy layer certificate proves that your family income is below the creamy layer limit and you belong to socially and educationally backward classes."
+        },
+        {
+          "question": "Can private school students apply?",
+          "answer": "Yes, students from both government and private recognized schools are eligible."
+        },
+        {
+          "question": "What is the income limit?",
+          "answer": "Parental income from all sources should not exceed ₹1 Lakh per annum."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Invalid or expired OBC certificate",
+        "Creamy layer status (income above limit)",
+        "Income exceeding ₹1 Lakh per annum",
+        "Incomplete or unclear documents",
+        "More than two siblings already receiving scholarship"
+      ],
+      "tips_for_successful_application": [
+        "Ensure OBC certificate is non-creamy layer and valid",
+        "Get income certificate from Tehsildar or competent authority",
+        "Apply early before deadline",
+        "Upload clear, readable documents",
+        "Keep application ID safe for tracking"
+      ],
+      "target_beneficiaries": [
+        "OBC students",
+        "Class 9-10 students",
+        "Students from economically weaker sections"
+      ],
+      "tags": [
+        "Education",
+        "OBC Welfare",
+        "Pre-Matric",
+        "Scholarship"
+      ],
+      "priority_level": "High",
+      "popularity_score": 80,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "education",
+      "banner_image_keyword": "school_students",
+      "theme_color": "#FF5722",
+      "featured_flag": false
+    },
+    {
+      "scheme_id": "SCH_048",
+      "scheme_name": "Rashtriya Kishor Swasthya Karyakram (RKSK)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Comprehensive adolescent health program providing health services, counseling, and nutrition support for 10-19 years age group.",
+      "detailed_description": "RKSK is a comprehensive program under National Health Mission to address the health needs of adolescents in the age group of 10-19 years. The program focuses on six key areas: nutrition, sexual and reproductive health, mental health, injuries and violence, substance misuse, and non-communicable diseases. Services are provided through Adolescent Friendly Health Clinics (AFHCs) at health facilities, peer educators, and school health programs.",
+      "key_benefits": [
+        "Free health checkups and counseling for adolescents",
+        "Nutrition supplementation for anemic adolescents (IFA tablets)",
+        "Mental health counseling and support services",
+        "Reproductive health education and services",
+        "Substance abuse prevention and counseling",
+        "Peer educator support in schools and communities"
+      ],
+      "financial_assistance": "Free health services",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "10 to 19 years",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Available to all adolescents regardless of economic status",
+        "Services provided at Adolescent Friendly Health Clinics",
+        "School health programs cover enrolled students",
+        "Confidential counseling services available",
+        "No registration required for basic services"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "School ID Card",
+          "required_or_optional": "Optional",
+          "description": "For school-based services identification"
+        },
+        {
+          "document_name": "Age Proof",
+          "required_or_optional": "Optional",
+          "description": "Birth certificate or school records for age verification"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://nhm.gov.in/index1.php?lang=1&level=2&sublinkid=818&lid=222",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Visit nearest Adolescent Friendly Health Clinic (AFHC) at PHC/CHC",
+        "No appointment needed - walk-in services available",
+        "Register at reception with basic details",
+        "Consult with trained counselor or doctor",
+        "Receive health checkup, counseling, or treatment as needed",
+        "Get IFA tablets if anemic (free of cost)",
+        "Follow-up visits as advised by health provider"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Adolescent Friendly Health Clinic",
+          "department_name": "Health Department",
+          "address": "Primary Health Center or Community Health Center",
+          "contact_phone": "Contact local PHC/CHC",
+          "working_days": "Monday to Saturday",
+          "working_hours": "09:00 AM - 05:00 PM (specific AFHC hours may vary)",
+          "who_should_visit": "Adolescent (can come alone or with parent)",
+          "notes": "Confidential services available, peer educators also provide support in schools"
+        }
+      ],
+      "start_date": "2014-01-08",
+      "last_date": "Ongoing program",
+      "status": "Active",
+      "validity": "Continuous coverage during adolescent years (10-19)",
+      "renewal_required": "No",
+      "processing_time": "Immediate consultation and services",
+      "helpline_number": "1800-180-1104",
+      "email_support": "rksk-mohfw@gov.in",
+      "faq": [
+        {
+          "question": "Are the services confidential?",
+          "answer": "Yes, all counseling and health services at AFHC are completely confidential."
+        },
+        {
+          "question": "Can I visit AFHC without parents?",
+          "answer": "Yes, adolescents can visit AFHC independently for consultation and services."
+        },
+        {
+          "question": "What services are provided?",
+          "answer": "Health checkups, nutrition counseling, mental health support, reproductive health education, substance abuse counseling, and treatment for common ailments."
+        }
+      ],
+      "common_rejection_reasons": [],
+      "tips_for_successful_application": [
+        "Locate nearest AFHC through ASHA worker or school health program",
+        "Visit during AFHC operational hours",
+        "Feel free to discuss any health concerns confidentially",
+        "Take IFA tablets regularly if prescribed for anemia",
+        "Participate in peer educator programs at school"
+      ],
+      "target_beneficiaries": [
+        "Adolescents 10-19 years",
+        "School-going adolescents",
+        "Out-of-school adolescents",
+        "Adolescent girls and boys"
+      ],
+      "tags": [
+        "Health",
+        "Adolescent Health",
+        "Mental Health",
+        "Nutrition",
+        "Counseling"
+      ],
+      "priority_level": "High",
+      "popularity_score": 72,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "adolescent_health",
+      "banner_image_keyword": "youth_healthcare",
+      "theme_color": "#9C27B0",
+      "featured_flag": false
+    },
+    {
+      "scheme_id": "SCH_049",
+      "scheme_name": "National Programme for Prevention and Control of Cancer, Diabetes, Cardiovascular Diseases and Stroke (NPCDCS)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Free screening, diagnosis, and treatment for non-communicable diseases including cancer, diabetes, hypertension, and stroke.",
+      "detailed_description": "NPCDCS is a comprehensive program to prevent and control major non-communicable diseases (NCDs) in India. The program provides free screening for diabetes, hypertension, and common cancers at primary health centers, followed by referral for diagnosis and treatment at district and tertiary level facilities. The program focuses on health promotion, early diagnosis, and management of NCDs through a three-tier system of NCD clinics.",
+      "key_benefits": [
+        "Free screening for diabetes, hypertension, and common cancers (oral, breast, cervical)",
+        "Free diagnostic tests at government facilities",
+        "Subsidized treatment and medicines for diagnosed conditions",
+        "Lifestyle counseling and health education",
+        "Referral to higher facilities for specialized care",
+        "Follow-up care and monitoring"
+      ],
+      "financial_assistance": "Free screening and subsidized treatment",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "30 years and above (screening), all ages for treatment",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Screening recommended for all adults above 30 years",
+        "Available at all government health facilities",
+        "No registration or application required",
+        "Treatment provided based on diagnosis",
+        "Referral system for specialized care"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Optional",
+          "description": "For identification and record maintenance"
+        },
+        {
+          "document_name": "Age Proof",
+          "required_or_optional": "Optional",
+          "description": "Any document showing age above 30 for screening"
+        },
+        {
+          "document_name": "Previous Medical Records",
+          "required_or_optional": "Optional",
+          "description": "If available, helps in better diagnosis and treatment"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://dghs.gov.in/content/1363_3_NationalProgrammePreventionControl.aspx",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Visit nearest Primary Health Center, Community Health Center, or District Hospital",
+        "Register at NCD clinic (usually specific days/hours)",
+        "Get free screening for blood pressure, blood sugar, and common cancers",
+        "If abnormality detected, get referred for diagnostic tests",
+        "Receive treatment and medicines at government facility",
+        "Follow up as per doctor's advice for monitoring",
+        "Get lifestyle counseling and health education"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "NCD Clinic",
+          "department_name": "Health Department",
+          "address": "Primary Health Center, Community Health Center, or District Hospital",
+          "contact_phone": "Contact local health facility",
+          "working_days": "Monday to Saturday (specific NCD clinic days)",
+          "working_hours": "09:00 AM - 02:00 PM (varies by facility)",
+          "who_should_visit": "Individual seeking screening or treatment",
+          "notes": "NCD clinics operate on specific days, check with local health facility for schedule"
+        }
+      ],
+      "start_date": "2010-01-01",
+      "last_date": "Ongoing program",
+      "status": "Active",
+      "validity": "Continuous, screening recommended annually",
+      "renewal_required": "No",
+      "processing_time": "Immediate screening, treatment as per diagnosis",
+      "helpline_number": "1800-180-1104",
+      "email_support": "npcdcs-mohfw@gov.in",
+      "faq": [
+        {
+          "question": "Who should get screened?",
+          "answer": "All adults above 30 years should get screened annually for diabetes, hypertension, and common cancers."
+        },
+        {
+          "question": "Is treatment free?",
+          "answer": "Screening is free. Treatment and medicines are provided free or at subsidized rates at government facilities."
+        },
+        {
+          "question": "What cancers are screened?",
+          "answer": "Common cancers screened include oral cancer, breast cancer (women), and cervical cancer (women)."
+        }
+      ],
+      "common_rejection_reasons": [],
+      "tips_for_successful_application": [
+        "Visit NCD clinic on designated days (check with local health facility)",
+        "Go for screening even if you feel healthy - early detection is key",
+        "Follow lifestyle advice given by health workers",
+        "Take prescribed medicines regularly",
+        "Attend follow-up appointments as scheduled"
+      ],
+      "target_beneficiaries": [
+        "Adults above 30 years",
+        "People with family history of NCDs",
+        "People with risk factors (obesity, smoking, etc.)",
+        "Diagnosed NCD patients"
+      ],
+      "tags": [
+        "Health",
+        "NCD",
+        "Cancer Screening",
+        "Diabetes",
+        "Hypertension",
+        "Preventive Care"
+      ],
+      "priority_level": "High",
+      "popularity_score": 78,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "health_screening",
+      "banner_image_keyword": "preventive_healthcare",
+      "theme_color": "#F44336",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_050",
+      "scheme_name": "National Mission for Sustainable Agriculture (NMSA)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Promotes sustainable agriculture practices through various components including soil health, water conservation, and climate-resilient farming.",
+      "detailed_description": "NMSA is an umbrella program that seeks to transform Indian agriculture into a climate-resilient production system through suitable adaptation and mitigation measures in the domain of agriculture and allied sectors. The mission has 10 key dimensions including Rainfed Area Development, Soil Health Management, On Farm Water Management, and Climate Change and Sustainable Agriculture. Financial assistance varies by component, ranging from ₹10,000 to ₹50,000 per hectare depending on the intervention.",
+      "key_benefits": [
+        "Financial assistance for soil health improvement (₹10,000-₹15,000/ha)",
+        "Support for water conservation structures (₹20,000-₹40,000/ha)",
+        "Assistance for climate-resilient farming practices",
+        "Subsidy for micro-irrigation systems",
+        "Training on sustainable agriculture practices",
+        "Support for organic farming and integrated farming systems"
+      ],
+      "financial_assistance": "₹10,000 to ₹50,000 per hectare (varies by component)",
+      "benefit_type": "Financial + Technical Support",
+      "age_criteria": "18 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Farmers",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must be a farmer with cultivable land",
+        "Land should be suitable for proposed intervention",
+        "Must commit to sustainable agriculture practices",
+        "Priority given to small and marginal farmers",
+        "Assistance varies by component and state implementation"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Land Ownership Documents",
+          "required_or_optional": "Required",
+          "description": "7/12 extract, land records, or lease agreement"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification and DBT"
+        },
+        {
+          "document_name": "Bank Account Details",
+          "required_or_optional": "Required",
+          "description": "For direct benefit transfer of subsidy"
+        },
+        {
+          "document_name": "Soil Health Card",
+          "required_or_optional": "Optional",
+          "description": "Helps in planning appropriate interventions"
+        },
+        {
+          "document_name": "Project Proposal",
+          "required_or_optional": "Required",
+          "description": "For certain components like water conservation structures"
+        }
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "Not Applicable",
+      "official_website": "https://agricoop.nic.in/en/NMSA",
+      "application_steps_online": [],
+      "application_steps_offline": [
+        "Contact District Agriculture Office or Krishi Vigyan Kendra",
+        "Identify suitable NMSA component based on your land and needs",
+        "Obtain application form for specific component",
+        "Prepare required documents and project proposal if needed",
+        "Submit application to District Agriculture Office",
+        "Get technical guidance from agriculture department",
+        "Upon approval, implement the intervention with department support",
+        "Receive subsidy after verification of work completion"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "District Agriculture Office",
+          "department_name": "Department of Agriculture",
+          "address": "District headquarters",
+          "contact_phone": "Contact district agriculture office",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Farmer",
+          "notes": "Krishi Vigyan Kendras and Block Agriculture Offices also provide guidance"
+        }
+      ],
+      "start_date": "2014-07-01",
+      "last_date": "Ongoing program",
+      "status": "Active",
+      "validity": "Varies by component (1-3 years)",
+      "renewal_required": "No",
+      "processing_time": "60 to 120 days depending on component",
+      "helpline_number": "011-23382012",
+      "email_support": "nmsa-agri@gov.in",
+      "faq": [
+        {
+          "question": "What components are available under NMSA?",
+          "answer": "Major components include Rainfed Area Development, Soil Health Management, On Farm Water Management, Climate Change adaptation, and Integrated Farming Systems."
+        },
+        {
+          "question": "How much subsidy is provided?",
+          "answer": "Subsidy varies by component and category of farmer. Small/marginal farmers get higher subsidy (up to 100% in some cases)."
+        },
+        {
+          "question": "Can I apply for multiple components?",
+          "answer": "Yes, farmers can benefit from multiple components if eligible and land is suitable."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Land not suitable for proposed intervention",
+        "Incomplete documentation",
+        "Budget exhausted for the year",
+        "Non-compliance with technical specifications",
+        "Duplicate application for same intervention"
+      ],
+      "tips_for_successful_application": [
+        "Get soil health card done before applying",
+        "Consult with agriculture department for suitable component",
+        "Ensure land documents are clear and updated",
+        "Follow technical specifications provided by department",
+        "Apply early in financial year when budget is available",
+        "Maintain proper records of implementation"
+      ],
+      "target_beneficiaries": [
+        "All farmers",
+        "Small and marginal farmers (priority)",
+        "Rainfed area farmers",
+        "Farmers in climate-vulnerable regions"
+      ],
+      "tags": [
+        "Agriculture",
+        "Sustainable Farming",
+        "Climate Resilience",
+        "Soil Health",
+        "Water Conservation"
+      ],
+      "priority_level": "Medium",
+      "popularity_score": 68,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "sustainable_farming",
+      "banner_image_keyword": "climate_smart_agriculture",
+      "theme_color": "#4CAF50",
+      "featured_flag": false
+    },
+    {
+      "scheme_id": "SCH_051",
+      "scheme_name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+      "category": "Financial Assistance",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Finance",
+      "short_description": "Accident insurance scheme providing ₹2 Lakh coverage for accidental death or disability at premium of just ₹20 per year.",
+      "detailed_description": "PMSBY is a one-year accident insurance scheme renewable from year to year, offering coverage for accidental death and disability. The scheme is available to people in the age group of 18 to 70 years with a savings bank account who give their consent to join and enable auto-debit. The premium of ₹20 per annum is to be deducted from the account holder's bank account through auto-debit facility in one installment on or before 1st June of each coverage year.",
+      "key_benefits": [
+        "₹2,00,000 coverage for accidental death",
+        "₹2,00,000 for permanent total disability (loss of both eyes or both limbs)",
+        "₹1,00,000 for permanent partial disability (loss of one eye or one limb)",
+        "Very low premium of only ₹20 per year",
+        "Simple enrollment process through bank",
+        "Coverage renewable annually"
+      ],
+      "financial_assistance": "₹2 Lakh accident insurance cover",
+      "benefit_type": "Insurance",
+      "age_criteria": "18 to 70 years",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must have a savings bank account in participating bank",
+        "Must give consent for auto-debit of premium amount",
+        "Account should have sufficient balance for premium deduction",
+        "Coverage period is June 1 to May 31 annually",
+        "Can be enrolled through multiple bank accounts but claim only from one"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification and KYC compliance"
+        },
+        {
+          "document_name": "Bank Account Details",
+          "required_or_optional": "Required",
+          "description": "Active savings bank account for premium deduction"
+        },
+        {
+          "document_name": "Consent Form",
+          "required_or_optional": "Required",
+          "description": "Written consent for enrollment and auto-debit authorization"
+        },
+        {
+          "document_name": "Nomination Form",
+          "required_or_optional": "Optional",
+          "description": "To nominate beneficiary for claim settlement"
+        }
+      ],
+      "application_mode": "Both",
+      "online_apply_link": "https://www.jansuraksha.gov.in/",
+      "official_website": "https://www.jansuraksha.gov.in/",
+      "application_steps_online": [
+        "Visit your bank's internet banking portal or mobile app",
+        "Navigate to insurance or Jan Suraksha section",
+        "Select Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+        "Fill the enrollment form with personal details",
+        "Provide consent for auto-debit of ₹20 premium",
+        "Submit the form and receive enrollment confirmation",
+        "Premium will be auto-debited from account annually"
+      ],
+      "application_steps_offline": [
+        "Visit your bank branch where you have savings account",
+        "Request for PMSBY enrollment form from bank staff",
+        "Fill the form completely with accurate details",
+        "Provide Aadhaar number and give consent for auto-debit",
+        "Submit the form along with required documents",
+        "Ensure sufficient balance in account for premium deduction",
+        "Receive enrollment confirmation and policy details"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Bank Branch",
+          "department_name": "Your Bank Branch",
+          "address": "Branch where you have savings account",
+          "contact_phone": "Your bank branch contact number",
+          "working_days": "Monday to Friday (Saturday for some banks)",
+          "working_hours": "10:00 AM - 04:00 PM",
+          "who_should_visit": "Account holder",
+          "notes": "Can also enroll through bank's internet banking or mobile app"
+        }
+      ],
+      "start_date": "2015-05-09",
+      "last_date": "Enrollment period: June 1 to May 31 annually",
+      "status": "Active",
+      "validity": "One year (June 1 to May 31), renewable annually",
+      "renewal_required": "Yes",
+      "processing_time": "Immediate enrollment, claims processed within 30 days",
+      "helpline_number": "1800-180-1111 / 1800-110-001",
+      "email_support": "jansuraksha@gov.in",
+      "faq": [
+        {
+          "question": "What is covered under PMSBY?",
+          "answer": "Accidental death and permanent disability (total or partial) due to accident are covered. Natural death is not covered."
+        },
+        {
+          "question": "Can I enroll after June 1?",
+          "answer": "Yes, you can enroll anytime during the year by paying full annual premium, but coverage will start from enrollment date."
+        },
+        {
+          "question": "Is medical examination required?",
+          "answer": "No, there is no medical examination required for enrollment in PMSBY."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Insufficient balance in account for premium deduction",
+        "Age not within 18-70 years range",
+        "Incomplete or incorrect Aadhaar details",
+        "Claim not supported by proper accident documentation"
+      ],
+      "tips_for_successful_application": [
+        "Ensure sufficient balance in account before June 1 for auto-debit",
+        "Link Aadhaar with bank account for smooth enrollment",
+        "Keep nomination details updated",
+        "Renew annually by maintaining sufficient balance",
+        "Keep policy documents safe for claim purposes"
+      ],
+      "target_beneficiaries": [
+        "Bank account holders",
+        "Working professionals",
+        "Self-employed individuals",
+        "Daily wage workers"
+      ],
+      "tags": [
+        "Insurance",
+        "Accident Cover",
+        "Financial Protection",
+        "Low Premium",
+        "Jan Suraksha"
+      ],
+      "priority_level": "High",
+      "popularity_score": 88,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "insurance_shield",
+      "banner_image_keyword": "accident_insurance",
+      "theme_color": "#FF9800",
+      "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_052",
+      "scheme_name": "Stand Up India Scheme",
+      "category": "Financial Assistance",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Finance",
+      "short_description": "Facilitates bank loans between ₹10 Lakh to ₹1 Crore for SC/ST and women entrepreneurs to set up greenfield enterprises.",
+      "detailed_description": "Stand Up India Scheme was launched to promote entrepreneurship among women and SC/ST categories. The scheme facilitates bank loans between ₹10 lakh and ₹1 crore to at least one Scheduled Caste (SC) or Scheduled Tribe (ST) borrower and at least one woman borrower per bank branch for setting up a greenfield enterprise in manufacturing, services or trading sector. The scheme also provides handholding support through Stand Up Connect Centers and convergence with other government schemes.",
+      "key_benefits": [
+        "Composite loan between ₹10 lakh to ₹1 crore for greenfield enterprises",
+        "Covers both term loan and working capital requirements",
+        "Margin money requirement reduced to 15% (25% for general category)",
+        "Handholding support through Stand Up Connect Centers",
+        "Credit Guarantee coverage available",
+        "Convergence with other government schemes like PMEGP, Mudra"
+      ],
+      "financial_assistance": "Loans ₹10 Lakh to ₹1 Crore",
+      "benefit_type": "Loan",
+      "age_criteria": "18 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "Women or SC/ST (Male/Female)",
+      "category_criteria": "SC/ST or Women",
+      "occupation_criteria": "Entrepreneur",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Loan is for greenfield enterprise only (new enterprise, not existing)",
+        "Enterprise should be in manufacturing, services or trading sector",
+        "Borrower should not be in default to any bank/financial institution",
+        "At least one SC/ST and one woman borrower per bank branch",
+        "Enterprise should generate employment"
+      ],
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Business Plan",
+          "required_or_optional": "Required",
+          "description": "Detailed project report with financial projections"
+        },
+        {
+          "document_name": "Aadhaar Card",
+          "required_or_optional": "Required",
+          "description": "For identity verification and KYC"
+        },
+        {
+          "document_name": "Caste Certificate",
+          "required_or_optional": "Required",
+          "description": "For SC/ST applicants - issued by competent authority"
+        },
+        {
+          "document_name": "Educational Certificates",
+          "required_or_optional": "Optional",
+          "description": "Proof of educational qualification"
+        },
+        {
+          "document_name": "Bank Statements",
+          "required_or_optional": "Required",
+          "description": "Last 6 months bank statements"
+        },
+        {
+          "document_name": "Property Documents",
+          "required_or_optional": "Optional",
+          "description": "For collateral if required by bank"
+        },
+        {
+          "document_name": "Business Registration",
+          "required_or_optional": "Required",
+          "description": "Proposed business registration documents or plan"
+        }
+      ],
+      "application_mode": "Both",
+      "online_apply_link": "https://www.standupmitra.in/",
+      "official_website": "https://www.standupin dia.gov.in/",
+      "application_steps_online": [
+        "Visit Stand Up India portal at www.standupmitra.in",
+        "Register as new user with valid email and mobile number",
+        "Fill the application form with personal and business details",
+        "Upload required documents including business plan",
+        "Submit application online",
+        "Application will be forwarded to nearest bank branch",
+        "Bank will contact you for further processing and loan sanction"
+      ],
+      "application_steps_offline": [
+        "Visit nearest bank branch (preferably where you have account)",
+        "Request for Stand Up India loan application form",
+        "Prepare detailed business plan with help of Stand Up Connect Center if needed",
+        "Fill application form completely with accurate information",
+        "Attach all required documents including caste certificate (for SC/ST)",
+        "Submit application to bank along with business plan",
+        "Attend bank interview and provide additional information if required",
+        "Upon approval, complete loan documentation and receive funds"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Bank Branch",
+          "department_name": "Scheduled Commercial Banks",
+          "address": "Any bank branch (Public/Private sector banks)",
+          "contact_phone": "Contact your nearest bank branch",
+          "working_days": "Monday to Friday (Saturday for some banks)",
+          "working_hours": "10:00 AM - 04:00 PM",
+          "who_should_visit": "Prospective entrepreneur",
+          "notes": "Stand Up Connect Centers also provide handholding support for application preparation"
+        }
+      ],
+      "start_date": "2016-04-05",
+      "last_date": "Ongoing scheme",
+      "status": "Active",
+      "validity": "Loan repayment period up to 7 years",
+      "renewal_required": "No",
+      "processing_time": "30 to 60 days depending on bank and documentation",
+      "helpline_number": "1800-180-1111",
+      "email_support": "standupindia.fid@sidbi.in",
+      "faq": [
+        {
+          "question": "Can I apply if I already have an existing business?",
+          "answer": "No, Stand Up India is only for greenfield enterprises (new businesses). Existing businesses are not eligible."
+        },
+        {
+          "question": "What is the interest rate?",
+          "answer": "Interest rate is lowest applicable rate of the bank for that category plus 3% tenure premium. Rate varies by bank."
+        },
+        {
+          "question": "Is collateral required?",
+          "answer": "For loans up to ₹25 lakh, no collateral is required. For higher amounts, bank may ask for collateral."
+        },
+        {
+          "question": "Can general category women apply?",
+          "answer": "Yes, all women irrespective of caste can apply under Stand Up India."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Existing business (not greenfield enterprise)",
+        "Incomplete or unrealistic business plan",
+        "Applicant is defaulter in other loans",
+        "Invalid or expired caste certificate",
+        "Insufficient margin money contribution"
+      ],
+      "tips_for_successful_application": [
+        "Prepare comprehensive and realistic business plan",
+        "Get business plan reviewed by Stand Up Connect Center",
+        "Ensure all documents are complete and valid",
+        "Have clear understanding of your business model",
+        "Arrange for margin money (15% of project cost)",
+        "Choose viable business with good market potential"
+      ],
+      "target_beneficiaries": [
+        "SC/ST entrepreneurs",
+        "Women entrepreneurs",
+        "First-time business owners",
+        "Greenfield enterprise promoters"
+      ],
+      "tags": [
+        "Entrepreneurship",
+        "Business Loan",
+        "SC/ST Welfare",
+        "Women Empowerment",
+        "MSME"
+      ],
+      "priority_level": "High",
+      "popularity_score": 82,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "business_startup",
+      "banner_image_keyword": "entrepreneur_success",
+      "theme_color": "#673AB7",
+      "featured_flag": true
     }
   ]
 }
