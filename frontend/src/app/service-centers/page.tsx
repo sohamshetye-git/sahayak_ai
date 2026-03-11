@@ -20,6 +20,7 @@ import {
   ArrowLeft,
   Home
 } from 'lucide-react';
+import InteractiveMap from '../components/InteractiveMap';
 
 type ViewMode = 'list' | 'map';
 
@@ -355,24 +356,19 @@ export default function ServiceCentersPage() {
         {/* Map View */}
         {viewMode === 'map' && (
           <div className="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
-            <div className="aspect-video bg-gray-100 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <MapIcon size={48} className="text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 mb-4">
-                  {language === 'hi' 
-                    ? 'इंटरैक्टिव मानचित्र जल्द आ रहा है' 
-                    : 'Interactive map coming soon'}
-                </p>
-                <p className="text-sm text-gray-500">
-                  {language === 'hi' 
-                    ? 'अभी के लिए, प्रत्येक केंद्र पर "नक्शे पर देखें" का उपयोग करें' 
-                    : 'For now, use "View on Map" on each center'}
-                </p>
-              </div>
-            </div>
+            <InteractiveMap
+              centers={filteredCenters}
+              userLocation={userLocation}
+              language={language}
+              onGetDirections={handleGetDirections}
+              onViewOnMap={handleViewOnMap}
+            />
 
             {/* Centers List Below Map */}
             <div className="mt-6 space-y-3 max-h-96 overflow-y-auto">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">
+                {language === 'hi' ? 'केंद्रों की सूची' : 'Centers List'}
+              </h3>
               {filteredCenters.map((center) => (
                 <div
                   key={center.center_id}
