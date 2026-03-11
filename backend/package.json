@@ -47,6 +47,7 @@
     "serverless-offline": "^13.3.2",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
   }
 }
