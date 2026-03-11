@@ -34,7 +34,7 @@ function getDynamoClient(): DynamoDBDocumentClient {
 }
 
 /**
- * Load schemes from JSON file
+ * Load schemes from JSON file (single source of truth)
  */
 async function loadSchemesFromJSON(): Promise<Scheme[]> {
   if (schemesMemoryCache) {
@@ -43,9 +43,10 @@ async function loadSchemesFromJSON(): Promise<Scheme[]> {
   }
 
   try {
-    console.log('[SCHEMES] Loading from JSON file');
+    console.log('[SCHEMES] Loading from schemes.json (single source of truth)');
     const schemes = await loadSchemesData();
     schemesMemoryCache = schemes;
+    console.log(`[SCHEMES] Loaded ${schemes.length} schemes from JSON`);
     return schemes;
   } catch (error) {
     console.error('[SCHEMES] Error loading schemes from JSON:', error);

@@ -92,8 +92,10 @@ export async function loadJsonData(filename: string): Promise<any> {
 /**
  * Load schemes data
  */
-export async function loadSchemesData(): Promise<any[]> {
-  return loadJsonData('schemes.json');
+export async function loadSchemesData(): Promise<any> {
+  const data = await loadJsonData('schemes.json');
+  // Return the schemes array from the JSON structure
+  return data.schemes || [];
 }
 
 /**

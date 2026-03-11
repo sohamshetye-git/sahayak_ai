@@ -65,6 +65,19 @@ function cleanAIResponse(text: string): string {
 function removeSchemeNamesFromResponse(text: string): string {
   if (!text) return text;
   
+  // FIX 4: Only block if AI is actually listing scheme names, not asking questions
+  const lowerText = text.toLowerCase();
+  
+  // Check if this is a question (contains ? or question words)
+  const isQuestion = text.includes('?') || 
+                    /\b(what|how|which|when|where|who|क्या|कैसे|कौन|कब|कहां)\b/i.test(text);
+  
+  // If it's a question, don't block it
+  if (isQuestion) {
+    console.log('[ARCHITECTURE_GUARD] Detected question - allowing through');
+    return text;
+  }
+  
   const schemeNames = [
     'PM-KISAN', 'PM KISAN', 'Pradhan Mantri Kisan', 'PMKISAN',
     'Ayushman Bharat', 'PMJAY', 'PM-JAY', 'AB-PMJAY',
@@ -82,26 +95,24 @@ function removeSchemeNamesFromResponse(text: string): string {
     'Kanyashree', 'Mukhyamantri',
   ];
   
-  // Check if response contains scheme recommendations
-  const lowerText = text.toLowerCase();
+  // Check if response contains scheme recommendations with actual scheme names
   const hasSchemeNames = schemeNames.some(name => 
     lowerText.includes(name.toLowerCase())
   );
   
   if (hasSchemeNames) {
-    console.log('[ARCHITECTURE_VIOLATION] AI attempted to recommend schemes - blocking');
+    console.log('[ARCHITECTURE_VIOLATION] AI attempted to recommend specific schemes - blocking');
     // Replace entire response with waiting message
     return 'Let me check your eligibility first...';
   }
   
-  // Check for recommendation phrases
+  // Check for recommendation phrases ONLY if they appear with scheme context
   const recommendationPhrases = [
     'here are the schemes',
-    'eligible for',
-    'you can apply',
-    'recommended schemes',
-    'following schemes',
-    'these schemes',
+    'eligible for the following',
+    'you can apply for these',
+    'recommended schemes are',
+    'following schemes match',
   ];
   
   const hasRecommendation = recommendationPhrases.some(phrase =>
@@ -109,12 +120,13 @@ function removeSchemeNamesFromResponse(text: string): string {
   );
   
   if (hasRecommendation) {
-    console.log('[ARCHITECTURE_VIOLATION] AI attempted to make recommendations - blocking');
+    console.log('[ARCHITECTURE_VIOLATION] AI attempted to make scheme recommendations - blocking');
     return 'Let me check your eligibility first...';
   }
   
   return text;
 }
+
 
 function getOrchestrator() {
   if (!orchestrator) {
@@ -553,12 +565,43 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
     // This prevents AI from "hallucinating" scheme names
     let cleanedResponse: string;
     
-    if (response.stage === 'recommendation_ready' && hasRequiredFields) {
-      console.log('[FIX 3] Intercepting AI response - forcing localized processing message');
+    // FIX 1: STRICT REQUIREMENT GATE - Never show "checking eligibility" unless profile is 100% complete
+    if (response.stage === 'recommendation_ready' && hasRequiredFields && profile.completeness === 100) {
+      console.log('[FIX 1] Profile 100% complete - forcing localized processing message');
       // Replace AI text IMMEDIATELY with localized message
       cleanedResponse = language === 'hi'
         ? 'धन्यवाद! मैं आपकी पात्रता की जांच कर रहा हूं...'
         : 'Thank you! I am checking your eligibility...';
+    } else if (response.stage === 'recommendation_ready' && !hasRequiredFields) {
+      // FIX 1: Profile incomplete but stage says ready - FORCE fallback to follow-up question
+      console.log('[FIX 1] DEADLOCK DETECTED - stage is recommendation_ready but profile incomplete');
+      console.log('[FIX 1] Missing fields:', missingFields);
+      console.log('[FIX 1] Forcing fallback to generateFollowUpQuestion');
+      
+      // Generate contextual follow-up question for the missing field
+      cleanedResponse = await orch.generateFollowUpQuestion(missingFields, language, profile);
+      
+      // If we have a name, personalize the question
+      if (profile.name && cleanedResponse) {
+        const greeting = language === 'hi' 
+          ? `बढ़िया, ${profile.name}! `
+          : `Great, ${profile.name}! `;
+        
+        // Add context based on what we know
+        if (profile.occupation && missingFields.includes('income')) {
+          const occupationContext = language === 'hi'
+            ? `मैं देख रहा हूं कि आप ${profile.occupation} हैं। `
+            : `I see you are a ${profile.occupation}. `;
+          cleanedResponse = greeting + occupationContext + cleanedResponse;
+        } else {
+          cleanedResponse = greeting + cleanedResponse;
+        }
+      }
+      
+      // Force stage back to collecting_profile
+      response.stage = 'collecting_profile';
+      session.stage = 'collecting_profile';
+      console.log('[FIX 1] Stage forced back to collecting_profile');
     } else {
       // Clean AI response - remove thinking tags and markdown
       cleanedResponse = cleanAIResponse(response.response);
@@ -588,7 +631,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       // If AI is asking for already collected field, generate proper next question
       if (alreadyCollected.length > 0 && missingFields.length > 0) {
         console.log('[DUPLICATE PREVENTION] AI asked for collected field:', alreadyCollected, '- generating next question');
-        cleanedResponse = await orch.generateFollowUpQuestion(missingFields, language);
+        cleanedResponse = await orch.generateFollowUpQuestion(missingFields, language, profile);
       }
     }
 

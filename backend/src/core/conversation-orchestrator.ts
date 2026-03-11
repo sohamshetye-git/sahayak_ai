@@ -404,6 +404,12 @@ ${missingFields.length > 0 ? `🔒 [STRICT RULE]: You are currently asking for "
     const missingFields = this.identifyMissingInfo(profile);
     const hasRequiredFields = missingFields.length === 0;
 
+    // FIX 2: STRICT GATE - Never allow recommendation_ready if missing fields exist
+    if (missingFields.length > 0) {
+      console.log('[STAGE] Missing fields detected - staying in collecting_profile:', missingFields);
+      return 'collecting_profile';
+    }
+
     // Stage transition logic
     if (currentStage === 'greeting') {
       // Move to collecting_profile after greeting
@@ -478,13 +484,32 @@ ${missingFields.length > 0 ? `🔒 [STRICT RULE]: You are currently asking for "
    */
   async generateFollowUpQuestion(
     missingFields: string[],
-    language: 'hi' | 'en'
+    language: 'hi' | 'en',
+    currentProfile?: Partial<UserProfile>
   ): Promise<string> {
     if (missingFields.length === 0) {
       return '';
     }
 
     const field = missingFields[0];
+    
+    // FIX 3: Contextual income question for students/farmers
+    if (field === 'income' && currentProfile?.occupation) {
+      const occupation = currentProfile.occupation.toLowerCase();
+      
+      if (occupation.includes('student')) {
+        return language === 'hi'
+          ? 'अधिकांश छात्र योजनाओं के लिए पारिवारिक आय की जानकारी आवश्यक है। क्या आपकी वार्षिक पारिवारिक आय ₹2.5 लाख से कम है या अधिक?'
+          : 'Most student schemes require family income details. Is your annual family income below ₹2.5 Lakhs or above?';
+      }
+      
+      if (occupation.includes('farmer')) {
+        return language === 'hi'
+          ? 'कृषि योजनाओं के लिए आय की जानकारी महत्वपूर्ण है। आपकी वार्षिक कृषि आय कितनी है?'
+          : 'Income information is important for agricultural schemes. What is your annual agricultural income?';
+      }
+    }
+    
     const questions: Record<string, Record<string, string>> = {
       en: {
         age: 'How old are you?',

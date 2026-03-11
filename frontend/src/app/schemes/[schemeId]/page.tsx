@@ -636,7 +636,9 @@ export default function SchemeDetailsPage() {
                       : 'Visit the official portal and apply online. Fast and convenient.'}
                   </p>
                   
-                  {scheme.online_apply_link ? (
+                  {scheme.online_apply_link && 
+                   scheme.online_apply_link !== 'Not Applicable' && 
+                   scheme.online_apply_link !== 'Not Specified' ? (
                     <a
                       href={scheme.online_apply_link}
                       target="_blank"
@@ -651,7 +653,7 @@ export default function SchemeDetailsPage() {
                       disabled
                       className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 text-gray-500 rounded-xl font-semibold text-sm cursor-not-allowed"
                     >
-                      {language === 'hi' ? 'जल्द आ रहा है' : 'Coming Soon'}
+                      {language === 'hi' ? 'ऑनलाइन उपलब्ध नहीं' : 'Not Available Online'}
                     </button>
                   )}
                 </div>
