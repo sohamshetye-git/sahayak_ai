@@ -8,14 +8,34 @@ import { UserProfile, Scheme, EligibilityResult, EligibilityCriteria } from '../
 export class EligibilityEngine {
   /**
    * Evaluate user eligibility against all schemes
+   * Optionally filter by target category (intent)
    */
   async evaluateEligibility(
     userProfile: UserProfile,
-    schemes: Scheme[]
+    schemes: Scheme[],
+    categoryFilter?: string
   ): Promise<EligibilityResult[]> {
+    // If category filter is provided, prioritize schemes in that category
+    let schemesToEvaluate = schemes;
+    
+    if (categoryFilter) {
+      const categorySchemes = schemes.filter(s => 
+        s.category.toLowerCase() === categoryFilter.toLowerCase()
+      );
+      
+      // If we found schemes in the target category, use only those
+      // Otherwise, fall back to all schemes
+      if (categorySchemes.length > 0) {
+        schemesToEvaluate = categorySchemes;
+        console.log(`[ELIGIBILITY] Filtering by category: ${categoryFilter}, found ${categorySchemes.length} schemes`);
+      } else {
+        console.log(`[ELIGIBILITY] No schemes found in category: ${categoryFilter}, using all schemes`);
+      }
+    }
+
     const results: EligibilityResult[] = [];
 
-    for (const scheme of schemes) {
+    for (const scheme of schemesToEvaluate) {
       const result = await this.checkSchemeEligibility(userProfile, scheme);
       results.push(result);
     }
@@ -171,12 +191,14 @@ export class EligibilityEngine {
 
   /**
    * Get only eligible schemes
+   * Optionally filter by target category (intent)
    */
   async getEligibleSchemes(
     userProfile: UserProfile,
-    schemes: Scheme[]
+    schemes: Scheme[],
+    categoryFilter?: string
   ): Promise<Scheme[]> {
-    const results = await this.evaluateEligibility(userProfile, schemes);
+    const results = await this.evaluateEligibility(userProfile, schemes, categoryFilter);
     return results.filter((r) => r.isEligible).map((r) => r.scheme);
   }
 }

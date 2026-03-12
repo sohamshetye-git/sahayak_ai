@@ -19,6 +19,7 @@ export const UserProfileSchema = z.object({
   casteCategory: z.enum(['general', 'obc', 'sc', 'st']).optional(),
   hasDisability: z.boolean().optional(),
   residenceType: z.enum(['Urban', 'Rural']).optional(),
+  targetCategory: z.string().optional(), // Intent: what category user is asking for
   completeness: z.number().min(0).max(100).default(0),
 });
 

@@ -668,7 +668,11 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       if (allSchemes.length > 0) {
         // ALWAYS run eligibility engine
         console.log('[ELIGIBILITY_ENGINE] Running eligibility evaluation...');
-        const eligibilityResults = await eligEngine.evaluateEligibility(profile as UserProfile, allSchemes);
+        const eligibilityResults = await eligEngine.evaluateEligibility(
+          profile as UserProfile, 
+          allSchemes,
+          profile.targetCategory // Pass intent category filter
+        );
         
         // Filter eligible schemes
         const eligibleSchemes = eligibilityResults
@@ -811,18 +815,28 @@ function formatEligibilityReason(rankedScheme: any, profile: UserProfile, langua
 function formatSchemeRecommendation(
   aiResponse: string,
   schemes: any[],
-  _profile: UserProfile,
-  _language: 'hi' | 'en'
+  profile: UserProfile,
+  language: 'hi' | 'en'
 ): string {
   if (schemes.length === 0) {
     return aiResponse;
+  }
+  
+  // Build intent acknowledgment if user specified a target category
+  let intentAcknowledgment = '';
+  if (profile.targetCategory) {
+    if (language === 'hi') {
+      intentAcknowledgment = `आपकी ${profile.targetCategory} योजनाओं में रुचि के आधार पर, यहाँ ${profile.occupation} के लिए ${profile.state} में उपलब्ध योजनाएं हैं:\n\n`;
+    } else {
+      intentAcknowledgment = `Based on your interest in ${profile.targetCategory} schemes, here are the available options for a ${profile.occupation} in ${profile.state}:\n\n`;
+    }
   }
   
   // Create structured scheme data for frontend parsing
   const schemeData = JSON.stringify(schemes, null, 2);
   
   // Add scheme data in parseable format that frontend can detect
-  const response = `${aiResponse}
+  const response = `${intentAcknowledgment}${aiResponse}
 
 [SCHEME_DATA]
 ${schemeData}

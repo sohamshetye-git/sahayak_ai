@@ -32,6 +32,13 @@ export class ConversationOrchestrator {
     // Extract user profile data from conversation FIRST
     const extractedProfile = await this.extractUserProfile(userMessage, userProfile);
 
+    // Extract intent (target category) from user message
+    const targetCategory = this.extractIntentCategory(userMessage, extractedProfile);
+    if (targetCategory) {
+      extractedProfile.targetCategory = targetCategory;
+      console.log('[INTENT] Extracted target category:', targetCategory);
+    }
+
     // Determine conversation stage based on profile completeness
     const nextStage = this.determineConversationStage(extractedProfile, currentStage, userMessage);
     
@@ -562,4 +569,34 @@ ${missingFields.length > 0 ? `🔒 [STRICT RULE]: You are currently asking for "
 
     return actions;
   }
+
+  /**
+   * Extract intent category from user message
+   * Detects if user is asking for specific scheme categories
+   */
+  private extractIntentCategory(userMessage: string, profile: Partial<UserProfile>): string | undefined {
+    const message = userMessage.toLowerCase();
+    
+    // Category keywords mapping
+    const categoryKeywords: Record<string, string[]> = {
+      'Health': ['health', 'medical', 'doctor', 'hospital', 'healthcare', 'disease', 'treatment', 'medicine'],
+      'Education': ['education', 'study', 'school', 'college', 'scholarship', 'student', 'learning', 'course'],
+      'Agriculture': ['agriculture', 'farming', 'farmer', 'crop', 'land', 'irrigation', 'kisan'],
+      'Housing': ['housing', 'house', 'home', 'rent', 'property', 'building', 'construction'],
+      'Employment': ['employment', 'job', 'work', 'career', 'skill', 'training', 'business'],
+      'Finance': ['finance', 'loan', 'credit', 'money', 'fund', 'financial', 'banking'],
+      'Social Welfare': ['pension', 'welfare', 'social', 'elderly', 'widow', 'orphan', 'vulnerable'],
+    };
+
+    // Check each category for keyword matches
+    for (const [category, keywords] of Object.entries(categoryKeywords)) {
+      if (keywords.some(keyword => message.includes(keyword))) {
+        return category;
+      }
+    }
+
+    // If no explicit category found, return undefined
+    return undefined;
+  }
 }
+

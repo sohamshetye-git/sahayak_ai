@@ -7,14 +7,16 @@ import { UserProfile, Scheme, RankedScheme, RankingFactor } from '../types';
 
 export class RankingEngine {
   // Ranking weights (total = 100)
-  private readonly WEIGHT_OCCUPATION = 30;
-  private readonly WEIGHT_STATE = 25;
-  private readonly WEIGHT_BENEFIT = 20;
-  private readonly WEIGHT_CATEGORY = 15;
-  private readonly WEIGHT_RECENCY = 10;
+  // Prioritize user's explicit intent (what they asked for) over occupation
+  private readonly WEIGHT_CATEGORY_INTENT = 50; // NEW: Highest priority - does this match what user asked for?
+  private readonly WEIGHT_OCCUPATION = 20;      // Reduced from 30
+  private readonly WEIGHT_STATE = 20;           // Unchanged
+  private readonly WEIGHT_BENEFIT = 10;         // Reduced from 20
+  private readonly WEIGHT_RECENCY = 0;          // Removed for now
 
   /**
    * Rank eligible schemes by relevance to user profile
+   * Considers user's explicit intent (target category)
    */
   rankSchemes(schemes: Scheme[], userProfile: UserProfile): RankedScheme[] {
     const rankedSchemes = schemes.map((scheme) => {
@@ -39,7 +41,15 @@ export class RankingEngine {
   ): { score: number; factors: RankingFactor[] } {
     const factors: RankingFactor[] = [];
 
-    // Factor 1: Occupation Match (30 points)
+    // Factor 1: Category Intent Match (50 points) - NEW HIGHEST PRIORITY
+    const intentScore = this.calculateIntentScore(scheme, userProfile);
+    factors.push({
+      factor: 'category_intent_match',
+      weight: this.WEIGHT_CATEGORY_INTENT,
+      score: intentScore,
+    });
+
+    // Factor 2: Occupation Match (20 points)
     const occupationScore = this.calculateOccupationScore(scheme, userProfile);
     factors.push({
       factor: 'occupation_match',
@@ -47,7 +57,7 @@ export class RankingEngine {
       score: occupationScore,
     });
 
-    // Factor 2: State Match (25 points)
+    // Factor 3: State Match (20 points)
     const stateScore = this.calculateStateScore(scheme, userProfile);
     factors.push({
       factor: 'state_match',
@@ -55,28 +65,12 @@ export class RankingEngine {
       score: stateScore,
     });
 
-    // Factor 3: Benefit Value (20 points)
+    // Factor 4: Benefit Value (10 points)
     const benefitScore = this.calculateBenefitScore(scheme);
     factors.push({
       factor: 'benefit_value',
       weight: this.WEIGHT_BENEFIT,
       score: benefitScore,
-    });
-
-    // Factor 4: Category Priority (15 points)
-    const categoryScore = this.calculateCategoryScore(scheme);
-    factors.push({
-      factor: 'category_priority',
-      weight: this.WEIGHT_CATEGORY,
-      score: categoryScore,
-    });
-
-    // Factor 5: Recency (10 points)
-    const recencyScore = this.calculateRecencyScore(scheme);
-    factors.push({
-      factor: 'recency',
-      weight: this.WEIGHT_RECENCY,
-      score: recencyScore,
     });
 
     // Calculate total score
@@ -86,7 +80,28 @@ export class RankingEngine {
   }
 
   /**
-   * Calculate occupation match score (0-30 points)
+   * Calculate intent match score (0-50 points)
+   * Does this scheme match what the user explicitly asked for?
+   */
+  private calculateIntentScore(scheme: Scheme, userProfile: UserProfile): number {
+    // If user specified a target category (intent), check if scheme matches
+    if (userProfile.targetCategory) {
+      const schemeCategory = scheme.category.toLowerCase();
+      const targetCategory = userProfile.targetCategory.toLowerCase();
+      
+      if (schemeCategory === targetCategory || schemeCategory.includes(targetCategory)) {
+        return this.WEIGHT_CATEGORY_INTENT; // Full score for exact match
+      }
+      
+      return 0; // No score if doesn't match intent
+    }
+
+    // If no explicit intent, give neutral score
+    return this.WEIGHT_CATEGORY_INTENT * 0.5;
+  }
+
+  /**
+   * Calculate occupation match score (0-20 points)
    */
   private calculateOccupationScore(scheme: Scheme, userProfile: UserProfile): number {
     if (!userProfile.occupation) {
@@ -108,7 +123,7 @@ export class RankingEngine {
   }
 
   /**
-   * Calculate state match score (0-25 points)
+   * Calculate state match score (0-20 points)
    */
   private calculateStateScore(scheme: Scheme, userProfile: UserProfile): number {
     if (!userProfile.state) {
@@ -127,7 +142,7 @@ export class RankingEngine {
   }
 
   /**
-   * Calculate benefit value score (0-20 points)
+   * Calculate benefit value score (0-10 points)
    * Normalized based on benefit amount
    */
   private calculateBenefitScore(scheme: Scheme): number {
@@ -141,38 +156,6 @@ export class RankingEngine {
     const normalized = Math.min(benefitAmount / maxBenefit, 1);
 
     return this.WEIGHT_BENEFIT * normalized;
-  }
-
-  /**
-   * Calculate category priority score (0-15 points)
-   * Prioritize certain categories (health, education)
-   */
-  private calculateCategoryScore(scheme: Scheme): number {
-    const highPriorityCategories = ['health', 'education', 'healthcare', 'scholarship'];
-    const mediumPriorityCategories = ['agriculture', 'housing', 'employment'];
-
-    const category = scheme.category.toLowerCase();
-
-    if (highPriorityCategories.some((c) => category.includes(c))) {
-      return this.WEIGHT_CATEGORY;
-    }
-
-    if (mediumPriorityCategories.some((c) => category.includes(c))) {
-      return this.WEIGHT_CATEGORY * 0.7;
-    }
-
-    return this.WEIGHT_CATEGORY * 0.5;
-  }
-
-  /**
-   * Calculate recency score (0-10 points)
-   * Newer schemes get higher scores
-   * Note: This is a placeholder - in production, you'd use actual creation dates
-   */
-  private calculateRecencyScore(scheme: Scheme): number {
-    // For now, return a default score
-    // In production, calculate based on scheme creation date
-    return this.WEIGHT_RECENCY * 0.8;
   }
 
   /**
