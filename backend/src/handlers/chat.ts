@@ -62,22 +62,33 @@ function cleanAIResponse(text: string): string {
  * Remove scheme names from AI response to enforce architecture
  * AI must NEVER recommend schemes - only rule engine can
  */
-function removeSchemeNamesFromResponse(text: string): string {
+/**
+ * Remove scheme names from AI response to prevent premature recommendations
+ * FIX 2: Soften Architecture Guard - Allow scheme names in providing_info stage
+ * AI must NEVER recommend schemes during eligibility collection - only rule engine can
+ */
+function removeSchemeNamesFromResponse(text: string, stage?: string): string {
   if (!text) return text;
-  
+
+  // FIX 2: Allow scheme names when in providing_info stage (general information mode)
+  if (stage === 'providing_info') {
+    console.log('[ARCHITECTURE_GUARD] In providing_info stage - allowing scheme names for general information');
+    return text;
+  }
+
   // FIX 4: Only block if AI is actually listing scheme names, not asking questions
   const lowerText = text.toLowerCase();
-  
+
   // Check if this is a question (contains ? or question words)
-  const isQuestion = text.includes('?') || 
+  const isQuestion = text.includes('?') ||
                     /\b(what|how|which|when|where|who|क्या|कैसे|कौन|कब|कहां)\b/i.test(text);
-  
+
   // If it's a question, don't block it
   if (isQuestion) {
     console.log('[ARCHITECTURE_GUARD] Detected question - allowing through');
     return text;
   }
-  
+
   const schemeNames = [
     'PM-KISAN', 'PM KISAN', 'Pradhan Mantri Kisan', 'PMKISAN',
     'Ayushman Bharat', 'PMJAY', 'PM-JAY', 'AB-PMJAY',
@@ -94,18 +105,18 @@ function removeSchemeNamesFromResponse(text: string): string {
     'Matru Vandana', 'PMMVY',
     'Kanyashree', 'Mukhyamantri',
   ];
-  
+
   // Check if response contains scheme recommendations with actual scheme names
-  const hasSchemeNames = schemeNames.some(name => 
+  const hasSchemeNames = schemeNames.some(name =>
     lowerText.includes(name.toLowerCase())
   );
-  
+
   if (hasSchemeNames) {
     console.log('[ARCHITECTURE_VIOLATION] AI attempted to recommend specific schemes - blocking');
     // Replace entire response with waiting message
     return 'Let me check your eligibility first...';
   }
-  
+
   // Check for recommendation phrases ONLY if they appear with scheme context
   const recommendationPhrases = [
     'here are the schemes',
@@ -114,18 +125,19 @@ function removeSchemeNamesFromResponse(text: string): string {
     'recommended schemes are',
     'following schemes match',
   ];
-  
+
   const hasRecommendation = recommendationPhrases.some(phrase =>
     lowerText.includes(phrase)
   );
-  
+
   if (hasRecommendation) {
     console.log('[ARCHITECTURE_VIOLATION] AI attempted to make scheme recommendations - blocking');
     return 'Let me check your eligibility first...';
   }
-  
+
   return text;
 }
+
 
 
 function getOrchestrator() {
@@ -607,7 +619,8 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       cleanedResponse = cleanAIResponse(response.response);
       
       // Additional guard: Remove any scheme names AI might have generated
-      cleanedResponse = removeSchemeNamesFromResponse(cleanedResponse);
+      // FIX 2: Pass stage to allow scheme names in providing_info mode
+      cleanedResponse = removeSchemeNamesFromResponse(cleanedResponse, response.stage);
     }
 
     // Prevent duplicate questions - check if AI is asking for already collected field

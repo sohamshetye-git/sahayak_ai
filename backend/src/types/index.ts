@@ -111,7 +111,7 @@ export const ChatSessionSchema = z.object({
 
 export type ChatSession = z.infer<typeof ChatSessionSchema>;
 
-export type ConversationStage = 'greeting' | 'collecting_profile' | 'profile_complete' | 'recommendation_ready' | 'post_recommendation';
+export type ConversationStage = 'greeting' | 'providing_info' | 'collecting_profile' | 'profile_complete' | 'recommendation_ready' | 'post_recommendation';
 
 export interface ChatResponse {
   sessionId: string;

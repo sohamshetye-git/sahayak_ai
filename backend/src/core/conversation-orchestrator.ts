@@ -406,21 +406,61 @@ ${missingFields.length > 0 ? `🔒 [STRICT RULE]: You are currently asking for "
   private determineConversationStage(
     profile: Partial<UserProfile>,
     currentStage: ConversationStage,
-    _userMessage: string
+    userMessage: string
   ): ConversationStage {
     const missingFields = this.identifyMissingInfo(profile);
     const hasRequiredFields = missingFields.length === 0;
 
+    // FIX 1: Intent-Based Stage Control - Detect information requests vs eligibility requests
+    const lowerMessage = userMessage.toLowerCase();
+    
+    // Information request patterns
+    const infoPatterns = [
+      'tell me about', 'what is', 'what are', 'explain', 'describe',
+      'बताओ', 'बताइए', 'क्या है', 'समझाओ', 'समझाइए',
+      'information about', 'details about', 'know about', 'learn about'
+    ];
+    
+    // Eligibility request patterns
+    const eligibilityPatterns = [
+      'am i eligible', 'can i get', 'do i qualify', 'suggest for me',
+      'check my status', 'which schemes', 'recommend', 'find schemes',
+      'मैं पात्र हूं', 'मुझे मिल सकता', 'सुझाव दें', 'योजना बताएं'
+    ];
+    
+    const isInfoRequest = infoPatterns.some(pattern => lowerMessage.includes(pattern));
+    const isEligibilityRequest = eligibilityPatterns.some(pattern => lowerMessage.includes(pattern));
+    
+    // If user is asking for general information, move to providing_info stage
+    if (isInfoRequest && !isEligibilityRequest && currentStage !== 'recommendation_ready' && currentStage !== 'post_recommendation') {
+      console.log('[STAGE] Information request detected - moving to providing_info');
+      return 'providing_info';
+    }
+    
+    // If user explicitly requests eligibility check, move to collecting_profile
+    if (isEligibilityRequest && missingFields.length > 0) {
+      console.log('[STAGE] Eligibility request detected - moving to collecting_profile');
+      return 'collecting_profile';
+    }
+
     // FIX 2: STRICT GATE - Never allow recommendation_ready if missing fields exist
-    if (missingFields.length > 0) {
+    if (missingFields.length > 0 && currentStage !== 'providing_info') {
       console.log('[STAGE] Missing fields detected - staying in collecting_profile:', missingFields);
       return 'collecting_profile';
     }
 
     // Stage transition logic
     if (currentStage === 'greeting') {
-      // Move to collecting_profile after greeting
-      return 'collecting_profile';
+      // Move to collecting_profile after greeting (unless info request)
+      return isInfoRequest ? 'providing_info' : 'collecting_profile';
+    }
+    
+    if (currentStage === 'providing_info') {
+      // Stay in providing_info unless user explicitly asks for eligibility
+      if (isEligibilityRequest) {
+        return 'collecting_profile';
+      }
+      return 'providing_info';
     }
     
     if (currentStage === 'collecting_profile') {
@@ -456,35 +496,40 @@ ${missingFields.length > 0 ? `🔒 [STRICT RULE]: You are currently asking for "
    * CRITICAL: This format MUST be followed exactly for AI to understand
    */
   private buildStageContext(
-    stage: ConversationStage,
-    missingFields: string[],
-    language: 'hi' | 'en'
-  ): string {
-    const contexts = {
-      greeting: {
-        en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: GREETING\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Welcome the user warmly\n• Ask for the FIRST missing required field ONLY\n• Do NOT repeat questions\n• Do NOT ask for already collected fields\n• Keep it natural and friendly',
-        hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: अभिवादन\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• उपयोगकर्ता का स्वागत करें\n• केवल पहली लापता आवश्यक फ़ील्ड पूछें\n• प्रश्न न दोहराएं\n• पहले से एकत्रित फ़ील्ड कभी न पूछें\n• स्वाभाविक और मित्रवत रहें',
-      },
-      collecting_profile: {
-        en: `\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: COLLECTING PROFILE\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Ask for ONE missing field ONLY\n• NEVER ask for already collected fields\n• ONE question per message\n• Next field to ask: ${missingFields[0] || 'none'}\n• Keep conversation natural and friendly`,
-        hi: `\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: प्रोफ़ाइल एकत्र करना\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• केवल एक लापता फ़ील्ड पूछें\n• पहले से एकत्रित फ़ील्ड कभी न पूछें\n• प्रति संदेश एक प्रश्न\n• अगली फ़ील्ड: ${missingFields[0] || 'कोई नहीं'}\n• बातचीत स्वाभाविक और मित्रवत रहें`,
-      },
-      profile_complete: {
-        en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: PROFILE COMPLETE\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Profile is complete\n• DO NOT ask any more questions\n• Inform user that eligibility will be checked automatically\n• Wait for backend to process',
-        hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: प्रोफ़ाइल पूर्ण\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• प्रोफ़ाइल पूर्ण है\n• कोई प्रश्न न पूछें\n• उपयोगकर्ता को बताएं कि पात्रता स्वचालित रूप से जांची जाएगी\n• बैकएंड को प्रोसेस करने के लिए प्रतीक्षा करें',
-      },
-      recommendation_ready: {
-        en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: RECOMMENDATION READY\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Profile is complete\n• Backend will run eligibility and ranking\n• AI will explain the recommended schemes\n• DO NOT ask any questions\n• DO NOT recommend schemes yourself\n• DO NOT mention scheme names\n• ONLY say: "Checking eligibility based on your details..."\n• Wait for backend results',
-        hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: सिफारिश तैयार\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• प्रोफ़ाइल पूर्ण है\n• बैकएंड पात्रता और रैंकिंग चलाएगा\n• AI सिफारिश की गई योजनाओं की व्याख्या करेगा\n• कोई प्रश्न न पूछें\n• स्वयं योजनाओं की सिफारिश न करें\n• योजना के नाम न बताएं\n• केवल कहें: "आपके विवरण के आधार पर पात्रता की जांच कर रहा हूं..."\n• बैकएंड परिणामों की प्रतीक्षा करें',
-      },
-      post_recommendation: {
-        en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: POST RECOMMENDATION\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Schemes have been shown\n• Answer questions about: documents, benefits, application process\n• DO NOT restart profile collection\n• DO NOT ask for profile information again\n• Help user with scheme-related questions only',
-        hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: सिफारिश के बाद\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• योजनाएं दिखाई गई हैं\n• दस्तावेज़ों, लाभों, आवेदन प्रक्रिया के बारे में प्रश्नों का उत्तर दें\n• प्रोफ़ाइल संग्रह पुनः आरंभ न करें\n• प्रोफ़ाइल जानकारी फिर से कभी न पूछें\n• केवल योजना-संबंधी प्���श्नों के उत्तर दें',
-      },
-    };
-    
-    return contexts[stage][language];
-  }
+      stage: ConversationStage,
+      missingFields: string[],
+      language: 'hi' | 'en'
+    ): string {
+      const contexts: Record<ConversationStage, { en: string; hi: string }> = {
+        greeting: {
+          en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: GREETING\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Welcome the user warmly\n• Ask for the FIRST missing required field ONLY\n• Do NOT repeat questions\n• Do NOT ask for already collected fields\n• Keep it natural and friendly',
+          hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: अभिवादन\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• उपयोगकर्ता का स्वागत करें\n• केवल पहली लापता आवश्यक फ़ील्ड पूछें\n• प्रश्न न दोहराएं\n• पहले से एकत्रित फ़ील्ड कभी न पूछें\n• स्वाभाविक और मित्रवत रहें',
+        },
+        providing_info: {
+          en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: PROVIDING INFO\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• User is asking for GENERAL INFORMATION about schemes\n• You ARE ALLOWED to name and explain major schemes (Ayushman Bharat, PM-KISAN, etc.)\n• Provide helpful descriptions of scheme categories and benefits\n• After explaining, you MAY ask: "Would you like me to check which schemes you are eligible for?"\n• DO NOT force profile collection unless user explicitly requests eligibility check\n• Keep explanations clear and informative',
+          hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: जानकारी प्रदान करना\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• उपयोगकर्ता योजनाओं के बारे में सामान्य जानकारी मांग रहा है\n• आप प्रमुख योजनाओं (आयुष्मान भारत, पीएम-किसान, आदि) का नाम और व्याख्या कर सकते हैं\n• योजना श्रेणियों और लाभों का सहायक विवरण प्रदान करें\n• व्याख्या के बाद, आप पूछ सकते हैं: "क्या आप चाहेंगे कि मैं जांचूं कि आप किन योजनाओं के लिए पात्र हैं?"\n• जब तक उपयोगकर्ता स्पष्ट रूप से पात्रता जांच का अनुरोध न करे, प्रोफ़ाइल संग्रह को बाध्य न करें\n• स्पष्टीकरण स्पष्ट और जानकारीपूर्ण रखें',
+        },
+        collecting_profile: {
+          en: `\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: COLLECTING PROFILE\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Ask for ONE missing field ONLY\n• NEVER ask for already collected fields\n• ONE question per message\n• Next field to ask: ${missingFields[0] || 'none'}\n• Keep conversation natural and friendly`,
+          hi: `\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: प्रोफ़ाइल एकत्र करना\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• केवल एक लापता फ़ील्ड पूछें\n• पहले से एकत्रित फ़ील्ड कभी न पूछें\n• प्रति संदेश एक प्रश्न\n• अगली फ़ील्ड: ${missingFields[0] || 'कोई नहीं'}\n• बातचीत स्वाभाविक और मित्रवत रहें`,
+        },
+        profile_complete: {
+          en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: PROFILE COMPLETE\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Profile is complete\n• DO NOT ask any more questions\n• Inform user that eligibility will be checked automatically\n• Wait for backend to process',
+          hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: प्रोफ़ाइल पूर्ण\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• प्रोफ़ाइल पूर्ण है\n• कोई प्रश्न न पूछें\n• उपयोगकर्ता को बताएं कि पात्रता स्वचालित रूप से जांची जाएगी\n• बैकएंड को प्रोसेस करने के लिए प्रतीक्षा करें',
+        },
+        recommendation_ready: {
+          en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: RECOMMENDATION READY\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Profile is complete\n• Backend will run eligibility and ranking\n• AI will explain the recommended schemes\n• DO NOT ask any questions\n• DO NOT recommend schemes yourself\n• DO NOT mention scheme names\n• ONLY say: "Checking eligibility based on your details..."\n• Wait for backend results',
+          hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: सिफारिश तैयार\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• प्रोफ़ाइल पूर्ण है\n• बैकएंड पात्रता और रैंकिंग चलाएगा\n• AI सिफारिश की गई योजनाओं की व्याख्या करेगा\n• कोई प्रश्न न पूछें\n• स्वयं योजनाओं की सिफारिश न करें\n• योजना के नाम न बताएं\n• केवल कहें: "आपके विवरण के आधार पर पात्रता की जांच कर रहा हूं..."\n• बैकएंड परिणामों की प्रतीक्षा करें',
+        },
+        post_recommendation: {
+          en: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 STAGE: POST RECOMMENDATION\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Schemes have been shown\n• Answer questions about: documents, benefits, application process\n• DO NOT restart profile collection\n• DO NOT ask for profile information again\n• Help user with scheme-related questions only',
+          hi: '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎯 चरण: सिफारिश के बाद\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• योजनाएं दिखाई गई हैं\n• दस्तावेज़ों, लाभों, आवेदन प्रक्रिया के बारे में प्रश्नों का उत्तर दें\n• प्रोफ़ाइल संग्रह पुनः आरंभ न करें\n• प्रोफ़ाइल जानकारी फिर से कभी न पूछें\n• केवल योजना-संबंधी प्रश्नों के उत्तर दें',
+        },
+      };
+
+      return contexts[stage][language];
+    }
+
 
   /**
    * Generate follow-up question for missing information
