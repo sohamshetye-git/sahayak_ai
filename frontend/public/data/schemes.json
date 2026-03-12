@@ -1393,7 +1393,8 @@
           "contact_phone": "108 / 102",
           "working_days": "24/7",
           "who_should_visit": "Pregnant Mother / ASHA",
-          "notes": "ASHA workers are the primary facilitators for this scheme."
+          "notes": "ASHA workers are the primary facilitators for this scheme.",
+          "working_hours": "24x7"
         }
       ],
       "start_date": "2005-04-12",
@@ -3661,148 +3662,6 @@
       "featured_flag": false
     },
     {
-      "scheme_id": "SCH_051",
-      "scheme_name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
-      "category": "Financial Assistance",
-      "central_or_state": "Central",
-      "ministry_department": "Ministry of Finance",
-      "short_description": "Accident insurance scheme providing ₹2 Lakh coverage for accidental death or disability at premium of just ₹20 per year.",
-      "detailed_description": "PMSBY is a one-year accident insurance scheme renewable from year to year, offering coverage for accidental death and disability. The scheme is available to people in the age group of 18 to 70 years with a savings bank account who give their consent to join and enable auto-debit. The premium of ₹20 per annum is to be deducted from the account holder's bank account through auto-debit facility in one installment on or before 1st June of each coverage year.",
-      "key_benefits": [
-        "₹2,00,000 coverage for accidental death",
-        "₹2,00,000 for permanent total disability (loss of both eyes or both limbs)",
-        "₹1,00,000 for permanent partial disability (loss of one eye or one limb)",
-        "Very low premium of only ₹20 per year",
-        "Simple enrollment process through bank",
-        "Coverage renewable annually"
-      ],
-      "financial_assistance": "₹2 Lakh accident insurance cover",
-      "benefit_type": "Insurance",
-      "age_criteria": "18 to 70 years",
-      "income_criteria": "All",
-      "gender_criteria": "All",
-      "category_criteria": "All",
-      "occupation_criteria": "All",
-      "geographic_criteria": "All India",
-      "other_conditions": [
-        "Must have a savings bank account in participating bank",
-        "Must give consent for auto-debit of premium amount",
-        "Account should have sufficient balance for premium deduction",
-        "Coverage period is June 1 to May 31 annually",
-        "Can be enrolled through multiple bank accounts but claim only from one"
-      ],
-      "REQUIRED_DOCUMENTS": [
-        {
-          "document_name": "Aadhaar Card",
-          "required_or_optional": "Required",
-          "description": "For identity verification and KYC compliance"
-        },
-        {
-          "document_name": "Bank Account Details",
-          "required_or_optional": "Required",
-          "description": "Active savings bank account for premium deduction"
-        },
-        {
-          "document_name": "Consent Form",
-          "required_or_optional": "Required",
-          "description": "Written consent for enrollment and auto-debit authorization"
-        },
-        {
-          "document_name": "Nomination Form",
-          "required_or_optional": "Optional",
-          "description": "To nominate beneficiary for claim settlement"
-        }
-      ],
-      "application_mode": "Both",
-      "online_apply_link": "https://www.jansuraksha.gov.in/",
-      "official_website": "https://www.jansuraksha.gov.in/",
-      "application_steps_online": [
-        "Visit your bank's internet banking portal or mobile app",
-        "Navigate to insurance or Jan Suraksha section",
-        "Select Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
-        "Fill the enrollment form with personal details",
-        "Provide consent for auto-debit of ₹20 premium",
-        "Submit the form and receive enrollment confirmation",
-        "Premium will be auto-debited from account annually"
-      ],
-      "application_steps_offline": [
-        "Visit your bank branch where you have savings account",
-        "Request for PMSBY enrollment form from bank staff",
-        "Fill the form completely with accurate details",
-        "Provide Aadhaar number and give consent for auto-debit",
-        "Submit the form along with required documents",
-        "Ensure sufficient balance in account for premium deduction",
-        "Receive enrollment confirmation and policy details"
-      ],
-      "submission_locations": [
-        {
-          "office_type": "Bank Branch",
-          "department_name": "Your Bank Branch",
-          "address": "Branch where you have savings account",
-          "contact_phone": "Your bank branch contact number",
-          "working_days": "Monday to Friday (Saturday for some banks)",
-          "working_hours": "10:00 AM - 04:00 PM",
-          "who_should_visit": "Account holder",
-          "notes": "Can also enroll through bank's internet banking or mobile app"
-        }
-      ],
-      "start_date": "2015-05-09",
-      "last_date": "Enrollment period: June 1 to May 31 annually",
-      "status": "Active",
-      "validity": "One year (June 1 to May 31), renewable annually",
-      "renewal_required": "Yes",
-      "processing_time": "Immediate enrollment, claims processed within 30 days",
-      "helpline_number": "1800-180-1111 / 1800-110-001",
-      "email_support": "jansuraksha@gov.in",
-      "faq": [
-        {
-          "question": "What is covered under PMSBY?",
-          "answer": "Accidental death and permanent disability (total or partial) due to accident are covered. Natural death is not covered."
-        },
-        {
-          "question": "Can I enroll after June 1?",
-          "answer": "Yes, you can enroll anytime during the year by paying full annual premium, but coverage will start from enrollment date."
-        },
-        {
-          "question": "Is medical examination required?",
-          "answer": "No, there is no medical examination required for enrollment in PMSBY."
-        }
-      ],
-      "common_rejection_reasons": [
-        "Insufficient balance in account for premium deduction",
-        "Age not within 18-70 years range",
-        "Incomplete or incorrect Aadhaar details",
-        "Claim not supported by proper accident documentation"
-      ],
-      "tips_for_successful_application": [
-        "Ensure sufficient balance in account before June 1 for auto-debit",
-        "Link Aadhaar with bank account for smooth enrollment",
-        "Keep nomination details updated",
-        "Renew annually by maintaining sufficient balance",
-        "Keep policy documents safe for claim purposes"
-      ],
-      "target_beneficiaries": [
-        "Bank account holders",
-        "Working professionals",
-        "Self-employed individuals",
-        "Daily wage workers"
-      ],
-      "tags": [
-        "Insurance",
-        "Accident Cover",
-        "Financial Protection",
-        "Low Premium",
-        "Jan Suraksha"
-      ],
-      "priority_level": "High",
-      "popularity_score": 88,
-      "difficulty_level_to_apply": "Easy",
-      "icon_keyword": "insurance_shield",
-      "banner_image_keyword": "accident_insurance",
-      "theme_color": "#FF9800",
-      "featured_flag": true
-    },
-    {
       "scheme_id": "SCH_052",
       "scheme_name": "Stand Up India Scheme",
       "category": "Financial Assistance",
@@ -5381,6 +5240,1183 @@
       "banner_image_keyword": "health_insurance",
       "theme_color": "#4CAF50",
       "featured_flag": true
+    },
+    {
+      "scheme_id": "SCH_063",
+      "scheme_name": "Pradhan Mantri Surakshit Matritva Abhiyan (PMSMA)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Free antenatal care on 9th of every month for pregnant women",
+      "detailed_description": "PMSMA provides assured, comprehensive and quality antenatal care to all pregnant women on the 9th day of every month. The initiative provides minimum package of antenatal care services including clinical examination, investigations and counseling.",
+      "key_benefits": [
+        "Free health checkup",
+        "Blood tests",
+        "Ultrasound",
+        "Iron and folic acid tablets",
+        "Counseling"
+      ],
+      "financial_assistance": "Free services",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "Pregnant women",
+      "income_criteria": "All",
+      "gender_criteria": "Female",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Visit on 9th of every month",
+        "Registration required"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://pmsma.nhp.gov.in/",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Visit nearest health facility on 9th",
+        "Register with details",
+        "Get checkup done",
+        "Receive reports and medicines"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Health Center",
+          "department_name": "Maternal Health",
+          "address": "Nearest PHC/CHC",
+          "contact_phone": "Local PHC",
+          "working_days": "9th of every month",
+          "working_hours": "09:00 AM - 02:00 PM",
+          "who_should_visit": "Pregnant Woman",
+          "notes": "Bring previous reports"
+        }
+      ],
+      "start_date": "2016-06-09",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Throughout pregnancy",
+      "renewal_required": "No",
+      "processing_time": "Same day",
+      "helpline_number": "104",
+      "email_support": "pmsma-nhm@gov.in",
+      "faq": [
+        {
+          "question": "Can I visit on other days?",
+          "answer": "PMSMA services are specifically provided on 9th of every month for quality assurance."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Not visiting on 9th",
+        "Incomplete registration"
+      ],
+      "tips_for_successful_application": [
+        "Visit on 9th",
+        "Carry previous medical records",
+        "Bring Aadhar card"
+      ],
+      "target_beneficiaries": [
+        "Pregnant Women",
+        "Expecting Mothers"
+      ],
+      "tags": [
+        "Health",
+        "Maternal Health",
+        "Antenatal Care"
+      ],
+      "priority_level": "High",
+      "popularity_score": 78,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "pregnant_woman",
+      "banner_image_keyword": "antenatal_care",
+      "theme_color": "#9C27B0",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_064",
+      "scheme_name": "National Programme for Prevention and Control of Cancer, Diabetes, CVD and Stroke (NPCDCS)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Prevention and control of non-communicable diseases",
+      "detailed_description": "NPCDCS aims to prevent and control common non-communicable diseases through health promotion, early diagnosis, treatment and referral. The programme focuses on strengthening infrastructure, human resource development, and health promotion.",
+      "key_benefits": [
+        "Free screening",
+        "Early detection",
+        "Treatment at government facilities",
+        "Awareness programs"
+      ],
+      "financial_assistance": "Free screening and treatment",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "30 years and above",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Regular screening recommended",
+        "Follow-up required"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://dghs.gov.in/content/1363_3_NationalProgrammePreventionControl.aspx",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Visit nearest NCD clinic",
+        "Get screening done",
+        "Receive counseling",
+        "Follow treatment plan if diagnosed"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "NCD Clinic",
+          "department_name": "Non-Communicable Diseases",
+          "address": "District Hospital/CHC",
+          "contact_phone": "District specific",
+          "working_days": "Monday to Saturday",
+          "working_hours": "09:00 AM - 05:00 PM",
+          "who_should_visit": "Individual",
+          "notes": "Fasting required for some tests"
+        }
+      ],
+      "start_date": "2010-01-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Ongoing",
+      "renewal_required": "No",
+      "processing_time": "Same day",
+      "helpline_number": "104",
+      "email_support": "npcdcs@gov.in",
+      "faq": [
+        {
+          "question": "What diseases are covered?",
+          "answer": "Cancer, Diabetes, Cardiovascular diseases and Stroke are covered under NPCDCS."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Below 30 years age",
+        "Not following up"
+      ],
+      "tips_for_successful_application": [
+        "Get regular screening",
+        "Maintain health records",
+        "Follow medical advice"
+      ],
+      "target_beneficiaries": [
+        "Adults above 30",
+        "High-risk individuals"
+      ],
+      "tags": [
+        "Health",
+        "NCD",
+        "Screening",
+        "Prevention"
+      ],
+      "priority_level": "Medium",
+      "popularity_score": 65,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "health_screening",
+      "banner_image_keyword": "ncd_prevention",
+      "theme_color": "#00BCD4",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_066",
+      "scheme_name": "National Mental Health Programme (NMHP)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Mental health services and awareness programme",
+      "detailed_description": "NMHP aims to ensure availability and accessibility of minimum mental health care for all, particularly the most vulnerable sections. The programme focuses on early detection, treatment, and rehabilitation of mentally ill persons.",
+      "key_benefits": [
+        "Free mental health consultation",
+        "Medicines at subsidized rates",
+        "Counseling services",
+        "Rehabilitation support"
+      ],
+      "financial_assistance": "Free consultation and subsidized medicines",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "All ages",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Confidentiality maintained",
+        "Regular follow-up required"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://dghs.gov.in/content/1350_3_NationalMentalHealthProgramme.aspx",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Visit nearest mental health clinic",
+        "Consult psychiatrist/psychologist",
+        "Get prescription",
+        "Collect medicines",
+        "Attend follow-up sessions"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Mental Health Clinic",
+          "department_name": "Psychiatry",
+          "address": "District Hospital",
+          "contact_phone": "District specific",
+          "working_days": "Monday to Friday",
+          "working_hours": "09:00 AM - 05:00 PM",
+          "who_should_visit": "Individual or with family",
+          "notes": "Confidential services"
+        }
+      ],
+      "start_date": "1982-08-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Ongoing",
+      "renewal_required": "No",
+      "processing_time": "Same day",
+      "helpline_number": "1800-599-0019",
+      "email_support": "nmhp@gov.in",
+      "faq": [
+        {
+          "question": "Is it confidential?",
+          "answer": "Yes, all mental health consultations are completely confidential."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Not following treatment plan"
+      ],
+      "tips_for_successful_application": [
+        "Seek help early",
+        "Be honest with doctor",
+        "Take medicines regularly",
+        "Attend counseling sessions"
+      ],
+      "target_beneficiaries": [
+        "Mentally ill persons",
+        "People with stress/anxiety"
+      ],
+      "tags": [
+        "Health",
+        "Mental Health",
+        "Counseling"
+      ],
+      "priority_level": "High",
+      "popularity_score": 68,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "mental_health",
+      "banner_image_keyword": "mental_wellness",
+      "theme_color": "#673AB7",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Optional",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_067",
+      "scheme_name": "National Programme for Control of Blindness and Visual Impairment (NPCBVI)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Free eye care and cataract surgery programme",
+      "detailed_description": "NPCBVI aims to reduce the prevalence of blindness through provision of comprehensive eye care services. The programme provides free cataract surgery, distribution of free spectacles, and treatment of other eye diseases.",
+      "key_benefits": [
+        "Free cataract surgery",
+        "Free spectacles",
+        "Eye screening camps",
+        "Treatment of eye diseases"
+      ],
+      "financial_assistance": "Free services",
+      "benefit_type": "Healthcare Services",
+      "age_criteria": "All ages",
+      "income_criteria": "All (priority to BPL)",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Medical examination required",
+        "Post-operative care mandatory"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://npcbvi.gov.in/",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Visit eye screening camp or hospital",
+        "Get eye examination",
+        "If surgery needed, get scheduled",
+        "Undergo surgery",
+        "Receive post-op care"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Eye Hospital",
+          "department_name": "Ophthalmology",
+          "address": "District Hospital",
+          "contact_phone": "District specific",
+          "working_days": "Monday to Saturday",
+          "working_hours": "09:00 AM - 05:00 PM",
+          "who_should_visit": "Individual",
+          "notes": "Eye camps held regularly"
+        }
+      ],
+      "start_date": "1976-01-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Ongoing",
+      "renewal_required": "No",
+      "processing_time": "As per schedule",
+      "helpline_number": "1800-180-1551",
+      "email_support": "npcb@gov.in",
+      "faq": [
+        {
+          "question": "Is cataract surgery really free?",
+          "answer": "Yes, cataract surgery is completely free at government hospitals under NPCBVI."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Not following post-op instructions"
+      ],
+      "tips_for_successful_application": [
+        "Attend eye camps",
+        "Get regular checkups",
+        "Follow post-surgery care"
+      ],
+      "target_beneficiaries": [
+        "Cataract patients",
+        "Visually impaired",
+        "BPL families"
+      ],
+      "tags": [
+        "Health",
+        "Eye Care",
+        "Blindness Prevention"
+      ],
+      "priority_level": "High",
+      "popularity_score": 80,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "eye_care",
+      "banner_image_keyword": "vision_care",
+      "theme_color": "#009688",
+      "featured_flag": true,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_069",
+      "scheme_name": "National Tuberculosis Elimination Programme (NTEP)",
+      "category": "Health",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Health and Family Welfare",
+      "short_description": "Free TB diagnosis and treatment programme",
+      "detailed_description": "NTEP provides universal access to quality diagnosis and treatment services for all TB patients. The programme offers free diagnosis, free anti-TB drugs, and nutritional support of ₹500 per month during treatment.",
+      "key_benefits": [
+        "Free TB testing",
+        "Free medicines",
+        "₹500 monthly nutrition support",
+        "Free follow-up tests"
+      ],
+      "financial_assistance": "₹500 per month during treatment",
+      "benefit_type": "Healthcare and Cash",
+      "age_criteria": "All ages",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "All",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Complete treatment course mandatory",
+        "Regular follow-up required",
+        "DOT (Directly Observed Treatment) preferred"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://tbcindia.gov.in/",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Visit nearest TB clinic with symptoms",
+        "Get free sputum test",
+        "If positive, start treatment",
+        "Collect medicines regularly",
+        "Receive nutrition support"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "TB Clinic",
+          "department_name": "NTEP",
+          "address": "PHC/CHC/District Hospital",
+          "contact_phone": "1800-11-6666",
+          "working_days": "All days",
+          "working_hours": "09:00 AM - 05:00 PM",
+          "who_should_visit": "Individual",
+          "notes": "Free testing available"
+        }
+      ],
+      "start_date": "1962-01-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Treatment duration (6-24 months)",
+      "renewal_required": "No",
+      "processing_time": "Same day testing",
+      "helpline_number": "1800-11-6666",
+      "email_support": "ntep@gov.in",
+      "faq": [
+        {
+          "question": "How long is the treatment?",
+          "answer": "TB treatment typically lasts 6 months for drug-sensitive TB and up to 24 months for drug-resistant TB."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Not completing treatment",
+        "Missing follow-up tests"
+      ],
+      "tips_for_successful_application": [
+        "Get tested early if symptoms present",
+        "Take medicines regularly",
+        "Complete full course",
+        "Attend all follow-ups"
+      ],
+      "target_beneficiaries": [
+        "TB patients",
+        "TB suspects",
+        "High-risk individuals"
+      ],
+      "tags": [
+        "Health",
+        "TB",
+        "Infectious Disease"
+      ],
+      "priority_level": "High",
+      "popularity_score": 88,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "tb_care",
+      "banner_image_keyword": "tb_elimination",
+      "theme_color": "#F44336",
+      "featured_flag": true,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        },
+        {
+          "document_name": "Bank Account",
+          "required_or_optional": "Required",
+          "description": "Issued by Bank. Valid for Active. Submit passbook."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_073",
+      "scheme_name": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Pension scheme for small and marginal farmers",
+      "detailed_description": "PM-KMY is a voluntary and contributory pension scheme for small and marginal farmers. Farmers get assured pension of ₹3,000 per month after attaining age of 60 years. The scheme has matching contribution from government.",
+      "key_benefits": [
+        "₹3,000 monthly pension after 60",
+        "Government matching contribution",
+        "Family pension on death",
+        "Voluntary exit option"
+      ],
+      "financial_assistance": "₹3,000 per month",
+      "benefit_type": "Pension",
+      "age_criteria": "18 to 40 years (entry age)",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Small and Marginal Farmer",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Cultivable land up to 2 hectares",
+        "Monthly contribution required",
+        "Not covered under other pension schemes"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://maandhan.in/",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Visit nearest CSC with documents",
+        "Fill enrollment form",
+        "Pay first contribution",
+        "Get enrollment number",
+        "Continue monthly contributions"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Common Service Center",
+          "department_name": "Agriculture",
+          "address": "Local CSC",
+          "contact_phone": "CSC specific",
+          "working_days": "Monday to Saturday",
+          "working_hours": "09:00 AM - 06:00 PM",
+          "who_should_visit": "Farmer",
+          "notes": "Bring land records"
+        }
+      ],
+      "start_date": "2019-09-12",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Lifetime",
+      "renewal_required": "No",
+      "processing_time": "Immediate enrollment",
+      "helpline_number": "1800-3000-3468",
+      "email_support": "support@maandhan.in",
+      "faq": [
+        {
+          "question": "How much do I need to contribute?",
+          "answer": "Contribution varies from ₹55 to ₹200 per month based on entry age."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Land holding above 2 hectares",
+        "Already covered under other pension",
+        "Age above 40"
+      ],
+      "tips_for_successful_application": [
+        "Enroll at younger age for lower contribution",
+        "Pay contributions regularly",
+        "Keep land records updated"
+      ],
+      "target_beneficiaries": [
+        "Small farmers",
+        "Marginal farmers"
+      ],
+      "tags": [
+        "Agriculture",
+        "Pension",
+        "Social Security"
+      ],
+      "priority_level": "Medium",
+      "popularity_score": 70,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "pension",
+      "banner_image_keyword": "farmer_pension",
+      "theme_color": "#FF9800",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        },
+        {
+          "document_name": "Bank Account Passbook",
+          "required_or_optional": "Required",
+          "description": "Issued by Bank. Valid for Active. Submit original."
+        },
+        {
+          "document_name": "Land Ownership Document",
+          "required_or_optional": "Required",
+          "description": "Issued by Revenue Department. Valid for Valid. Submit copy."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_074",
+      "scheme_name": "Soil Health Card Scheme",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Free soil testing and health card for farmers",
+      "detailed_description": "The scheme provides Soil Health Cards to farmers which carry crop-wise recommendations of nutrients and fertilizers required for individual farms. This helps farmers improve productivity through judicious use of inputs.",
+      "key_benefits": [
+        "Free soil testing",
+        "Customized fertilizer recommendations",
+        "Improved crop yield",
+        "Cost savings on fertilizers"
+      ],
+      "financial_assistance": "Free service",
+      "benefit_type": "Advisory Service",
+      "age_criteria": "All ages",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Farmer",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must provide soil sample",
+        "Card issued once in 3 years",
+        "Follow recommendations for best results"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://soilhealth.dac.gov.in/",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Contact local agriculture officer",
+        "Provide soil sample from field",
+        "Wait for testing",
+        "Receive Soil Health Card",
+        "Follow recommendations"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "Agriculture Office",
+          "department_name": "Soil Testing Lab",
+          "address": "Block/District Agriculture Office",
+          "contact_phone": "District specific",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Farmer",
+          "notes": "Bring soil sample in clean bag"
+        }
+      ],
+      "start_date": "2015-02-19",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "3 years",
+      "renewal_required": "Yes",
+      "processing_time": "15-30 days",
+      "helpline_number": "1800-180-1551",
+      "email_support": "shc@gov.in",
+      "faq": [
+        {
+          "question": "How to collect soil sample?",
+          "answer": "Collect soil from 4-5 spots in field, mix well, take 500g sample in clean bag."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Contaminated sample",
+        "Insufficient sample quantity"
+      ],
+      "tips_for_successful_application": [
+        "Collect proper soil sample",
+        "Label sample with details",
+        "Follow up for card"
+      ],
+      "target_beneficiaries": [
+        "All farmers",
+        "Landowners"
+      ],
+      "tags": [
+        "Agriculture",
+        "Soil Health",
+        "Advisory"
+      ],
+      "priority_level": "Medium",
+      "popularity_score": 75,
+      "difficulty_level_to_apply": "Easy",
+      "icon_keyword": "soil_testing",
+      "banner_image_keyword": "soil_health",
+      "theme_color": "#795548",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Land Ownership Document",
+          "required_or_optional": "Required",
+          "description": "Issued by Revenue Department. Valid for Valid. Submit copy."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_075",
+      "scheme_name": "Pradhan Mantri Krishi Sinchai Yojana (PMKSY)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Irrigation support and water conservation for farmers",
+      "detailed_description": "PMKSY aims to expand cultivable area under assured irrigation, improve on-farm water use efficiency, and adopt precision irrigation. The scheme provides financial assistance for micro-irrigation, watershed development, and other water conservation activities.",
+      "key_benefits": [
+        "Subsidy on drip/sprinkler irrigation",
+        "Watershed development",
+        "Water conservation structures",
+        "Improved water efficiency"
+      ],
+      "financial_assistance": "Up to 55% subsidy (90% for SC/ST)",
+      "benefit_type": "Subsidy",
+      "age_criteria": "All ages",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All (higher subsidy for SC/ST)",
+      "occupation_criteria": "Farmer",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Must have water source",
+        "Technical approval required",
+        "Minimum land area criteria"
+      ],
+      "application_mode": "Online and Offline",
+      "online_apply_link": "State specific portals",
+      "official_website": "https://pmksy.gov.in/",
+      "application_steps_online": [
+        "Visit state agriculture portal",
+        "Register as farmer",
+        "Apply for irrigation subsidy",
+        "Upload documents",
+        "Submit application"
+      ],
+      "application_steps_offline": [
+        "Visit district agriculture office",
+        "Fill application form",
+        "Submit land and water source documents",
+        "Get technical approval",
+        "Install system and claim subsidy"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "District Agriculture Office",
+          "department_name": "Irrigation",
+          "address": "District Agriculture Office",
+          "contact_phone": "District specific",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Farmer",
+          "notes": "Get quotation from approved vendors"
+        }
+      ],
+      "start_date": "2015-07-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "One-time benefit",
+      "renewal_required": "No",
+      "processing_time": "60-90 days",
+      "helpline_number": "1800-180-1551",
+      "email_support": "pmksy@gov.in",
+      "faq": [
+        {
+          "question": "What is the subsidy amount?",
+          "answer": "General category: 55%, SC/ST: 90%, Small/Marginal: 75% of system cost."
+        }
+      ],
+      "common_rejection_reasons": [
+        "No water source",
+        "Incomplete documents",
+        "Non-approved vendor"
+      ],
+      "tips_for_successful_application": [
+        "Ensure water availability",
+        "Get quotation from approved vendor",
+        "Complete installation before claiming"
+      ],
+      "target_beneficiaries": [
+        "All farmers",
+        "SC/ST farmers",
+        "Small farmers"
+      ],
+      "tags": [
+        "Agriculture",
+        "Irrigation",
+        "Water Conservation"
+      ],
+      "priority_level": "High",
+      "popularity_score": 80,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "irrigation",
+      "banner_image_keyword": "drip_irrigation",
+      "theme_color": "#03A9F4",
+      "featured_flag": true,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Land Ownership Document",
+          "required_or_optional": "Required",
+          "description": "Issued by Revenue Department. Valid for Valid. Submit original."
+        },
+        {
+          "document_name": "Water Source Certificate",
+          "required_or_optional": "Required",
+          "description": "Issued by Agriculture Department. Valid for Valid. Submit original."
+        },
+        {
+          "document_name": "Quotation from Vendor",
+          "required_or_optional": "Required",
+          "description": "Issued by Approved Vendor. Valid for Valid. Submit original."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_076",
+      "scheme_name": "National Agriculture Market (e-NAM)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Online trading platform for agricultural commodities",
+      "detailed_description": "e-NAM is a pan-India electronic trading portal which networks existing APMC mandis to create a unified national market for agricultural commodities. Farmers can sell their produce online and get better prices through transparent auction process.",
+      "key_benefits": [
+        "Better price discovery",
+        "Transparent auction",
+        "Online payment",
+        "Reduced intermediaries",
+        "Access to more buyers"
+      ],
+      "financial_assistance": "Better market prices",
+      "benefit_type": "Market Access",
+      "age_criteria": "All ages",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Farmer",
+      "geographic_criteria": "States with e-NAM mandis",
+      "other_conditions": [
+        "Registration at e-NAM mandi required",
+        "Quality testing of produce",
+        "Bank account mandatory"
+      ],
+      "application_mode": "Online and Offline",
+      "online_apply_link": "https://www.enam.gov.in/",
+      "official_website": "https://www.enam.gov.in/",
+      "application_steps_online": [
+        "Visit enam.gov.in",
+        "Click on Farmer Registration",
+        "Fill details",
+        "Upload documents",
+        "Get registered at nearest e-NAM mandi"
+      ],
+      "application_steps_offline": [
+        "Visit nearest e-NAM mandi",
+        "Fill registration form",
+        "Submit documents",
+        "Get farmer ID",
+        "Start trading"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "e-NAM Mandi",
+          "department_name": "Market Committee",
+          "address": "Nearest APMC with e-NAM",
+          "contact_phone": "Mandi specific",
+          "working_days": "Market days",
+          "working_hours": "Market hours",
+          "who_should_visit": "Farmer",
+          "notes": "Bring produce for quality testing"
+        }
+      ],
+      "start_date": "2016-04-14",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "Ongoing",
+      "renewal_required": "No",
+      "processing_time": "Same day registration",
+      "helpline_number": "1800-270-0224",
+      "email_support": "enam.helpdesk@gmail.com",
+      "faq": [
+        {
+          "question": "How do I get payment?",
+          "answer": "Payment is made directly to your bank account within 24 hours of sale."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Poor quality produce",
+        "No bank account",
+        "Mandi not e-NAM enabled"
+      ],
+      "tips_for_successful_application": [
+        "Register at e-NAM mandi",
+        "Ensure good quality produce",
+        "Link bank account"
+      ],
+      "target_beneficiaries": [
+        "All farmers",
+        "Farmer Producer Organizations"
+      ],
+      "tags": [
+        "Agriculture",
+        "Marketing",
+        "Digital"
+      ],
+      "priority_level": "Medium",
+      "popularity_score": 72,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "online_market",
+      "banner_image_keyword": "e_nam",
+      "theme_color": "#009688",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        },
+        {
+          "document_name": "Bank Account Passbook",
+          "required_or_optional": "Required",
+          "description": "Issued by Bank. Valid for Active. Submit original."
+        },
+        {
+          "document_name": "Land Ownership Document",
+          "required_or_optional": "Optional",
+          "description": "Issued by Revenue Department. Valid for Valid. Submit copy."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_078",
+      "scheme_name": "Sub-Mission on Agricultural Mechanization (SMAM)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Subsidy on agricultural machinery and equipment",
+      "detailed_description": "SMAM promotes agricultural mechanization through financial assistance for purchase of agricultural machinery and equipment. The scheme provides subsidy ranging from 40% to 50% on various farm equipment to reduce drudgery and improve efficiency.",
+      "key_benefits": [
+        "40-50% subsidy on machinery",
+        "Custom Hiring Centers support",
+        "Farm mechanization training",
+        "Demonstration of new technology"
+      ],
+      "financial_assistance": "40-50% subsidy",
+      "benefit_type": "Subsidy",
+      "age_criteria": "All ages",
+      "income_criteria": "All",
+      "gender_criteria": "All (50% subsidy for women)",
+      "category_criteria": "All (50% subsidy for SC/ST)",
+      "occupation_criteria": "Farmer",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "One-time benefit per equipment",
+        "Purchase from approved dealers",
+        "Equipment registration required"
+      ],
+      "application_mode": "Online",
+      "online_apply_link": "State specific portals",
+      "official_website": "https://agrimachinery.nic.in/",
+      "application_steps_online": [
+        "Visit state agriculture portal",
+        "Register as farmer",
+        "Apply for machinery subsidy",
+        "Select equipment",
+        "Upload documents",
+        "Get approval",
+        "Purchase and claim subsidy"
+      ],
+      "application_steps_offline": [
+        "Visit district agriculture office",
+        "Fill application",
+        "Get approval",
+        "Purchase from approved dealer",
+        "Submit bills",
+        "Receive subsidy"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "District Agriculture Office",
+          "department_name": "Farm Mechanization",
+          "address": "District Agriculture Office",
+          "contact_phone": "District specific",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Farmer",
+          "notes": "Check approved dealer list"
+        }
+      ],
+      "start_date": "2014-04-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "One-time per equipment",
+      "renewal_required": "No",
+      "processing_time": "30-60 days",
+      "helpline_number": "1800-180-1551",
+      "email_support": "smam@gov.in",
+      "faq": [
+        {
+          "question": "What equipment are covered?",
+          "answer": "Tractors, power tillers, harvesters, seeders, sprayers, and other farm equipment as per state list."
+        }
+      ],
+      "common_rejection_reasons": [
+        "Purchase from non-approved dealer",
+        "Already availed for same equipment",
+        "Incomplete documents"
+      ],
+      "tips_for_successful_application": [
+        "Apply before purchase",
+        "Buy from approved dealer",
+        "Keep all bills and documents",
+        "Register equipment"
+      ],
+      "target_beneficiaries": [
+        "All farmers",
+        "Women farmers",
+        "SC/ST farmers"
+      ],
+      "tags": [
+        "Agriculture",
+        "Mechanization",
+        "Subsidy"
+      ],
+      "priority_level": "Medium",
+      "popularity_score": 78,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "tractor",
+      "banner_image_keyword": "farm_machinery",
+      "theme_color": "#FF5722",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        },
+        {
+          "document_name": "Land Ownership Document",
+          "required_or_optional": "Required",
+          "description": "Issued by Revenue Department. Valid for Valid. Submit copy."
+        },
+        {
+          "document_name": "Bank Account Passbook",
+          "required_or_optional": "Required",
+          "description": "Issued by Bank. Valid for Active. Submit original."
+        },
+        {
+          "document_name": "Caste Certificate",
+          "required_or_optional": "Optional",
+          "description": "Issued by Revenue Department. Valid for Valid. Submit copy."
+        }
+      ]
+    },
+    {
+      "scheme_id": "SCH_079",
+      "scheme_name": "National Beekeeping and Honey Mission (NBHM)",
+      "category": "Agriculture",
+      "central_or_state": "Central",
+      "ministry_department": "Ministry of Agriculture and Farmers Welfare",
+      "short_description": "Promotion of beekeeping and honey production",
+      "detailed_description": "NBHM promotes scientific beekeeping and honey production to increase farmers' income. The scheme provides financial assistance for bee colonies, equipment, training, and infrastructure development. It also supports honey processing and marketing.",
+      "key_benefits": [
+        "Subsidy on bee boxes and colonies",
+        "Free training",
+        "Processing equipment support",
+        "Marketing assistance",
+        "Additional income source"
+      ],
+      "financial_assistance": "40% subsidy (general), 50% (SC/ST/Women)",
+      "benefit_type": "Subsidy and Training",
+      "age_criteria": "All ages",
+      "income_criteria": "All",
+      "gender_criteria": "All",
+      "category_criteria": "All",
+      "occupation_criteria": "Farmer/Beekeeper",
+      "geographic_criteria": "All India",
+      "other_conditions": [
+        "Training mandatory",
+        "Minimum 5 bee colonies",
+        "Proper location for beekeeping"
+      ],
+      "application_mode": "Offline",
+      "online_apply_link": "NA",
+      "official_website": "https://nbhm.gov.in/",
+      "application_steps_online": [
+        "Not applicable"
+      ],
+      "application_steps_offline": [
+        "Contact district horticulture officer",
+        "Attend beekeeping training",
+        "Submit application with plan",
+        "Get approval",
+        "Purchase equipment",
+        "Start beekeeping",
+        "Claim subsidy"
+      ],
+      "submission_locations": [
+        {
+          "office_type": "District Horticulture Office",
+          "department_name": "Beekeeping Cell",
+          "address": "District Horticulture Office",
+          "contact_phone": "District specific",
+          "working_days": "Monday to Friday",
+          "working_hours": "10:00 AM - 05:00 PM",
+          "who_should_visit": "Farmer/Beekeeper",
+          "notes": "Training certificate required"
+        }
+      ],
+      "start_date": "2020-04-01",
+      "last_date": "Ongoing",
+      "status": "Active",
+      "validity": "One-time benefit",
+      "renewal_required": "No",
+      "processing_time": "45-60 days",
+      "helpline_number": "1800-180-1551",
+      "email_support": "nbhm@gov.in",
+      "faq": [
+        {
+          "question": "Do I need prior experience?",
+          "answer": "No, but mandatory training is provided before starting beekeeping."
+        }
+      ],
+      "common_rejection_reasons": [
+        "No training certificate",
+        "Unsuitable location",
+        "Less than 5 colonies"
+      ],
+      "tips_for_successful_application": [
+        "Complete training first",
+        "Select proper location",
+        "Start with minimum 5 colonies",
+        "Maintain records"
+      ],
+      "target_beneficiaries": [
+        "Farmers",
+        "Rural youth",
+        "Women",
+        "SC/ST"
+      ],
+      "tags": [
+        "Agriculture",
+        "Beekeeping",
+        "Allied Activity"
+      ],
+      "priority_level": "Low",
+      "popularity_score": 60,
+      "difficulty_level_to_apply": "Medium",
+      "icon_keyword": "beekeeping",
+      "banner_image_keyword": "honey_production",
+      "theme_color": "#FFC107",
+      "featured_flag": false,
+      "REQUIRED_DOCUMENTS": [
+        {
+          "document_name": "Aadhar Card",
+          "required_or_optional": "Required",
+          "description": "Issued by UIDAI. Valid for Lifetime. Submit original."
+        },
+        {
+          "document_name": "Training Certificate",
+          "required_or_optional": "Required",
+          "description": "Issued by Agriculture/Horticulture Department. Valid for Valid. Submit original."
+        },
+        {
+          "document_name": "Bank Account Passbook",
+          "required_or_optional": "Required",
+          "description": "Issued by Bank. Valid for Active. Submit original."
+        }
+      ]
     }
   ]
 }
