@@ -2,23 +2,55 @@ import express from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
 import path from 'path';
+
+// Load environment variables first
+config({ path: path.resolve(__dirname, '../../.env') });
+config({ path: path.resolve(__dirname, '../../.env.production') });
+
 import { handler as chatHandler } from '../src/handlers/chat';
 import { handler as eligibilityHandler } from '../src/handlers/eligibility';
 import { handler as schemesHandler } from '../src/handlers/schemes';
 import { handler as serviceCentersHandler } from '../src/handlers/service-centers';
 import { handler as applicationsHandler } from '../src/handlers/applications';
 
-// Load environment variables
-config({ path: path.resolve(__dirname, '../../.env') });
-
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+// Add request logging for debugging
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  next();
+});
+
+app.use(cors({
+  origin: ['https://sahayak-two.vercel.app', 'http://localhost:3000'],
+  credentials: true
+}));
+app.use(express.json({ limit: '10mb' }));
 
 // Health check
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: Date.now() });
+  res.json({ 
+    status: 'ok', 
+    timestamp: Date.now(),
+    env: process.env.NODE_ENV,
+    version: '1.0.0'
+  });
+});
+
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Sahayak AI Backend API',
+    status: 'running',
+    timestamp: Date.now(),
+    env: {
+      NODE_ENV: process.env.NODE_ENV,
+      hasGeminiKey: !!process.env.GEMINI_API_KEY,
+      hasOpenAIKey: !!process.env.OPENAI_API_KEY,
+      hasGroqKey: !!process.env.GROQ_API_KEY,
+      hasSarvamKey: !!process.env.SARVAM_API_KEY
+    }
+  });
 });
 
 // Chat endpoint
@@ -186,7 +218,22 @@ app.put('/api/applications/:applicationId', async (req, res) => {
 
 // Catch all 404
 app.use((req, res) => {
-  res.status(404).json({ error: 'Not found' });
+  console.log(`404 - Route not found: ${req.method} ${req.path}`);
+  res.status(404).json({ 
+    error: 'Not found',
+    path: req.path,
+    method: req.method
+  });
+});
+
+// Global error handler
+app.use((error: any, req: any, res: any, next: any) => {
+  console.error('Global error handler:', error);
+  res.status(500).json({ 
+    error: 'Internal server error',
+    message: error.message,
+    timestamp: Date.now()
+  });
 });
 
 export default app;

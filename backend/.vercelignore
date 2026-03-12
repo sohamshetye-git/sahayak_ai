@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+.env.production
+*.log
+coverage
+.nyc_output
+.DS_Store
+*.test.ts
+*.spec.ts
+jest.config.js
