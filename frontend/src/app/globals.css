@@ -21,3 +21,24 @@
     @apply bg-white rounded-lg shadow-md p-6;
   }
 }
+
+/* Hide Vercel branding/toolbar */
+@layer utilities {
+  /* Hide Vercel development toolbar */
+  [data-vercel-toolbar] {
+    display: none !important;
+  }
+  
+  /* Hide any Vercel branding elements */
+  .vercel-badge,
+  .vercel-toolbar,
+  [class*="vercel"],
+  [id*="vercel"] {
+    display: none !important;
+  }
+  
+  /* Hide powered by Vercel footer if it exists */
+  a[href*="vercel.com"] {
+    display: none !important;
+  }
+}

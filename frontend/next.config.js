@@ -20,8 +20,12 @@ const nextConfig = {
   // Skip source maps for faster builds
   productionBrowserSourceMaps: false,
   
+  // Disable Vercel branding and analytics
+  analytics: false,
+  
   env: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001',
+    DISABLE_VERCEL_BRANDING: 'true',
   },
   
   webpack: (config, { isServer }) => {
@@ -41,6 +45,21 @@ const nextConfig = {
     };
     
     return config;
+  },
+  
+  // Custom headers to prevent Vercel branding injection
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Powered-By',
+            value: 'Sahayak AI',
+          },
+        ],
+      },
+    ];
   },
 };
 
