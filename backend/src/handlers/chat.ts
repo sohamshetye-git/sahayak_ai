@@ -525,10 +525,33 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
         messages: [],
         userProfile: { completeness: 0 },
         stage: 'greeting',
+        metadata: {}, // FIX 2: Initialize metadata for primary intent
         createdAt: Date.now(),
         updatedAt: Date.now(),
       };
       sessions.set(sessionId, session);
+    }
+
+    // FIX 2: Capture primary intent from first meaningful message
+    if (!session.metadata?.primaryIntent && session.messages.length === 0) {
+      // Extract intent from first user message
+      const lowerMessage = message.toLowerCase();
+      const intentKeywords: Record<string, string[]> = {
+        'Health': ['health', 'medical', 'doctor', 'hospital', 'healthcare', 'स्वास्थ्य', 'चिकित्सा'],
+        'Education': ['education', 'study', 'school', 'scholarship', 'शिक्षा', 'पढ़ाई'],
+        'Agriculture': ['agriculture', 'farming', 'farmer', 'crop', 'कृषि', 'किसान'],
+        'Housing': ['housing', 'house', 'home', 'आवास', 'घर'],
+        'Employment': ['employment', 'job', 'work', 'रोजगार', 'नौकरी'],
+        'Finance': ['finance', 'loan', 'credit', 'वित्त', 'ऋण'],
+      };
+      
+      for (const [category, keywords] of Object.entries(intentKeywords)) {
+        if (keywords.some(keyword => lowerMessage.includes(keyword))) {
+          session.metadata = { primaryIntent: category };
+          console.log('[PRIMARY_INTENT] Locked intent from first message:', category);
+          break;
+        }
+      }
     }
 
     // Process message with orchestrator
@@ -624,27 +647,76 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
     }
 
     // Prevent duplicate questions - check if AI is asking for already collected field
+    // FIX 1: STATE-LOCK MECHANISM - Physically block duplicate questions
     if (cleanedResponse && response.stage !== 'recommendation_ready') {
       const lowerResponse = cleanedResponse.toLowerCase();
       const alreadyCollected: string[] = [];
       
-      if (profile.age !== undefined && (lowerResponse.includes('age') || lowerResponse.includes('उम्र'))) {
+      // Check each field with comprehensive keyword matching
+      if (profile.age !== undefined && (
+        lowerResponse.includes('age') || lowerResponse.includes('उम्र') ||
+        lowerResponse.includes('old are you') || lowerResponse.includes('कितने साल')
+      )) {
         alreadyCollected.push('age');
+        console.log('[STATE-LOCK] Blocked duplicate question for: age (value:', profile.age, ')');
       }
-      if (profile.occupation && (lowerResponse.includes('occupation') || lowerResponse.includes('व्यवसाय'))) {
+      if (profile.occupation && (
+        lowerResponse.includes('occupation') || lowerResponse.includes('व्यवसाय') ||
+        lowerResponse.includes('what do you do') || lowerResponse.includes('आप क्या करते')
+      )) {
         alreadyCollected.push('occupation');
+        console.log('[STATE-LOCK] Blocked duplicate question for: occupation (value:', profile.occupation, ')');
       }
-      if (profile.state && (lowerResponse.includes('state') || lowerResponse.includes('राज्य'))) {
+      if (profile.state && (
+        lowerResponse.includes('state') || lowerResponse.includes('राज्य') ||
+        lowerResponse.includes('which state') || lowerResponse.includes('कौन से राज्य')
+      )) {
         alreadyCollected.push('state');
+        console.log('[STATE-LOCK] Blocked duplicate question for: state (value:', profile.state, ')');
       }
-      if (profile.income !== undefined && (lowerResponse.includes('income') || lowerResponse.includes('आय'))) {
+      if (profile.income !== undefined && (
+        lowerResponse.includes('income') || lowerResponse.includes('आय') ||
+        lowerResponse.includes('earn') || lowerResponse.includes('कमाते')
+      )) {
         alreadyCollected.push('income');
+        console.log('[STATE-LOCK] Blocked duplicate question for: income (value:', profile.income, ')');
+      }
+      if (profile.residenceType && (
+        lowerResponse.includes('residence') || lowerResponse.includes('निवास') ||
+        lowerResponse.includes('urban') || lowerResponse.includes('rural') ||
+        lowerResponse.includes('शहरी') || lowerResponse.includes('ग्रामीण')
+      )) {
+        alreadyCollected.push('residenceType');
+        console.log('[STATE-LOCK] Blocked duplicate question for: residenceType (value:', profile.residenceType, ')');
       }
       
-      // If AI is asking for already collected field, generate proper next question
-      if (alreadyCollected.length > 0 && missingFields.length > 0) {
-        console.log('[DUPLICATE PREVENTION] AI asked for collected field:', alreadyCollected, '- generating next question');
-        cleanedResponse = await orch.generateFollowUpQuestion(missingFields, language, profile);
+      // If AI is asking for already collected field, FORCE next question or move to recommendation
+      if (alreadyCollected.length > 0) {
+        console.log('[STATE-LOCK] INTERCEPTED duplicate question attempt for:', alreadyCollected);
+        
+        // Re-calculate missing fields to ensure accuracy
+        const currentMissingFields = orch.identifyMissingInfo(profile);
+        console.log('[STATE-LOCK] Current missing fields:', currentMissingFields);
+        
+        if (currentMissingFields.length > 0) {
+          // Generate next question for the first missing field
+          console.log('[STATE-LOCK] Forcing next question for:', currentMissingFields[0]);
+          cleanedResponse = await orch.generateFollowUpQuestion(currentMissingFields, language, profile);
+          
+          // Add acknowledgment of the collected field
+          const acknowledgment = language === 'hi' 
+            ? 'धन्यवाद! ' 
+            : 'Thank you! ';
+          cleanedResponse = acknowledgment + cleanedResponse;
+        } else {
+          // All fields collected - force move to recommendation_ready
+          console.log('[STATE-LOCK] All fields collected - forcing recommendation_ready stage');
+          response.stage = 'recommendation_ready';
+          session.stage = 'recommendation_ready';
+          cleanedResponse = language === 'hi'
+            ? 'धन्यवाद! मैं आपकी पात्रता की जांच कर रहा हूं...'
+            : 'Thank you! I am checking your eligibility...';
+        }
       }
     }
 
@@ -696,12 +768,37 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
         
         if (eligibleSchemes.length > 0) {
           // ALWAYS run ranking engine
-          console.log('[RANKING_ENGINE] Ranking eligible schemes...');
-          const rankedSchemes = rankEngine.rankSchemes(eligibleSchemes, profile as UserProfile);
+          // FIX 2: Pass primary intent to ranking engine for intent-based prioritization
+          const primaryIntent = session.metadata?.primaryIntent;
+          console.log('[RANKING_ENGINE] Ranking eligible schemes with primary intent:', primaryIntent);
+          
+          const rankedSchemes = rankEngine.rankSchemes(
+            eligibleSchemes, 
+            profile as UserProfile,
+            primaryIntent // Pass locked intent
+          );
           console.log(`[RANKED_SCHEMES] Ranked ${rankedSchemes.length} schemes`);
           
-          // Take top 3 schemes
+          // FIX 4: NO-MATCH REDIRECT - Check if top schemes match primary intent
           const topSchemes = rankedSchemes.slice(0, 3);
+          const primaryIntentMatched = primaryIntent && topSchemes.some(rs => 
+            rs.scheme.category.toLowerCase() === primaryIntent.toLowerCase() ||
+            rs.scheme.category.toLowerCase().includes(primaryIntent.toLowerCase())
+          );
+          
+          // If user asked for specific category but no schemes match, explain
+          if (primaryIntent && !primaryIntentMatched && rankedSchemes.length > 0) {
+            console.log(`[NO-MATCH_REDIRECT] User asked for "${primaryIntent}" but no matching schemes found`);
+            console.log(`[NO-MATCH_REDIRECT] Showing general eligible schemes with explanation`);
+            
+            // Add explanation message
+            const noMatchExplanation = language === 'hi'
+              ? `मैंने ${primaryIntent} योजनाओं की खोज की, लेकिन आपकी प्रोफ़ाइल (${profile.age} वर्ष, ${profile.occupation}, ${profile.state}) के लिए कोई मेल नहीं खाया।\n\nहालांकि, मुझे ये सामान्य योजनाएं मिलीं जिनके लिए आप पात्र हैं:`
+              : `I searched for ${primaryIntent} schemes, but none matched your profile (${profile.age} years old, ${profile.occupation}, ${profile.state}).\n\nHowever, I found these general schemes you are eligible for:`;
+            
+            cleanedResponse = noMatchExplanation;
+          }
+          
           console.log(`[TOP_SCHEMES] Selected top 3 schemes for recommendation`);
           
           // Format schemes for response

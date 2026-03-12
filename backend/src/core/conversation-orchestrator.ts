@@ -159,69 +159,76 @@ export class ConversationOrchestrator {
     }
 
     // Extract occupation with comprehensive list
-    if (!updatedProfile.occupation) {
-      const occupationMap = {
-        'farmer': /\b(farmer|farming|agriculture|framer|famer|kisaan|kheti|किसान|खेती)\b/i,
-        'student': /\b(student|studying|studant|छात्र|पढ़ाई)\b/i,
-        'unemployed': /\b(unemployed|jobless|बेरोजगार)\b/i,
-        'self-employed': /\b(self[- ]?employed|business|bussiness|व्यापार|स्वरोजगार)\b/i,
-        'daily wage': /\b(daily wage|labor|labour|majdoor|mazdoor|मजदूर|दिहाड़ी)\b/i,
-        'government employee': /\b(government|sarkari|govt|सरकारी)\b/i,
-        'private employee': /\b(private|company|pvt|कंपनी|प्राइवेट)\b/i,
-        'retired': /\b(retired|pension|रिटायर|पेंशन)\b/i,
-      };
-      
-      for (const [occupation, pattern] of Object.entries(occupationMap)) {
-        if (pattern.test(message)) {
-          updatedProfile.occupation = normalizeOccupation(occupation);
-          break;
+    // FIX 3: CLEAN OVERWRITE LOGIC - Last-In-Priority
+    const occupationMap = {
+      'farmer': /\b(farmer|farming|agriculture|framer|famer|kisaan|kheti|किसान|खेती)\b/i,
+      'student': /\b(student|studying|studant|छात्र|पढ़ाई)\b/i,
+      'teacher': /\b(teacher|teaching|professor|शिक्षक|अध्यापक)\b/i,
+      'unemployed': /\b(unemployed|jobless|बेरोजगार)\b/i,
+      'self-employed': /\b(self[- ]?employed|business|bussiness|व्यापार|स्वरोजगार)\b/i,
+      'daily wage': /\b(daily wage|labor|labour|majdoor|mazdoor|मजदूर|दिहाड़ी)\b/i,
+      'government employee': /\b(government|sarkari|govt|सरकारी)\b/i,
+      'private employee': /\b(private|company|pvt|कंपनी|प्राइवेट)\b/i,
+      'retired': /\b(retired|pension|रिटायर|पेंशन)\b/i,
+    };
+    
+    for (const [occupation, pattern] of Object.entries(occupationMap)) {
+      if (pattern.test(message)) {
+        const newOccupation = normalizeOccupation(occupation);
+        
+        // FIX 3: Log if occupation is being changed (overwrite)
+        if (updatedProfile.occupation && updatedProfile.occupation !== newOccupation) {
+          console.log(`[PROFILE_UPDATE] Occupation changed from "${updatedProfile.occupation}" to "${newOccupation}"`);
         }
+        
+        // Always overwrite with latest value (Last-In-Priority)
+        updatedProfile.occupation = newOccupation;
+        break;
       }
     }
 
     // Extract state with comprehensive list
-    if (!updatedProfile.state) {
-      const stateMap = {
-        'Maharashtra': /\b(maharashtra|mumbai|pune|nagpur|महाराष्ट्र|मुंबई)\b/i,
-        'Karnataka': /\b(karnataka|bangalore|bengaluru|mysore|कर्नाटक|बेंगलुरु)\b/i,
-        'Tamil Nadu': /\b(tamil nadu|chennai|madurai|तमिलनाडु|चेन्नई)\b/i,
-        'Delhi': /\b(delhi|new delhi|दिल्ली)\b/i,
-        'Uttar Pradesh': /\b(uttar pradesh|up|lucknow|kanpur|उत्तर प्रदेश|लखनऊ)\b/i,
-        'Gujarat': /\b(gujarat|ahmedabad|surat|गुजरात|अहमदाबाद)\b/i,
-        'Rajasthan': /\b(rajasthan|jaipur|jodhpur|राजस्थान|जयपुर)\b/i,
-        'West Bengal': /\b(west bengal|kolkata|calcutta|पश्चिम बंगाल|कोलकाता)\b/i,
-        'Madhya Pradesh': /\b(madhya pradesh|mp|bhopal|indore|मध्य प्रदेश|भोपाल)\b/i,
-        'Bihar': /\b(bihar|patna|बिहार|पटना)\b/i,
-        'Punjab': /\b(punjab|chandigarh|ludhiana|पंजाब|चंडीगढ़)\b/i,
-        'Haryana': /\b(haryana|gurgaon|faridabad|हरियाणा|गुड़गांव)\b/i,
-        'Andhra Pradesh': /\b(andhra pradesh|hyderabad|visakhapatnam|आंध्र प्रदेश)\b/i,
-        'Telangana': /\b(telangana|hyderabad|तेलंगाना|हैदराबाद)\b/i,
-        'Kerala': /\b(kerala|kochi|trivandrum|केरल|कोच्चि)\b/i,
-        'Odisha': /\b(odisha|orissa|bhubaneswar|ओडिशा|भुवनेश्वर)\b/i,
-        'Assam': /\b(assam|guwahati|असम|गुवाहाटी)\b/i,
-        'Jharkhand': /\b(jharkhand|ranchi|झारखंड|रांची)\b/i,
-        'Chhattisgarh': /\b(chhattisgarh|raipur|छत्तीसगढ़|रायपुर)\b/i,
-        'Uttarakhand': /\b(uttarakhand|dehradun|उत्तराखंड|देहरादून)\b/i,
-        'Himachal Pradesh': /\b(himachal pradesh|shimla|हिमाचल प्रदेश|शिमला)\b/i,
-        'Goa': /\b(goa|panaji|गोवा)\b/i,
-      };
-      
-      for (const [state, pattern] of Object.entries(stateMap)) {
-        if (pattern.test(message)) {
-          updatedProfile.state = normalizeState(state);
-          break;
-        }
+    // FIX 3: CLEAN OVERWRITE LOGIC - Last-In-Priority
+    const stateMap = {
+      'Maharashtra': /\b(maharashtra|mumbai|pune|nagpur|महाराष्ट्र|मुंबई)\b/i,
+      'Karnataka': /\b(karnataka|bangalore|bengaluru|mysore|कर्नाटक|बेंगलुरु)\b/i,
+      'Tamil Nadu': /\b(tamil nadu|chennai|madurai|तमिलनाडु|चेन्नई)\b/i,
+      'Delhi': /\b(delhi|new delhi|दिल्ली)\b/i,
+      'Uttar Pradesh': /\b(uttar pradesh|up|lucknow|kanpur|उत्तर प्रदेश|लखनऊ)\b/i,
+      'Gujarat': /\b(gujarat|ahmedabad|surat|गुजरात|अहमदाबाद)\b/i,
+      'Rajasthan': /\b(rajasthan|jaipur|jodhpur|राजस्थान|जयपुर)\b/i,
+      'West Bengal': /\b(west bengal|kolkata|calcutta|पश्चिम बंगाल|कोलकाता)\b/i,
+      'Madhya Pradesh': /\b(madhya pradesh|mp|bhopal|indore|मध्य प्रदेश|भोपाल)\b/i,
+      'Bihar': /\b(bihar|patna|बिहार|पटना)\b/i,
+      'Punjab': /\b(punjab|chandigarh|ludhiana|पंजाब|चंडीगढ़)\b/i,
+      'Haryana': /\b(haryana|gurgaon|faridabad|हरियाणा|गुड़गांव)\b/i,
+      'Andhra Pradesh': /\b(andhra pradesh|hyderabad|visakhapatnam|आंध्र प्रदेश)\b/i,
+      'Telangana': /\b(telangana|hyderabad|तेलंगाना|हैदराबाद)\b/i,
+      'Kerala': /\b(kerala|kochi|trivandrum|केरल|कोच्चि)\b/i,
+      'Odisha': /\b(odisha|orissa|bhubaneswar|ओडिशा|भुवनेश्वर)\b/i,
+      'Assam': /\b(assam|guwahati|असम|गुवाहाटी)\b/i,
+      'Jharkhand': /\b(jharkhand|ranchi|झारखंड|रांची)\b/i,
+      'Chhattisgarh': /\b(chhattisgarh|raipur|छत्तीसगढ़|रायपुर)\b/i,
+      'Uttarakhand': /\b(uttarakhand|dehradun|उत्तराखंड|देहरादून)\b/i,
+      'Himachal Pradesh': /\b(himachal pradesh|shimla|हिमाचल प्रदेश|शिमला)\b/i,
+      'Goa': /\b(goa|panaji|गोवा)\b/i,
+    };
+    
+    for (const [state, pattern] of Object.entries(stateMap)) {
+      if (pattern.test(message)) {
+        updatedProfile.state = normalizeState(state);
+        break;
       }
-      
-      // Also try direct state name extraction
-      if (!updatedProfile.state) {
-        const words = message.split(/\s+/);
-        for (const word of words) {
-          const normalized = normalizeState(word);
-          if (normalized !== word) {
-            updatedProfile.state = normalized;
-            break;
-          }
+    }
+    
+    // Also try direct state name extraction
+    if (!updatedProfile.state) {
+      const words = message.split(/\s+/);
+      for (const word of words) {
+        const normalized = normalizeState(word);
+        if (normalized !== word) {
+          updatedProfile.state = normalized;
+          break;
         }
       }
     }

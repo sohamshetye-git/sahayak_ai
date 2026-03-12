@@ -16,11 +16,11 @@ export class RankingEngine {
 
   /**
    * Rank eligible schemes by relevance to user profile
-   * Considers user's explicit intent (target category)
+   * FIX 2: Considers primary intent (locked from first message) over occupation
    */
-  rankSchemes(schemes: Scheme[], userProfile: UserProfile): RankedScheme[] {
+  rankSchemes(schemes: Scheme[], userProfile: UserProfile, primaryIntent?: string): RankedScheme[] {
     const rankedSchemes = schemes.map((scheme) => {
-      const { score, factors } = this.calculateRelevanceScore(scheme, userProfile);
+      const { score, factors } = this.calculateRelevanceScore(scheme, userProfile, primaryIntent);
       return {
         scheme,
         relevanceScore: score,
@@ -34,15 +34,18 @@ export class RankingEngine {
 
   /**
    * Calculate relevance score for a single scheme
+   * FIX 2: Primary intent takes precedence over targetCategory
    */
   private calculateRelevanceScore(
     scheme: Scheme,
-    userProfile: UserProfile
+    userProfile: UserProfile,
+    primaryIntent?: string
   ): { score: number; factors: RankingFactor[] } {
     const factors: RankingFactor[] = [];
 
-    // Factor 1: Category Intent Match (50 points) - NEW HIGHEST PRIORITY
-    const intentScore = this.calculateIntentScore(scheme, userProfile);
+    // Factor 1: Category Intent Match (50 points) - HIGHEST PRIORITY
+    // FIX 2: Use primaryIntent if available, otherwise fall back to targetCategory
+    const intentScore = this.calculateIntentScore(scheme, userProfile, primaryIntent);
     factors.push({
       factor: 'category_intent_match',
       weight: this.WEIGHT_CATEGORY_INTENT,
@@ -81,18 +84,23 @@ export class RankingEngine {
 
   /**
    * Calculate intent match score (0-50 points)
+   * FIX 2: Primary intent (locked from first message) takes precedence
    * Does this scheme match what the user explicitly asked for?
    */
-  private calculateIntentScore(scheme: Scheme, userProfile: UserProfile): number {
-    // If user specified a target category (intent), check if scheme matches
-    if (userProfile.targetCategory) {
+  private calculateIntentScore(scheme: Scheme, userProfile: UserProfile, primaryIntent?: string): number {
+    // FIX 2: Use primaryIntent if available (locked from first message)
+    const targetCategory = primaryIntent || userProfile.targetCategory;
+    
+    if (targetCategory) {
       const schemeCategory = scheme.category.toLowerCase();
-      const targetCategory = userProfile.targetCategory.toLowerCase();
+      const target = targetCategory.toLowerCase();
       
-      if (schemeCategory === targetCategory || schemeCategory.includes(targetCategory)) {
+      if (schemeCategory === target || schemeCategory.includes(target)) {
+        console.log(`[INTENT_MATCH] Scheme "${scheme.name}" matches primary intent "${targetCategory}" - full score`);
         return this.WEIGHT_CATEGORY_INTENT; // Full score for exact match
       }
       
+      console.log(`[INTENT_MISMATCH] Scheme "${scheme.name}" (${scheme.category}) does not match intent "${targetCategory}" - zero score`);
       return 0; // No score if doesn't match intent
     }
 

@@ -105,7 +105,10 @@ export const ChatSessionSchema = z.object({
   language: z.enum(['hi', 'en']),
   messages: z.array(MessageSchema),
   userProfile: UserProfileSchema.partial(),
-  stage: z.enum(['greeting', 'collecting_profile', 'profile_complete', 'recommendation_ready', 'post_recommendation']),
+  stage: z.enum(['greeting', 'providing_info', 'collecting_profile', 'profile_complete', 'recommendation_ready', 'post_recommendation']),
+  metadata: z.object({
+    primaryIntent: z.string().optional(), // FIX 2: Lock the first intent (e.g., 'Health')
+  }).optional(),
   ttl: z.number(),
 });
 
