@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { LanguageProvider } from '../lib/context/language-context';
+import BackendStatus from './components/BackendStatus';
 
 export const metadata: Metadata = {
   title: 'Sahayak AI - Government Scheme Assistant',
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="bg-gray-50">
         <LanguageProvider>
           {children}
+          <BackendStatus />
         </LanguageProvider>
       </body>
     </html>
