@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "src/local.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/local.ts"
+    }
+  ]
+}
