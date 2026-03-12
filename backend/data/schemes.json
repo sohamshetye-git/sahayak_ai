@@ -140,7 +140,7 @@
         "If a person has multiple bank accounts, they can join the scheme through only one account."
       ],
       "application_mode": "Both",
-      "online_apply_link": "Via Internet Banking",
+      "online_apply_link": "https://jansuraksha.gov.in/",
       "official_website": "https://jansuraksha.gov.in/",
       "application_steps_online": [
         "Log in to your bank's net banking portal.",
@@ -246,7 +246,7 @@
         "Auto-debit mandate is mandatory."
       ],
       "application_mode": "Both",
-      "online_apply_link": "Via Internet Banking",
+      "online_apply_link": "https://jansuraksha.gov.in/",
       "official_website": "https://jansuraksha.gov.in/",
       "application_steps_online": [
         "Log in to Internet Banking.",
