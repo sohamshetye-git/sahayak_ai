@@ -20,6 +20,10 @@ class KeepAliveService {
     }
 
     console.log('🚀 Starting keep-alive service (ping every 5 minutes)');
+    console.log('🎯 Backend URLs:', {
+      primary: process.env.NEXT_PUBLIC_API_URL || 'https://sahayak-ai-backend.vercel.app',
+      fallback: process.env.NEXT_PUBLIC_FALLBACK_API_URL || 'https://sahayak-ai-mvny.onrender.com'
+    });
     this.isActive = true;
 
     // Ping immediately on start
@@ -53,14 +57,17 @@ class KeepAliveService {
    */
   private async ping(): Promise<void> {
     try {
+      console.log('🏓 Pinging backend...');
       const result = await apiClient.ping();
       console.log('🏓 Backend ping successful:', {
         status: result.status,
         uptime: `${Math.floor(result.uptime)}s`,
-        timestamp: new Date(result.timestamp).toLocaleTimeString()
+        timestamp: new Date(result.timestamp).toLocaleTimeString(),
+        backend: apiClient.getBackendStatus().current
       });
     } catch (error) {
       console.warn('⚠️ Backend ping failed:', error);
+      console.log('🔍 Backend status:', apiClient.getBackendStatus());
     }
   }
 
