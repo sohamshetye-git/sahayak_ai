@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { LanguageProvider } from '../lib/context/language-context';
+import KeepAliveProvider from './components/KeepAliveProvider';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
@@ -17,51 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-gray-50">
         <LanguageProvider>
+          <KeepAliveProvider />
           {children}
         </LanguageProvider>
-        
-        {/* Backend Warmer Script */}
-        <Script id="backend-warmer" strategy="afterInteractive">
-          {`
-            // Simple backend warmer
-            let warmupInterval;
-            
-            function warmBackend() {
-              fetch('/api/warmup', { method: 'GET' })
-                .then(res => res.json())
-                .then(data => console.log('[WARMER] Success:', data.duration))
-                .catch(err => {
-                  console.warn('[WARMER] Failed, trying health check');
-                  fetch('/api/health').catch(() => {});
-                });
-            }
-            
-            // Start warming
-            function startWarmer() {
-              if (warmupInterval) return;
-              console.log('[WARMER] Starting');
-              warmBackend(); // Immediate warmup
-              warmupInterval = setInterval(warmBackend, 4 * 60 * 1000); // Every 4 minutes
-            }
-            
-            // Stop warming
-            function stopWarmer() {
-              if (warmupInterval) {
-                clearInterval(warmupInterval);
-                warmupInterval = null;
-                console.log('[WARMER] Stopped');
-              }
-            }
-            
-            // Auto-start/stop based on page visibility
-            window.addEventListener('load', startWarmer);
-            window.addEventListener('beforeunload', stopWarmer);
-            document.addEventListener('visibilitychange', () => {
-              if (document.hidden) stopWarmer();
-              else startWarmer();
-            });
-          `}
-        </Script>
         
         {/* Script to remove Vercel branding */}
         <Script id="remove-vercel-branding" strategy="afterInteractive">

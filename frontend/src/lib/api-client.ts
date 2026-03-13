@@ -183,6 +183,13 @@ class APIClient {
 
     return { primary: primaryHealth, fallback: fallbackHealth };
   }
+
+  /**
+   * Ping backend to keep it warm
+   */
+  async ping(): Promise<{ status: string, timestamp: number, uptime: number }> {
+    return this.get('/ping');
+  }
 }
 
 export const apiClient = new APIClient();

@@ -40,6 +40,15 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Simple ping endpoint for keeping function warm
+app.get('/ping', (req, res) => {
+  res.json({ 
+    status: 'pong', 
+    timestamp: Date.now(),
+    uptime: process.uptime()
+  });
+});
+
 // Warm-up endpoint (initializes backend components)
 app.get('/warmup', async (req, res) => {
   try {
