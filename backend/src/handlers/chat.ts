@@ -461,6 +461,8 @@ function checkRateLimit(ip: string): { allowed: boolean; remaining: number } {
 }
 
 export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> {
+  const startTime = Date.now();
+  
   try {
     // Get client IP for rate limiting
     const clientIp = event.requestContext?.identity?.sourceIp || 
@@ -489,16 +491,11 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       };
     }
 
-    // Get orchestrator and engines
-    const orch = getOrchestrator();
-    const eligEngine = getEligibilityEngine();
-    const rankEngine = getRankingEngine();
-    
-    // Parse request body
+    // Parse request body early
     const body: ChatRequest = JSON.parse(event.body || '{}');
     const { sessionId: requestSessionId, message, language, voiceInput } = body;
 
-    // Validate required fields
+    // Validate required fields early
     if (!message || !language) {
       return {
         statusCode: 400,
@@ -512,6 +509,23 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
         }),
       };
     }
+
+    // Initialize components with timeout
+    const initPromise = Promise.all([
+      Promise.resolve(getOrchestrator()),
+      Promise.resolve(getEligibilityEngine()),
+      Promise.resolve(getRankingEngine()),
+      Promise.resolve(loadSchemesData())
+    ]);
+
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error('Initialization timeout')), 5000);
+    });
+
+    const [orch, eligEngine, rankEngine, schemes] = await Promise.race([
+      initPromise,
+      timeoutPromise
+    ]) as [any, EligibilityEngine, RankingEngine, Scheme[]];
 
     // Get or create session
     const sessionId = requestSessionId || uuidv4();

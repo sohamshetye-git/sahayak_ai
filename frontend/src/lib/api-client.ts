@@ -57,7 +57,7 @@ class APIClient {
           'Content-Type': 'application/json',
           ...options.headers,
         },
-        timeout: 10000, // 10 second timeout
+        timeout: 20000, // Reduced from 10s to 20s for chat requests
       });
 
       if (!response.ok) {

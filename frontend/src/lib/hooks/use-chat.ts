@@ -50,12 +50,19 @@ export function useChat(initialSessionId?: string) {
     setMessages(prev => [...prev, userMessage]);
 
     try {
-      const response = await apiClient.post<ChatResponse>('/api/chat', {
+      // Add timeout for chat requests
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Request timeout - please try again')), 25000); // 25 second timeout
+      });
+
+      const apiPromise = apiClient.post<ChatResponse>('/api/chat', {
         sessionId,
         message,
         language,
         voiceInput,
       });
+
+      const response = await Promise.race([apiPromise, timeoutPromise]) as ChatResponse;
 
       // Update session ID
       if (response.sessionId) {
@@ -72,8 +79,28 @@ export function useChat(initialSessionId?: string) {
 
       return response;
     } catch (err: any) {
-      const errorMessage = err.message || 'Failed to send message';
+      let errorMessage = 'Failed to send message';
+      
+      if (err.message?.includes('timeout')) {
+        errorMessage = 'Response is taking longer than expected. Please try again.';
+      } else if (err.message?.includes('Both backends failed')) {
+        errorMessage = 'Service temporarily unavailable. Please try again in a moment.';
+      } else if (err.statusCode === 429) {
+        errorMessage = 'Too many requests. Please wait a moment and try again.';
+      } else {
+        errorMessage = err.message || errorMessage;
+      }
+      
       setError(errorMessage);
+      
+      // Add error message to chat
+      const errorAssistantMessage: Message = {
+        role: 'assistant',
+        content: `Sorry, ${errorMessage} Please try asking your question again.`,
+        timestamp: new Date(),
+      };
+      setMessages(prev => [...prev, errorAssistantMessage]);
+      
       throw err;
     } finally {
       setIsLoading(false);

@@ -214,7 +214,7 @@ export function createAIProviderFromEnv(): AIProvider {
   // Always use retry attempts from env (default: 1 for free tier)
   const retryAttempts = parseInt(process.env.AI_RETRY_ATTEMPTS || '1');
   
-  const primaryType = (process.env.AI_PROVIDER as 'bedrock' | 'gemini' | 'groq' | 'sarvam') || 'gemini';
+  const primaryType = (process.env.AI_PROVIDER as 'bedrock' | 'gemini' | 'groq' | 'sarvam') || 'groq'; // Changed to groq for speed
   
   // Determine API key based on primary provider
   let primaryApiKey: string | undefined;
@@ -229,7 +229,7 @@ export function createAIProviderFromEnv(): AIProvider {
   const config: AIProviderConfig = {
     primary: {
       type: primaryType,
-      model: process.env.AI_PROVIDER_PRIMARY_MODEL || 'gemini-pro',
+      model: process.env.AI_PROVIDER_PRIMARY_MODEL || (primaryType === 'groq' ? 'llama-3.1-8b-instant' : 'gemini-pro'), // Fast model for Groq
       region: process.env.AWS_REGION || 'us-east-1',
       apiKey: primaryApiKey,
     },
@@ -259,7 +259,7 @@ export function createAIProviderFromEnv(): AIProvider {
         }
       : undefined,
     retryAttempts,
-    timeoutMs: parseInt(process.env.AI_TIMEOUT_MS || '30000'),
+    timeoutMs: parseInt(process.env.AI_TIMEOUT_MS || '15000'), // Reduced from 30s to 15s
   };
 
   console.log('AI Provider Config:', {
