@@ -176,6 +176,7 @@ function loadSchemesData(): Scheme[] {
   try {
     // Try multiple possible paths for the schemes data
     const possiblePaths = [
+      path.join(__dirname, 'schemes.json'),                       // Bundled with src
       path.join(process.cwd(), 'data', 'schemes.json'),           // Local development
       path.join(process.cwd(), 'backend', 'data', 'schemes.json'), // Vercel deployment
       path.join(__dirname, '..', 'data', 'schemes.json'),        // Relative to src
@@ -185,14 +186,23 @@ function loadSchemesData(): Scheme[] {
     let rawData: string | null = null;
     let usedPath = '';
 
+    console.log('[SCHEMES] Attempting to load schemes data from multiple paths...');
+    console.log('[SCHEMES] Current working directory:', process.cwd());
+    console.log('[SCHEMES] __dirname:', __dirname);
+
     for (const dataPath of possiblePaths) {
+      console.log(`[SCHEMES] Trying path: ${dataPath}`);
       try {
         if (fs.existsSync(dataPath)) {
+          console.log(`[SCHEMES] File exists at: ${dataPath}`);
           rawData = fs.readFileSync(dataPath, 'utf-8');
           usedPath = dataPath;
           break;
+        } else {
+          console.log(`[SCHEMES] File not found at: ${dataPath}`);
         }
       } catch (error) {
+        console.log(`[SCHEMES] Error reading ${dataPath}:`, error.message);
         // Continue to next path
         continue;
       }
