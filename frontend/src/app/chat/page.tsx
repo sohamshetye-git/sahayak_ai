@@ -44,6 +44,16 @@ export default function ChatPage() {
     
     // Load schemes data
     schemesDataService.loadSchemes();
+    
+    // Pre-warm backend when chat page loads
+    console.log('[CHAT] Pre-warming backend...');
+    fetch('/api/warmup')
+      .then(res => res.json())
+      .then(data => console.log('[CHAT] Backend pre-warmed:', data.duration))
+      .catch(err => {
+        console.warn('[CHAT] Pre-warm failed, trying health check');
+        fetch('/api/health').catch(() => {});
+      });
   }, []);
 
   useEffect(() => {

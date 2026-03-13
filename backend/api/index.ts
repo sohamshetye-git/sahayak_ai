@@ -13,6 +13,9 @@ import { handler as schemesHandler } from '../src/handlers/schemes';
 import { handler as serviceCentersHandler } from '../src/handlers/service-centers';
 import { handler as applicationsHandler } from '../src/handlers/applications';
 
+// Import initialization functions for warmup
+import { getOrchestrator, getEligibilityEngine, getRankingEngine, loadSchemesData } from '../src/handlers/chat';
+
 const app = express();
 
 // Add request logging for debugging
@@ -35,6 +38,43 @@ app.get('/health', (req, res) => {
     env: process.env.NODE_ENV,
     version: '1.0.0'
   });
+});
+
+// Warm-up endpoint (initializes backend components)
+app.get('/warmup', async (req, res) => {
+  try {
+    console.log('[WARMUP] Backend warming initiated');
+    
+    // Initialize all components
+    const startTime = Date.now();
+    
+    // These will trigger lazy initialization
+    const orch = getOrchestrator();
+    const eligEngine = getEligibilityEngine();
+    const rankEngine = getRankingEngine();
+    const schemes = loadSchemesData();
+    
+    const duration = Date.now() - startTime;
+    
+    res.json({ 
+      status: 'warmed',
+      duration: `${duration}ms`,
+      components: {
+        orchestrator: !!orch,
+        eligibilityEngine: !!eligEngine,
+        rankingEngine: !!rankEngine,
+        schemes: schemes.length
+      },
+      timestamp: Date.now()
+    });
+  } catch (error: any) {
+    console.error('[WARMUP] Error:', error);
+    res.status(500).json({ 
+      status: 'error',
+      message: error.message,
+      timestamp: Date.now()
+    });
+  }
 });
 
 // Root endpoint

@@ -162,6 +162,9 @@ function getRankingEngine() {
   return rankingEngine;
 }
 
+// Export functions for warmup
+export { getOrchestrator, getEligibilityEngine, getRankingEngine, loadSchemesData };
+
 /**
  * Load schemes data from JSON file
  */
