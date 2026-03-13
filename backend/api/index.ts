@@ -49,6 +49,44 @@ app.get('/ping', (req, res) => {
   });
 });
 
+// Debug endpoint to check file system
+app.get('/debug', (req, res) => {
+  const fs = require('fs');
+  const path = require('path');
+  
+  const debugInfo = {
+    cwd: process.cwd(),
+    __dirname: __dirname,
+    nodeEnv: process.env.NODE_ENV,
+    timestamp: Date.now()
+  };
+
+  // Check various paths
+  const pathsToCheck = [
+    'data/schemes.json',
+    'backend/data/schemes.json',
+    'src/schemes.json',
+    path.join(__dirname, '..', 'src', 'schemes.json'),
+    path.join(process.cwd(), 'data', 'schemes.json'),
+    path.join(process.cwd(), 'backend', 'data', 'schemes.json')
+  ];
+
+  debugInfo.paths = pathsToCheck.map(p => ({
+    path: p,
+    absolute: path.resolve(p),
+    exists: fs.existsSync(p)
+  }));
+
+  // List directory contents
+  try {
+    debugInfo.cwdContents = fs.readdirSync(process.cwd());
+  } catch (e) {
+    debugInfo.cwdContents = `Error: ${e.message}`;
+  }
+
+  res.json(debugInfo);
+});
+
 // Warm-up endpoint (initializes backend components)
 app.get('/warmup', async (req, res) => {
   try {
