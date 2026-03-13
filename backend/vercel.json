@@ -12,6 +12,11 @@
       "dest": "/api/index.ts"
     }
   ],
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "data/**"
+    }
+  },
   "env": {
     "NODE_ENV": "production"
   }

@@ -174,8 +174,34 @@ function loadSchemesData(): Scheme[] {
   }
 
   try {
-    const dataPath = path.join(process.cwd(), 'data', 'schemes.json');
-    const rawData = fs.readFileSync(dataPath, 'utf-8');
+    // Try multiple possible paths for the schemes data
+    const possiblePaths = [
+      path.join(process.cwd(), 'data', 'schemes.json'),           // Local development
+      path.join(process.cwd(), 'backend', 'data', 'schemes.json'), // Vercel deployment
+      path.join(__dirname, '..', 'data', 'schemes.json'),        // Relative to src
+      path.join(__dirname, '..', '..', 'data', 'schemes.json'),  // Alternative relative path
+    ];
+
+    let rawData: string | null = null;
+    let usedPath = '';
+
+    for (const dataPath of possiblePaths) {
+      try {
+        if (fs.existsSync(dataPath)) {
+          rawData = fs.readFileSync(dataPath, 'utf-8');
+          usedPath = dataPath;
+          break;
+        }
+      } catch (error) {
+        // Continue to next path
+        continue;
+      }
+    }
+
+    if (!rawData) {
+      throw new Error('schemes.json file not found in any expected location');
+    }
+
     const jsonData = JSON.parse(rawData);
     
     // Transform JSON data to Scheme format
@@ -204,7 +230,7 @@ function loadSchemesData(): Scheme[] {
     }));
 
     schemesData = transformedSchemes;
-    console.log(`[SCHEMES] Loaded ${schemesData.length} schemes from data/schemes.json`);
+    console.log(`[SCHEMES] Loaded ${schemesData.length} schemes from ${usedPath}`);
     return schemesData;
   } catch (error: any) {
     console.error('[SCHEMES] Failed to load schemes data:', error);
