@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '../lib/context/language-context';
+// import { translations } from '../lib/i18n/translations';
 
 const languages = [
   { code: 'hi', label: 'हिंदी', sub: 'Hindi', flag: '🇮🇳' },
@@ -11,6 +12,7 @@ const languages = [
 export default function LanguageSelection() {
   const router = useRouter();
   const { language, setLanguage } = useLanguage();
+  // const t = translations[language];
 
   const handleLanguageSelect = (lang: 'en' | 'hi') => {
     setLanguage(lang);
@@ -73,13 +75,16 @@ export default function LanguageSelection() {
           onClick={() => router.push('/home')}
           className="mt-4 px-10 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors text-sm shadow-md"
         >
-          Continue →
+          {language === 'hi' ? 'जारी रखें →' : 'Continue →'}
         </button>
       </div>
 
       {/* Footer note */}
       <p className="mt-8 text-xs text-gray-400 text-center">
-        This service is free and secure. यह सेवा निःशुल्क और सुरक्षित है।
+        {language === 'hi' 
+          ? 'यह सेवा निःशुल्क और सुरक्षित है।'
+          : 'This service is free and secure.'
+        }
       </p>
     </div>
   );

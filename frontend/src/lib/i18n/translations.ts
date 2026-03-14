@@ -17,6 +17,8 @@ export const translations = {
     chooseLanguage: 'Choose your preferred language to continue',
     english: 'English',
     hindi: 'हिंदी',
+    continue: 'Continue →',
+    freeSecureService: 'This service is free and secure.',
     
     // Home Page
     welcome: 'Welcome to Sahayak AI',
@@ -24,6 +26,21 @@ export const translations = {
     askAssistant: 'Ask Assistant',
     browseSchemes: 'Browse Schemes',
     findServiceCenters: 'Find Service Centers',
+    
+    // Hero Section
+    voiceFirstAccess: 'Voice-First Access to Government Schemes',
+    heroSubtitle: 'Discover, understand, and apply for welfare schemes in your language. AI-powered assistance for every citizen.',
+    startVoiceConversation: 'Start Voice Conversation',
+    clickMicrophoneHelp: 'Click the microphone or type your question below',
+    searchPlaceholder: 'Ask about farming schemes, pension, health insurance...',
+    
+    // Feature Cards
+    smartSchemeMatching: 'Smart Scheme Matching',
+    smartSchemeDesc: 'AI-powered personalized eligibility check',
+    multilingualVoiceSupport: 'Multilingual Voice Support',
+    multilingualVoiceDesc: 'Speak in your local language',
+    nearestServiceCenterLocator: 'Nearest Service Center Locator',
+    nearestServiceCenterDesc: 'Find government offices near you instantly',
     
     // Chat
     typeMessage: 'Type your message...',
@@ -100,6 +117,8 @@ export const translations = {
     chooseLanguage: 'जारी रखने के लिए अपनी पसंदीदा भाषा चुनें',
     english: 'English',
     hindi: 'हिंदी',
+    continue: 'जारी रखें →',
+    freeSecureService: 'यह सेवा निःशुल्क और सुरक्षित है।',
     
     // Home Page
     welcome: 'सहायक एआई में आपका स्वागत है',
@@ -107,6 +126,21 @@ export const translations = {
     askAssistant: 'सहायक से पूछें',
     browseSchemes: 'योजनाएं देखें',
     findServiceCenters: 'सेवा केंद्र खोजें',
+    
+    // Hero Section
+    voiceFirstAccess: 'सरकारी योजनाओं तक वॉयस-फर्स्ट पहुंच',
+    heroSubtitle: 'अपनी भाषा में कल्याणकारी योजनाओं को खोजें, समझें और आवेदन करें। हर नागरिक के लिए एआई-संचालित सहायता।',
+    startVoiceConversation: 'वॉयस बातचीत शुरू करें',
+    clickMicrophoneHelp: 'माइक्रोफोन पर क्लिक करें या नीचे अपना प्रश्न टाइप करें',
+    searchPlaceholder: 'कृषि योजनाओं, पेंशन, स्वास्थ्य बीमा के बारे में पूछें...',
+    
+    // Feature Cards
+    smartSchemeMatching: 'स्मार्ट योजना मैचिंग',
+    smartSchemeDesc: 'एआई-संचालित व्यक्तिगत पात्रता जांच',
+    multilingualVoiceSupport: 'बहुभाषी वॉयस सपोर्ट',
+    multilingualVoiceDesc: 'अपनी स्थानीय भाषा में बोलें',
+    nearestServiceCenterLocator: 'निकटतम सेवा केंद्र लोकेटर',
+    nearestServiceCenterDesc: 'अपने पास सरकारी कार्यालय तुरंत खोजें',
     
     // Chat
     typeMessage: 'अपना संदेश टाइप करें...',

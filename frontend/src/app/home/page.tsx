@@ -4,53 +4,57 @@ import { useRouter } from 'next/navigation';
 import { useState, useRef } from 'react';
 import { Layout } from '../components/Layout';
 import { Mic, Search, ChevronRight } from 'lucide-react';
-
-const featureCards = [
-  {
-    icon: (
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <rect width="36" height="36" rx="8" fill="#EFF6FF" />
-        <path d="M10 14h16M10 18h10M10 22h12" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="27" cy="24" r="4" fill="#3B82F6" />
-        <path d="M26 24l1 1 2-2" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: 'Smart Scheme Matching',
-    desc: 'AI-powered personalized eligibility check',
-    path: '/chat',
-  },
-  {
-    icon: (
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <rect width="36" height="36" rx="8" fill="#EFF6FF" />
-        <circle cx="18" cy="18" r="7" stroke="#3B82F6" strokeWidth="2" />
-        <path d="M18 11v7l4 2" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
-        <path d="M11 25c1.5-1.5 3.5-2.5 7-2.5s5.5 1 7 2.5" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
-    title: 'Multilingual Voice Support',
-    desc: 'Speak in your local language',
-    path: '/chat',
-  },
-  {
-    icon: (
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <rect width="36" height="36" rx="8" fill="#EFF6FF" />
-        <path d="M18 10c-3.866 0-7 3.134-7 7 0 5.25 7 11 7 11s7-5.75 7-11c0-3.866-3.134-7-7-7z" stroke="#3B82F6" strokeWidth="2" />
-        <circle cx="18" cy="17" r="2.5" stroke="#3B82F6" strokeWidth="1.8" />
-      </svg>
-    ),
-    title: 'Nearest Service Center Locator',
-    desc: 'Find government offices near you instantly',
-    path: '/service-centers',
-  },
-];
+import { useLanguage } from '../../lib/context/language-context';
+// import { translations } from '../../lib/i18n/translations';
 
 export default function HomePage() {
   const router = useRouter();
+  const { language } = useLanguage();
+  // const t = translations[language];
   const [inputVal, setInputVal] = useState('');
   const [pulsing, setPulsing] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const featureCards = [
+    {
+      icon: (
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="#EFF6FF" />
+          <path d="M10 14h16M10 18h10M10 22h12" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="27" cy="24" r="4" fill="#3B82F6" />
+          <path d="M26 24l1 1 2-2" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      ),
+      title: language === 'hi' ? 'स्मार्ट योजना मैचिंग' : 'Smart Scheme Matching',
+      desc: language === 'hi' ? 'एआई-संचालित व्यक्तिगत पात्रता जांच' : 'AI-powered personalized eligibility check',
+      path: '/chat',
+    },
+    {
+      icon: (
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="#EFF6FF" />
+          <circle cx="18" cy="18" r="7" stroke="#3B82F6" strokeWidth="2" />
+          <path d="M18 11v7l4 2" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
+          <path d="M11 25c1.5-1.5 3.5-2.5 7-2.5s5.5 1 7 2.5" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      ),
+      title: language === 'hi' ? 'बहुभाषी वॉयस सपोर्ट' : 'Multilingual Voice Support',
+      desc: language === 'hi' ? 'अपनी स्थानीय भाषा में बोलें' : 'Speak in your local language',
+      path: '/chat',
+    },
+    {
+      icon: (
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="#EFF6FF" />
+          <path d="M18 10c-3.866 0-7 3.134-7 7 0 5.25 7 11 7 11s7-5.75 7-11c0-3.866-3.134-7-7-7z" stroke="#3B82F6" strokeWidth="2" />
+          <circle cx="18" cy="17" r="2.5" stroke="#3B82F6" strokeWidth="1.8" />
+        </svg>
+      ),
+      title: language === 'hi' ? 'निकटतम सेवा केंद्र लोकेटर' : 'Nearest Service Center Locator',
+      desc: language === 'hi' ? 'अपने पास सरकारी कार्यालय तुरंत खोजें' : 'Find government offices near you instantly',
+      path: '/service-centers',
+    },
+  ];
 
   const handleMicClick = () => {
     setPulsing(true);
@@ -95,16 +99,21 @@ export default function HomePage() {
             <div className="flex flex-col items-center text-center max-w-2xl">
               {/* Heading */}
               <h1 className="text-4xl sm:text-5xl text-blue-700 mb-4" style={{ fontWeight: 700, lineHeight: 1.15 }}>
-                Voice-First Access to Government Schemes
+                {language === 'hi' ? 'सरकारी योजनाओं तक वॉयस-फर्स्ट पहुंच' : 'Voice-First Access to Government Schemes'}
               </h1>
               
               {/* Subtitle */}
               <p className="text-gray-600 text-lg mb-12 max-w-xl">
-                Discover, understand, and apply for welfare schemes in your language. AI-powered assistance for every citizen.
+                {language === 'hi' 
+                  ? 'अपनी भाषा में कल्याणकारी योजनाओं को खोजें, समझें और आवेदन करें। हर नागरिक के लिए एआई-संचालित सहायता।'
+                  : 'Discover, understand, and apply for welfare schemes in your language. AI-powered assistance for every citizen.'
+                }
               </p>
 
               {/* CTA Label */}
-              <p className="text-gray-700 text-base font-semibold mb-3">Start Voice Conversation</p>
+              <p className="text-gray-700 text-base font-semibold mb-3">
+                {language === 'hi' ? 'वॉयस बातचीत शुरू करें' : 'Start Voice Conversation'}
+              </p>
 
               {/* Microphone Button - PRIMARY FOCUS */}
               <div className="relative mb-4">
@@ -147,7 +156,12 @@ export default function HomePage() {
               </div>
 
               {/* Help Text */}
-              <p className="text-gray-500 text-sm mb-10">Click the microphone or type your question below</p>
+              <p className="text-gray-500 text-sm mb-10">
+                {language === 'hi' 
+                  ? 'माइक्रोफोन पर क्लिक करें या नीचे अपना प्रश्न टाइप करें'
+                  : 'Click the microphone or type your question below'
+                }
+              </p>
 
               {/* Search Bar */}
               <div className="w-full max-w-xl">
@@ -157,7 +171,10 @@ export default function HomePage() {
                     value={inputVal}
                     onChange={(e) => setInputVal(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    placeholder="Ask about farming schemes, pension, health insurance..."
+                    placeholder={language === 'hi' 
+                      ? 'कृषि योजनाओं, पेंशन, स्वास्थ्य बीमा के बारे में पूछें...'
+                      : 'Ask about farming schemes, pension, health insurance...'
+                    }
                     className="w-full pl-5 pr-12 py-3.5 rounded-xl border-2 border-blue-200 bg-white text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 shadow-sm transition-all"
                   />
                   <button

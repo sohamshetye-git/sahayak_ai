@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { Globe, Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../../lib/context/language-context';
+// import { translations } from '../../lib/i18n/translations';
 
 const languages = [
   { code: 'en', label: 'English' },
@@ -13,17 +14,18 @@ const languages = [
 
 export function Navbar() {
   const { language, setLanguage } = useLanguage();
+  // const t = translations[language];
   const pathname = usePathname();
   const router = useRouter();
   const [langOpen, setLangOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Home', path: '/home' },
-    { label: 'AI Chat', path: '/chat' },
-    { label: 'Explore Schemes', path: '/schemes' },
-    { label: 'Service Centers', path: '/service-centers' },
-    { label: 'My Applications', path: '/applications' },
+    { label: language === 'hi' ? 'होम' : 'Home', path: '/home' },
+    { label: language === 'hi' ? 'चैट सहायक' : 'AI Chat', path: '/chat' },
+    { label: language === 'hi' ? 'योजनाएं देखें' : 'Explore Schemes', path: '/schemes' },
+    { label: language === 'hi' ? 'सेवा केंद्र' : 'Service Centers', path: '/service-centers' },
+    { label: language === 'hi' ? 'मेरे आवेदन' : 'My Applications', path: '/applications' },
   ];
 
   const isActive = (path: string) => pathname === path;
