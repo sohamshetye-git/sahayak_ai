@@ -234,12 +234,54 @@ Sahayak AI enables:
 
 ## 🔮 Future Enhancements
 
-- 🌐 Support for more Indian languages
-- 🪪 DigiLocker integration
-- 🧾 Auto form filling
-- 📲 WhatsApp voice assistant
-- 🧠 Predictive benefit suggestions
-- 📊 Government analytics dashboard
+
+🤖 Machine Learning Recommendation Engine
+
+ML models will analyze:
+
+Past applications
+
+Demographic data
+
+Popular schemes
+
+to recommend better schemes automatically.
+
+📲 WhatsApp Integration
+
+Users will be able to:
+
+Send voice messages
+
+Ask scheme questions
+
+Receive application guidance
+
+via WhatsApp chatbot.
+
+☎ IVR Phone System
+
+Users without smartphones can call a number.
+
+Example:
+
+Dial: 1800-XXXX
+Speak with Sahayak AI
+🌐 More Indian Languages
+
+Future support:
+
+Marathi
+
+Tamil
+
+Telugu
+
+Bengali
+
+Gujarati
+
+Kannada
 
 ---
 
@@ -253,14 +295,6 @@ npm install
 
 # Run development server
 npm run dev
-```
-
-### Deployment (AWS)
-
-- **Frontend** → AWS Amplify
-- **Backend** → AWS Lambda + API Gateway
-- **Database** → RDS + DynamoDB
-- **Caching** → ElastiCache Redis
 
 
 
